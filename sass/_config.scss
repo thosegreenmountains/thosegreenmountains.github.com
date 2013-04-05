@@ -1,0 +1,62 @@
+// Typography
+$base-font-size: 16px;
+$base-line-height: 27px;
+
+// Animations
+$default-animation-duration: 2s;
+
+// Colors
+$base-color: rgb(157, 216, 255);
+$body-gradient: ($base-color, lighten($base-color, 15%));
+$link-color: darken($base-color, 60%);
+
+// Logo
+$logo-small-width: 100px;
+
+// Badges
+$badge-large: 400px;
+$badge-small: 100px;
+
+// Progress Bar
+$progress-bar-line-height: 2;
+$progress-bar-height: $base-line-height * $progress-bar-line-height;
+$progress-bar-nav-width: 130px;
+
+// Arrows
+$arrows-height: 20px;
+$arrows-width: 34px;
+$arrow-active-fill: #6d6e70;
+
+// Intro
+$intro-width: 35em;
+
+// Compass Imports
+@import 'compass/css3';
+@import 'compass/typography';
+@import 'compass/utilities';
+
+// Custom Imports
+@import 'mixins';
+@import 'animations';
+
+// Placeholders
+
+%group {
+  &:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+}
+
+%center {
+  display: block;
+  margin: 0 auto;
+}
+
+%hide {
+  height: 0;
+  width: 0;
+  margin: 0;
+  @include hide-text;
+}
