@@ -14,6 +14,9 @@
   var widthBreakpoint = 650;
   var isPreloadingClass = 'is-loading';
   var hasProfileClass = 'has-profile-bar';
+  var navArrows = {};
+  var navArrowOpacity = 0.5;
+  var showArrows = false;
 
   TGM.init = function() {
 
@@ -55,9 +58,15 @@
     this.$levels = $(".level");
     this.$slides = $('.slide');
     this.$arrows = $("#arrows");
+    this.$navArrows = $("#nav-arrows i");
     this.$bg = $("#bg");
     this.$info = $("#info");
     this.$logomark = $("body::after");
+
+    navArrows.up = $(".nav-arrow__up");
+    navArrows.right = $(".nav-arrow__right");
+    navArrows.down = $(".nav-arrow__down");
+    navArrows.left = $(".nav-arrow__left");
 
     // Remove preload class from body
     this.$body.removeClass(isPreloadingClass);
@@ -91,11 +100,21 @@
       e.preventDefault();
     });
 
+    // Trigger navigation when you click
+    // on nav arrows
+    this.$navArrows.on('click', arrowClicked);
+
     // Sets the initial layout
     windowResized();
 
     // Go to the default slide
     slideTo( 0, 0 );
+
+    // Show the nav arrows after a delay
+    setTimeout(function() {
+      showArrows = true;
+      slideTo(0, 0);
+    }, 6000);
 
   }
 
@@ -114,7 +133,7 @@
     var left = (slide > 0 && level === 1);
 
     // Set directions for navigation arrows
-    setArrows( up, right, down, left );
+    if (showArrows) setArrows( up, right, down, left );
 
     // Adjust parallax
     setParallax( 'vertical', level );
@@ -288,12 +307,30 @@
 
   function setArrows( up, right, down, left ) {
 
+    $.each(navArrows, function(index, arrow) {
+      arrow.css('opacity', 0);
+    });
     TGM.$arrows.removeClass('up right down left');
 
-    if (up) TGM.$arrows.addClass('up');
-    if (right) TGM.$arrows.addClass('right');
-    if (down) TGM.$arrows.addClass('down');
-    if (left) TGM.$arrows.addClass('left');
+    if (up) {
+      TGM.$arrows.addClass('up');
+      navArrows.up.css('opacity', navArrowOpacity);
+    }
+    
+    if (right) {
+      TGM.$arrows.addClass('right');
+      navArrows.right.css('opacity', navArrowOpacity);
+    }
+    
+    if (down) {
+      TGM.$arrows.addClass('down');
+      navArrows.down.css('opacity', navArrowOpacity);
+    }
+    
+    if (left) { 
+      TGM.$arrows.addClass('left');
+      navArrows.left.css('opacity', navArrowOpacity);
+    }
 
   }
 
@@ -317,7 +354,7 @@
   function setupProgressBar() {
 
     if (!TGM.$profileBG) {
-      TGM.$profileBG = $('<img class="profile__bg" src="/images/profile.svg#preserveAspectRatio=none" alt="" />');
+      TGM.$profileBG = $('<img class="profile__bg" src="/images/profile.svg#svgView(preserveAspectRatio(none))" alt="" />');
       TGM.$profileBG.appendTo(TGM.$profile);
     }
 
@@ -373,6 +410,35 @@
       // When you press the down arrow key...
       case 40:
         e.preventDefault();
+        navigateDown();
+        break;
+    }
+
+  }
+
+  // Handle navigation arrow clicks
+  function arrowClicked( e ) {
+
+    e.preventDefault();
+    console.log(e);
+    console.log($(this).data('direction'));
+
+    switch ($(this).data('direction')) {
+
+      // When you click the left arrow...
+      case 'left':
+        navigateLeft();
+        break;
+      // When you click the up arrow...
+      case 'up':
+        navigateUp();
+        break;
+      // When you click the right arrow...
+      case 'right':
+        navigateRight();
+        break;
+      // When you click the down arrow...
+      case 'down':
         navigateDown();
         break;
     }
@@ -452,7 +518,7 @@
 $(function() {
 
   var images = [
-    'arrows.png',
+    'arrow-down.svg',
     'noise.png',
     'logo.svg',
     'profile.svg',

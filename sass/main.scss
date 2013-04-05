@@ -226,7 +226,7 @@ a {
     max-width: 90%;
     margin: 0 auto;
     position: absolute;
-    bottom: 8%;
+    bottom: ($nav-arrow-edge-offset * 2) + $nav-arrow-size;
     left: 50%;
     margin-left: -($intro-width/2);
     color: white;
@@ -246,19 +246,10 @@ a {
   }
 
   .intro__navigation {
-    margin: 0;
-    
-    img {
-      float: left;
-      margin-top: 7px;
-      margin-right: 40px;
-      @extend %pulse;
-    }
-    
-    figcaption {
-      @include adjust-font-size-to(14px);
-    }
-
+    margin: 0 auto;
+    text-align: center;
+    width: 420px;
+    @include adjust-font-size-to(14px);
   }
 
   //////////////////////////////////////
@@ -293,14 +284,13 @@ a {
   .details {
     max-height: 100%;
     overflow-y: auto;
-    padding-top: 40px;
+    padding-top: ($nav-arrow-edge-offset * 2) + $nav-arrow-size;
     padding-bottom: $progress-bar-height;
     color: white;
   }
 
   .details__wrapper {
     padding: 40px;
-    // width: 900px;
     width: 90%;
     max-width: 800px;
     min-height: 100%;
@@ -389,7 +379,7 @@ a {
       background-repeat: no-repeat;
       @include transition-property(opacity);
       @include transition-timing-function(cubic-bezier(0.260, 0.860, 0.440, 0.985));
-      @include transition-duration(4s);
+      @include transition-duration(6s);
     }
 
     // Horizontal levels
@@ -500,6 +490,67 @@ a {
 
   }
 
+  .nav-arrow__up {
+    left: 50%;
+    top: $nav-arrow-edge-offset;
+    margin-left: $nav-arrow-size / -2;
+    @include background(image-url('arrow-up.svg') center center no-repeat);
+
+    &:hover {
+      margin-top: -1px;
+    }
+  }
+
+  .nav-arrow__right {
+    right: $nav-arrow-edge-offset;
+    top: 50%;
+    margin-top: $nav-arrow-size / -2;
+    @include background(image-url('arrow-right.svg') center center no-repeat);
+
+    &:hover {
+      margin-right: -1px;
+    }
+  }
+
+  .nav-arrow__down {
+    bottom: $nav-arrow-edge-offset;
+    left: 50%;
+    margin-left: $nav-arrow-size / -2;
+    @include background(image-url('arrow-down.svg') center center no-repeat);
+
+    &:hover {
+      margin-bottom: -1px;
+    }
+  }
+
+  .nav-arrow__left {
+    left: $nav-arrow-edge-offset;
+    top: 50%;
+    margin-top: $nav-arrow-size / -2;
+    @include background(image-url('arrow-left.svg') center center no-repeat);
+
+    &:hover {
+      margin-left: -1px;
+    }
+  }
+
+  .nav-arrow__up,
+  .nav-arrow__right,
+  .nav-arrow__down,
+  .nav-arrow__left {
+    position: absolute;
+    display: block;
+    width: $nav-arrow-size;
+    height: $nav-arrow-size;
+    cursor: pointer;
+    z-index: 30;
+    opacity: 0;
+    @include transition-property(opacity top bottom);
+    @include transition-duration(1s);
+    @include transition-timing-function(ease);
+    @include background-size(cover);
+  }
+
   .arrows {
     width: $arrows-width;
     height: $arrows-height;
@@ -594,8 +645,8 @@ a {
     opacity: 0.6;
     z-index: 10;
     @include transition-property(left);
-    @include transition-duration(0.5s);
-    @include transition-timing-function(ease-in-out);
+    @include transition-duration(1s);
+    @include transition-timing-function(ease);
   }
 
   //////////////////////////////////////
@@ -655,6 +706,9 @@ a {
     .progress {
       bottom: 0;
       box-shadow: 0 -5px 10px rgba(0, 0, 0, 0.2);
+    }
+    .nav-arrow__down {
+      bottom: $progress-bar-height + $nav-arrow-edge-offset;
     }
   }
 

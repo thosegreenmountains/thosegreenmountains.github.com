@@ -1,32 +1,4 @@
 @import url(http://fonts.googleapis.com/css?family=Raleway:800|Cutive);
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mike\/Sites\/thosegreenmountains\/thosegreenmountains\.github\.com\/sass\/_animations\.scss}line{font-family:\000033}}
-[data-layout="enhanced"] .intro__navigation img {
-  -webkit-animation-name: pulse;
-  -moz-animation-name: pulse;
-  -o-animation-name: pulse;
-  animation-name: pulse;
-  -webkit-animation-duration: 1s;
-  -moz-animation-duration: 1s;
-  -o-animation-duration: 1s;
-  animation-duration: 1s;
-  -webkit-animation-timing-function: ease-in-out;
-  -moz-animation-timing-function: ease-in-out;
-  -o-animation-timing-function: ease-in-out;
-  animation-timing-function: ease-in-out;
-  -webkit-animation-iteration-count: infinite;
-  -moz-animation-iteration-count: infinite;
-  -o-animation-iteration-count: infinite;
-  animation-iteration-count: infinite;
-  -webkit-animation-fill-mode: both;
-  -moz-animation-fill-mode: both;
-  -o-animation-fill-mode: both;
-  animation-fill-mode: both;
-  -webkit-animation-direction: alternate;
-  -moz-animation-direction: alternate;
-  -o-animation-direction: alternate;
-  animation-direction: alternate;
-}
-
 @-webkit-keyframes pulse {
   /* line 36, ../sass/_animations.scss */
   0% {
@@ -227,7 +199,7 @@
   }
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mike\/Sites\/thosegreenmountains\/thosegreenmountains\.github\.com\/sass\/_config\.scss}line{font-family:\0000357}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mike\/Sites\/thosegreenmountains\/thosegreenmountains\.github\.com\/sass\/_config\.scss}line{font-family:\0000360}}
 [data-layout="enhanced"] #navigation h1 {
   height: 0;
   width: 0;
@@ -498,7 +470,7 @@ a:hover {
   max-width: 90%;
   margin: 0 auto;
   position: absolute;
-  bottom: 8%;
+  bottom: 72px;
   left: 50%;
   margin-left: -17.5em;
   color: white;
@@ -524,20 +496,13 @@ a:hover {
 }
 @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mike\/Sites\/thosegreenmountains\/thosegreenmountains\.github\.com\/sass\/main\.scss}line{font-family:\00003248}}
 [data-layout="enhanced"] .intro__navigation {
-  margin: 0;
-}
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mike\/Sites\/thosegreenmountains\/thosegreenmountains\.github\.com\/sass\/main\.scss}line{font-family:\00003251}}
-[data-layout="enhanced"] .intro__navigation img {
-  float: left;
-  margin-top: 7px;
-  margin-right: 40px;
-}
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mike\/Sites\/thosegreenmountains\/thosegreenmountains\.github\.com\/sass\/main\.scss}line{font-family:\00003258}}
-[data-layout="enhanced"] .intro__navigation figcaption {
+  margin: 0 auto;
+  text-align: center;
+  width: 420px;
   font-size: 0.875em;
   line-height: 1.92857em;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mike\/Sites\/thosegreenmountains\/thosegreenmountains\.github\.com\/sass\/main\.scss}line{font-family:\00003274}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mike\/Sites\/thosegreenmountains\/thosegreenmountains\.github\.com\/sass\/main\.scss}line{font-family:\00003265}}
 [data-layout="enhanced"] #navigation a {
   display: block;
   margin: 0 auto;
@@ -546,19 +511,19 @@ a:hover {
   cursor: default;
   pointer-events: none;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mike\/Sites\/thosegreenmountains\/thosegreenmountains\.github\.com\/sass\/main\.scss}line{font-family:\00003283}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mike\/Sites\/thosegreenmountains\/thosegreenmountains\.github\.com\/sass\/main\.scss}line{font-family:\00003274}}
 [data-layout="enhanced"] #navigation .slide {
   padding-bottom: 54px;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mike\/Sites\/thosegreenmountains\/thosegreenmountains\.github\.com\/sass\/main\.scss}line{font-family:\00003293}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mike\/Sites\/thosegreenmountains\/thosegreenmountains\.github\.com\/sass\/main\.scss}line{font-family:\00003284}}
 [data-layout="enhanced"] .details {
   max-height: 100%;
   overflow-y: auto;
-  padding-top: 40px;
+  padding-top: 72px;
   padding-bottom: 54px;
   color: white;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mike\/Sites\/thosegreenmountains\/thosegreenmountains\.github\.com\/sass\/main\.scss}line{font-family:\00003301}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mike\/Sites\/thosegreenmountains\/thosegreenmountains\.github\.com\/sass\/main\.scss}line{font-family:\00003292}}
 [data-layout="enhanced"] .details__wrapper {
   padding: 40px;
   width: 90%;
@@ -570,7 +535,7 @@ a:hover {
   -moz-box-shadow: inset 0 0 20px -3px rgba(0, 0, 0, 0.2);
   box-shadow: inset 0 0 20px -3px rgba(0, 0, 0, 0.2);
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mike\/Sites\/thosegreenmountains\/thosegreenmountains\.github\.com\/sass\/main\.scss}line{font-family:\00003312}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mike\/Sites\/thosegreenmountains\/thosegreenmountains\.github\.com\/sass\/main\.scss}line{font-family:\00003302}}
 [data-layout="enhanced"] .details__heading {
   font-family: 'Raleway', sans-serif;
   font-weight: 800;
@@ -581,16 +546,16 @@ a:hover {
   font-size: 2.75em;
   line-height: 1.22727em;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mike\/Sites\/thosegreenmountains\/thosegreenmountains\.github\.com\/sass\/main\.scss}line{font-family:\00003322}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mike\/Sites\/thosegreenmountains\/thosegreenmountains\.github\.com\/sass\/main\.scss}line{font-family:\00003312}}
 [data-layout="enhanced"] .details__logo {
   margin-right: 0.84375em;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mike\/Sites\/thosegreenmountains\/thosegreenmountains\.github\.com\/sass\/main\.scss}line{font-family:\00003326}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mike\/Sites\/thosegreenmountains\/thosegreenmountains\.github\.com\/sass\/main\.scss}line{font-family:\00003316}}
 [data-layout="enhanced"] .details__content {
   height: 100%;
   padding-top: 1.6875em;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mike\/Sites\/thosegreenmountains\/thosegreenmountains\.github\.com\/sass\/main\.scss}line{font-family:\00003335}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mike\/Sites\/thosegreenmountains\/thosegreenmountains\.github\.com\/sass\/main\.scss}line{font-family:\00003325}}
 [data-layout="enhanced"] .overlay {
   position: fixed;
   left: 0;
@@ -601,7 +566,7 @@ a:hover {
   background: rgba(255, 255, 255, 0.8);
   z-index: 100;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mike\/Sites\/thosegreenmountains\/thosegreenmountains\.github\.com\/sass\/main\.scss}line{font-family:\00003347}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mike\/Sites\/thosegreenmountains\/thosegreenmountains\.github\.com\/sass\/main\.scss}line{font-family:\00003337}}
 [data-layout="enhanced"] .overlay__content {
   display: none;
   position: absolute;
@@ -613,7 +578,7 @@ a:hover {
   color: #666;
   box-shadow: 0 0 40px rgba(0, 0, 0, 0.1);
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mike\/Sites\/thosegreenmountains\/thosegreenmountains\.github\.com\/sass\/main\.scss}line{font-family:\00003359}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mike\/Sites\/thosegreenmountains\/thosegreenmountains\.github\.com\/sass\/main\.scss}line{font-family:\00003349}}
 [data-layout="enhanced"] .overlay__hide {
   position: absolute;
   text-indent: 200%;
@@ -622,7 +587,7 @@ a:hover {
   width: 20px;
   height: 20px;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mike\/Sites\/thosegreenmountains\/thosegreenmountains\.github\.com\/sass\/main\.scss}line{font-family:\00003372}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mike\/Sites\/thosegreenmountains\/thosegreenmountains\.github\.com\/sass\/main\.scss}line{font-family:\00003362}}
 [data-layout="enhanced"] .bg {
   height: 100%;
   width: 100%;
@@ -631,7 +596,7 @@ a:hover {
   left: 0;
   text-indent: -150%;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mike\/Sites\/thosegreenmountains\/thosegreenmountains\.github\.com\/sass\/main\.scss}line{font-family:\00003381}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mike\/Sites\/thosegreenmountains\/thosegreenmountains\.github\.com\/sass\/main\.scss}line{font-family:\00003371}}
 [data-layout="enhanced"] .bg * {
   width: 100%;
   height: 100%;
@@ -649,68 +614,68 @@ a:hover {
   -moz-transition-timing-function: cubic-bezier(0.26, 0.86, 0.44, 0.985);
   -o-transition-timing-function: cubic-bezier(0.26, 0.86, 0.44, 0.985);
   transition-timing-function: cubic-bezier(0.26, 0.86, 0.44, 0.985);
-  -webkit-transition-duration: 4s;
-  -moz-transition-duration: 4s;
-  -o-transition-duration: 4s;
-  transition-duration: 4s;
+  -webkit-transition-duration: 6s;
+  -moz-transition-duration: 6s;
+  -o-transition-duration: 6s;
+  transition-duration: 6s;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mike\/Sites\/thosegreenmountains\/thosegreenmountains\.github\.com\/sass\/main\.scss}line{font-family:\00003398}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mike\/Sites\/thosegreenmountains\/thosegreenmountains\.github\.com\/sass\/main\.scss}line{font-family:\00003388}}
 [data-layout="enhanced"] .bg[data-level-h="2"] .bg__back {
   left: -9%;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mike\/Sites\/thosegreenmountains\/thosegreenmountains\.github\.com\/sass\/main\.scss}line{font-family:\00003399}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mike\/Sites\/thosegreenmountains\/thosegreenmountains\.github\.com\/sass\/main\.scss}line{font-family:\00003389}}
 [data-layout="enhanced"] .bg[data-level-h="2"] .bg__mid {
   left: -3%;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mike\/Sites\/thosegreenmountains\/thosegreenmountains\.github\.com\/sass\/main\.scss}line{font-family:\00003402}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mike\/Sites\/thosegreenmountains\/thosegreenmountains\.github\.com\/sass\/main\.scss}line{font-family:\00003392}}
 [data-layout="enhanced"] .bg[data-level-h="3"] .bg__back {
   left: -10%;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mike\/Sites\/thosegreenmountains\/thosegreenmountains\.github\.com\/sass\/main\.scss}line{font-family:\00003403}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mike\/Sites\/thosegreenmountains\/thosegreenmountains\.github\.com\/sass\/main\.scss}line{font-family:\00003393}}
 [data-layout="enhanced"] .bg[data-level-h="3"] .bg__mid {
   left: -6%;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mike\/Sites\/thosegreenmountains\/thosegreenmountains\.github\.com\/sass\/main\.scss}line{font-family:\00003406}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mike\/Sites\/thosegreenmountains\/thosegreenmountains\.github\.com\/sass\/main\.scss}line{font-family:\00003396}}
 [data-layout="enhanced"] .bg[data-level-h="4"] .bg__back {
   left: -11%;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mike\/Sites\/thosegreenmountains\/thosegreenmountains\.github\.com\/sass\/main\.scss}line{font-family:\00003407}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mike\/Sites\/thosegreenmountains\/thosegreenmountains\.github\.com\/sass\/main\.scss}line{font-family:\00003397}}
 [data-layout="enhanced"] .bg[data-level-h="4"] .bg__mid {
   left: -9%;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mike\/Sites\/thosegreenmountains\/thosegreenmountains\.github\.com\/sass\/main\.scss}line{font-family:\00003410}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mike\/Sites\/thosegreenmountains\/thosegreenmountains\.github\.com\/sass\/main\.scss}line{font-family:\00003400}}
 [data-layout="enhanced"] .bg[data-level-h="5"] .bg__back {
   left: -12%;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mike\/Sites\/thosegreenmountains\/thosegreenmountains\.github\.com\/sass\/main\.scss}line{font-family:\00003411}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mike\/Sites\/thosegreenmountains\/thosegreenmountains\.github\.com\/sass\/main\.scss}line{font-family:\00003401}}
 [data-layout="enhanced"] .bg[data-level-h="5"] .bg__mid {
   left: -12%;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mike\/Sites\/thosegreenmountains\/thosegreenmountains\.github\.com\/sass\/main\.scss}line{font-family:\00003414}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mike\/Sites\/thosegreenmountains\/thosegreenmountains\.github\.com\/sass\/main\.scss}line{font-family:\00003404}}
 [data-layout="enhanced"] .bg[data-level-h="6"] .bg__back {
   left: -13%;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mike\/Sites\/thosegreenmountains\/thosegreenmountains\.github\.com\/sass\/main\.scss}line{font-family:\00003415}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mike\/Sites\/thosegreenmountains\/thosegreenmountains\.github\.com\/sass\/main\.scss}line{font-family:\00003405}}
 [data-layout="enhanced"] .bg[data-level-h="6"] .bg__mid {
   left: -15%;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mike\/Sites\/thosegreenmountains\/thosegreenmountains\.github\.com\/sass\/main\.scss}line{font-family:\00003418}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mike\/Sites\/thosegreenmountains\/thosegreenmountains\.github\.com\/sass\/main\.scss}line{font-family:\00003408}}
 [data-layout="enhanced"] .bg[data-level-h="7"] .bg__back {
   left: -14%;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mike\/Sites\/thosegreenmountains\/thosegreenmountains\.github\.com\/sass\/main\.scss}line{font-family:\00003419}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mike\/Sites\/thosegreenmountains\/thosegreenmountains\.github\.com\/sass\/main\.scss}line{font-family:\00003409}}
 [data-layout="enhanced"] .bg[data-level-h="7"] .bg__mid {
   left: -18%;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mike\/Sites\/thosegreenmountains\/thosegreenmountains\.github\.com\/sass\/main\.scss}line{font-family:\00003422}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mike\/Sites\/thosegreenmountains\/thosegreenmountains\.github\.com\/sass\/main\.scss}line{font-family:\00003412}}
 [data-layout="enhanced"] .bg[data-level-h="8"] .bg__back {
   left: -15%;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mike\/Sites\/thosegreenmountains\/thosegreenmountains\.github\.com\/sass\/main\.scss}line{font-family:\00003423}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mike\/Sites\/thosegreenmountains\/thosegreenmountains\.github\.com\/sass\/main\.scss}line{font-family:\00003413}}
 [data-layout="enhanced"] .bg[data-level-h="8"] .bg__mid {
   left: -21%;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mike\/Sites\/thosegreenmountains\/thosegreenmountains\.github\.com\/sass\/main\.scss}line{font-family:\00003428}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mike\/Sites\/thosegreenmountains\/thosegreenmountains\.github\.com\/sass\/main\.scss}line{font-family:\00003418}}
 [data-layout="enhanced"] .bg__back {
   z-index: 1;
   height: 766px;
@@ -720,7 +685,7 @@ a:hover {
   width: 116%;
   left: -8%;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mike\/Sites\/thosegreenmountains\/thosegreenmountains\.github\.com\/sass\/main\.scss}line{font-family:\00003438}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mike\/Sites\/thosegreenmountains\/thosegreenmountains\.github\.com\/sass\/main\.scss}line{font-family:\00003428}}
 [data-layout="enhanced"] .bg__mid {
   z-index: 2;
   height: 340px;
@@ -730,7 +695,7 @@ a:hover {
   width: 121%;
   left: 0%;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mike\/Sites\/thosegreenmountains\/thosegreenmountains\.github\.com\/sass\/main\.scss}line{font-family:\00003448}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mike\/Sites\/thosegreenmountains\/thosegreenmountains\.github\.com\/sass\/main\.scss}line{font-family:\00003438}}
 [data-layout="enhanced"] .bg__fore {
   z-index: 3;
   height: 216px;
@@ -738,7 +703,7 @@ a:hover {
   background-size: cover;
   opacity: 0.7;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mike\/Sites\/thosegreenmountains\/thosegreenmountains\.github\.com\/sass\/main\.scss}line{font-family:\00003460}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mike\/Sites\/thosegreenmountains\/thosegreenmountains\.github\.com\/sass\/main\.scss}line{font-family:\00003450}}
 [data-layout="enhanced"] .progress {
   position: fixed;
   bottom: -54px;
@@ -748,7 +713,7 @@ a:hover {
   opacity: 1;
   z-index: 20;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mike\/Sites\/thosegreenmountains\/thosegreenmountains\.github\.com\/sass\/main\.scss}line{font-family:\00003470}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mike\/Sites\/thosegreenmountains\/thosegreenmountains\.github\.com\/sass\/main\.scss}line{font-family:\00003460}}
 [data-layout="enhanced"] .progress ul {
   list-style: none;
   padding: 0;
@@ -758,7 +723,7 @@ a:hover {
   height: 100%;
   overflow: hidden;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mike\/Sites\/thosegreenmountains\/thosegreenmountains\.github\.com\/sass\/main\.scss}line{font-family:\00003480}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mike\/Sites\/thosegreenmountains\/thosegreenmountains\.github\.com\/sass\/main\.scss}line{font-family:\00003470}}
 [data-layout="enhanced"] .progress li {
   text-align: center;
   display: inline-block;
@@ -769,7 +734,7 @@ a:hover {
   position: relative;
   border-left: 1px solid #b2b2b3;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mike\/Sites\/thosegreenmountains\/thosegreenmountains\.github\.com\/sass\/main\.scss}line{font-family:\00003491}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mike\/Sites\/thosegreenmountains\/thosegreenmountains\.github\.com\/sass\/main\.scss}line{font-family:\00003481}}
 [data-layout="enhanced"] .progress a, [data-layout="enhanced"] .progress span {
   display: block;
   text-decoration: none;
@@ -780,7 +745,80 @@ a:hover {
   font-size: 1.125em;
   line-height: 3em;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mike\/Sites\/thosegreenmountains\/thosegreenmountains\.github\.com\/sass\/main\.scss}line{font-family:\00003503}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mike\/Sites\/thosegreenmountains\/thosegreenmountains\.github\.com\/sass\/main\.scss}line{font-family:\00003493}}
+[data-layout="enhanced"] .nav-arrow__up {
+  left: 50%;
+  top: 20px;
+  margin-left: -16px;
+  background: url('/images/arrow-up.svg?1365137894') center center no-repeat;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mike\/Sites\/thosegreenmountains\/thosegreenmountains\.github\.com\/sass\/main\.scss}line{font-family:\00003499}}
+[data-layout="enhanced"] .nav-arrow__up:hover {
+  margin-top: -1px;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mike\/Sites\/thosegreenmountains\/thosegreenmountains\.github\.com\/sass\/main\.scss}line{font-family:\00003504}}
+[data-layout="enhanced"] .nav-arrow__right {
+  right: 20px;
+  top: 50%;
+  margin-top: -16px;
+  background: url('/images/arrow-right.svg?1365137894') center center no-repeat;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mike\/Sites\/thosegreenmountains\/thosegreenmountains\.github\.com\/sass\/main\.scss}line{font-family:\00003510}}
+[data-layout="enhanced"] .nav-arrow__right:hover {
+  margin-right: -1px;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mike\/Sites\/thosegreenmountains\/thosegreenmountains\.github\.com\/sass\/main\.scss}line{font-family:\00003515}}
+[data-layout="enhanced"] .nav-arrow__down {
+  bottom: 20px;
+  left: 50%;
+  margin-left: -16px;
+  background: url('/images/arrow-down.svg?1365137894') center center no-repeat;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mike\/Sites\/thosegreenmountains\/thosegreenmountains\.github\.com\/sass\/main\.scss}line{font-family:\00003521}}
+[data-layout="enhanced"] .nav-arrow__down:hover {
+  margin-bottom: -1px;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mike\/Sites\/thosegreenmountains\/thosegreenmountains\.github\.com\/sass\/main\.scss}line{font-family:\00003526}}
+[data-layout="enhanced"] .nav-arrow__left {
+  left: 20px;
+  top: 50%;
+  margin-top: -16px;
+  background: url('/images/arrow-left.svg?1365137894') center center no-repeat;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mike\/Sites\/thosegreenmountains\/thosegreenmountains\.github\.com\/sass\/main\.scss}line{font-family:\00003532}}
+[data-layout="enhanced"] .nav-arrow__left:hover {
+  margin-left: -1px;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mike\/Sites\/thosegreenmountains\/thosegreenmountains\.github\.com\/sass\/main\.scss}line{font-family:\00003540}}
+[data-layout="enhanced"] .nav-arrow__up,
+[data-layout="enhanced"] .nav-arrow__right,
+[data-layout="enhanced"] .nav-arrow__down,
+[data-layout="enhanced"] .nav-arrow__left {
+  position: absolute;
+  display: block;
+  width: 32px;
+  height: 32px;
+  cursor: pointer;
+  z-index: 30;
+  opacity: 0;
+  -webkit-transition-property: opacity, top, bottom;
+  -moz-transition-property: opacity, top, bottom;
+  -o-transition-property: opacity, top, bottom;
+  transition-property: opacity top bottom;
+  -webkit-transition-duration: 1s;
+  -moz-transition-duration: 1s;
+  -o-transition-duration: 1s;
+  transition-duration: 1s;
+  -webkit-transition-timing-function: ease;
+  -moz-transition-timing-function: ease;
+  -o-transition-timing-function: ease;
+  transition-timing-function: ease;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mike\/Sites\/thosegreenmountains\/thosegreenmountains\.github\.com\/sass\/main\.scss}line{font-family:\00003554}}
 [data-layout="enhanced"] .arrows {
   width: 34px;
   height: 20px;
@@ -790,23 +828,23 @@ a:hover {
   margin-left: -17px;
   margin-top: -10px;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mike\/Sites\/thosegreenmountains\/thosegreenmountains\.github\.com\/sass\/main\.scss}line{font-family:\00003513}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mike\/Sites\/thosegreenmountains\/thosegreenmountains\.github\.com\/sass\/main\.scss}line{font-family:\00003564}}
 [data-layout="enhanced"] .arrows.up .arrow__up {
   border-bottom-color: #6d6e70;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mike\/Sites\/thosegreenmountains\/thosegreenmountains\.github\.com\/sass\/main\.scss}line{font-family:\00003519}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mike\/Sites\/thosegreenmountains\/thosegreenmountains\.github\.com\/sass\/main\.scss}line{font-family:\00003570}}
 [data-layout="enhanced"] .arrows.right .arrow__right {
   border-left-color: #6d6e70;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mike\/Sites\/thosegreenmountains\/thosegreenmountains\.github\.com\/sass\/main\.scss}line{font-family:\00003525}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mike\/Sites\/thosegreenmountains\/thosegreenmountains\.github\.com\/sass\/main\.scss}line{font-family:\00003576}}
 [data-layout="enhanced"] .arrows.down .arrow__down {
   border-top-color: #6d6e70;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mike\/Sites\/thosegreenmountains\/thosegreenmountains\.github\.com\/sass\/main\.scss}line{font-family:\00003531}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mike\/Sites\/thosegreenmountains\/thosegreenmountains\.github\.com\/sass\/main\.scss}line{font-family:\00003582}}
 [data-layout="enhanced"] .arrows.left .arrow__left {
   border-right-color: #6d6e70;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mike\/Sites\/thosegreenmountains\/thosegreenmountains\.github\.com\/sass\/main\.scss}line{font-family:\00003537}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mike\/Sites\/thosegreenmountains\/thosegreenmountains\.github\.com\/sass\/main\.scss}line{font-family:\00003588}}
 [data-layout="enhanced"] .arrows .arrow__up, [data-layout="enhanced"] .arrows .arrow__right,
 [data-layout="enhanced"] .arrows .arrow__down, [data-layout="enhanced"] .arrows .arrow__left {
   width: 0;
@@ -819,7 +857,7 @@ a:hover {
   -o-transition: 0.5s border-color ease;
   transition: 0.5s border-color ease;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mike\/Sites\/thosegreenmountains\/thosegreenmountains\.github\.com\/sass\/main\.scss}line{font-family:\00003545}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mike\/Sites\/thosegreenmountains\/thosegreenmountains\.github\.com\/sass\/main\.scss}line{font-family:\00003596}}
 [data-layout="enhanced"] .arrows .arrow__up {
   border-bottom: 6px solid #ccc;
   border-left: 4px solid transparent;
@@ -827,7 +865,7 @@ a:hover {
   margin-top: -15px;
   margin-left: -6px;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mike\/Sites\/thosegreenmountains\/thosegreenmountains\.github\.com\/sass\/main\.scss}line{font-family:\00003552}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mike\/Sites\/thosegreenmountains\/thosegreenmountains\.github\.com\/sass\/main\.scss}line{font-family:\00003603}}
 [data-layout="enhanced"] .arrows .arrow__right {
   border-top: 4px solid transparent;
   border-bottom: 4px solid transparent;
@@ -835,7 +873,7 @@ a:hover {
   margin-top: -4px;
   margin-left: 7px;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mike\/Sites\/thosegreenmountains\/thosegreenmountains\.github\.com\/sass\/main\.scss}line{font-family:\00003559}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mike\/Sites\/thosegreenmountains\/thosegreenmountains\.github\.com\/sass\/main\.scss}line{font-family:\00003610}}
 [data-layout="enhanced"] .arrows .arrow__down {
   border-top: 6px solid #ccc;
   border-left: 4px solid transparent;
@@ -843,7 +881,7 @@ a:hover {
   margin-top: 9px;
   margin-left: -6px;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mike\/Sites\/thosegreenmountains\/thosegreenmountains\.github\.com\/sass\/main\.scss}line{font-family:\00003566}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mike\/Sites\/thosegreenmountains\/thosegreenmountains\.github\.com\/sass\/main\.scss}line{font-family:\00003617}}
 [data-layout="enhanced"] .arrows .arrow__left {
   border-top: 4px solid transparent;
   border-bottom: 4px solid transparent;
@@ -851,14 +889,14 @@ a:hover {
   margin-top: -4px;
   margin-left: -17px;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mike\/Sites\/thosegreenmountains\/thosegreenmountains\.github\.com\/sass\/main\.scss}line{font-family:\00003575}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mike\/Sites\/thosegreenmountains\/thosegreenmountains\.github\.com\/sass\/main\.scss}line{font-family:\00003626}}
 [data-layout="enhanced"] .profile {
   position: relative;
   margin-right: 130px;
   height: 54px;
   background: #ddd;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mike\/Sites\/thosegreenmountains\/thosegreenmountains\.github\.com\/sass\/main\.scss}line{font-family:\00003582}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mike\/Sites\/thosegreenmountains\/thosegreenmountains\.github\.com\/sass\/main\.scss}line{font-family:\00003633}}
 [data-layout="enhanced"] .profile__bg {
   position: absolute;
   left: 0;
@@ -866,7 +904,7 @@ a:hover {
   width: 100%;
   height: 80% !important;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mike\/Sites\/thosegreenmountains\/thosegreenmountains\.github\.com\/sass\/main\.scss}line{font-family:\00003590}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mike\/Sites\/thosegreenmountains\/thosegreenmountains\.github\.com\/sass\/main\.scss}line{font-family:\00003641}}
 [data-layout="enhanced"] .profile__indicator {
   position: absolute;
   height: 100%;
@@ -877,36 +915,36 @@ a:hover {
   -moz-transition-property: left;
   -o-transition-property: left;
   transition-property: left;
-  -webkit-transition-duration: 0.5s;
-  -moz-transition-duration: 0.5s;
-  -o-transition-duration: 0.5s;
-  transition-duration: 0.5s;
-  -webkit-transition-timing-function: ease-in-out;
-  -moz-transition-timing-function: ease-in-out;
-  -o-transition-timing-function: ease-in-out;
-  transition-timing-function: ease-in-out;
+  -webkit-transition-duration: 1s;
+  -moz-transition-duration: 1s;
+  -o-transition-duration: 1s;
+  transition-duration: 1s;
+  -webkit-transition-timing-function: ease;
+  -moz-transition-timing-function: ease;
+  -o-transition-timing-function: ease;
+  transition-timing-function: ease;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mike\/Sites\/thosegreenmountains\/thosegreenmountains\.github\.com\/sass\/main\.scss}line{font-family:\00003608}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mike\/Sites\/thosegreenmountains\/thosegreenmountains\.github\.com\/sass\/main\.scss}line{font-family:\00003659}}
 [data-layout="enhanced"].is-loading .bg * {
   -webkit-transition: none;
   -moz-transition: none;
   -o-transition: none;
   transition: none;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mike\/Sites\/thosegreenmountains\/thosegreenmountains\.github\.com\/sass\/main\.scss}line{font-family:\00003613}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mike\/Sites\/thosegreenmountains\/thosegreenmountains\.github\.com\/sass\/main\.scss}line{font-family:\00003664}}
 [data-layout="enhanced"].is-loading .bg__back,
 [data-layout="enhanced"].is-loading .bg__mid,
 [data-layout="enhanced"].is-loading .bg__fore {
   opacity: 0 !important;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mike\/Sites\/thosegreenmountains\/thosegreenmountains\.github\.com\/sass\/main\.scss}line{font-family:\00003617}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mike\/Sites\/thosegreenmountains\/thosegreenmountains\.github\.com\/sass\/main\.scss}line{font-family:\00003668}}
 [data-layout="enhanced"].is-loading .progress {
   -webkit-transition: none;
   -moz-transition: none;
   -o-transition: none;
   transition: none;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mike\/Sites\/thosegreenmountains\/thosegreenmountains\.github\.com\/sass\/main\.scss}line{font-family:\00003627}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mike\/Sites\/thosegreenmountains\/thosegreenmountains\.github\.com\/sass\/main\.scss}line{font-family:\00003678}}
 [data-layout="enhanced"].is-animated .bg * {
   -webkit-transition-property: -webkit-transform, opacity, left;
   -moz-transition-property: -moz-transform, opacity, left;
@@ -917,28 +955,28 @@ a:hover {
   -o-transition-duration: 1s;
   transition-duration: 1s;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mike\/Sites\/thosegreenmountains\/thosegreenmountains\.github\.com\/sass\/main\.scss}line{font-family:\00003634}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mike\/Sites\/thosegreenmountains\/thosegreenmountains\.github\.com\/sass\/main\.scss}line{font-family:\00003685}}
 [data-layout="enhanced"].is-animated .bg__back {
   -webkit-transition-duration: 1.5s;
   -moz-transition-duration: 1.5s;
   -o-transition-duration: 1.5s;
   transition-duration: 1.5s;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mike\/Sites\/thosegreenmountains\/thosegreenmountains\.github\.com\/sass\/main\.scss}line{font-family:\00003638}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mike\/Sites\/thosegreenmountains\/thosegreenmountains\.github\.com\/sass\/main\.scss}line{font-family:\00003689}}
 [data-layout="enhanced"].is-animated .bg__mid {
   -webkit-transition-duration: 1.25s;
   -moz-transition-duration: 1.25s;
   -o-transition-duration: 1.25s;
   transition-duration: 1.25s;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mike\/Sites\/thosegreenmountains\/thosegreenmountains\.github\.com\/sass\/main\.scss}line{font-family:\00003642}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mike\/Sites\/thosegreenmountains\/thosegreenmountains\.github\.com\/sass\/main\.scss}line{font-family:\00003693}}
 [data-layout="enhanced"].is-animated .bg__fore {
   -webkit-transition-duration: 1s;
   -moz-transition-duration: 1s;
   -o-transition-duration: 1s;
   transition-duration: 1s;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mike\/Sites\/thosegreenmountains\/thosegreenmountains\.github\.com\/sass\/main\.scss}line{font-family:\00003646}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mike\/Sites\/thosegreenmountains\/thosegreenmountains\.github\.com\/sass\/main\.scss}line{font-family:\00003697}}
 [data-layout="enhanced"].is-animated .progress {
   -webkit-transition-property: bottom, box-shadow;
   -moz-transition-property: bottom, box-shadow;
@@ -953,13 +991,17 @@ a:hover {
   -o-transition-timing-function: ease-in-out;
   transition-timing-function: ease-in-out;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mike\/Sites\/thosegreenmountains\/thosegreenmountains\.github\.com\/sass\/main\.scss}line{font-family:\00003655}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mike\/Sites\/thosegreenmountains\/thosegreenmountains\.github\.com\/sass\/main\.scss}line{font-family:\00003706}}
 [data-layout="enhanced"].has-profile-bar .progress {
   bottom: 0;
   box-shadow: 0 -5px 10px rgba(0, 0, 0, 0.2);
 }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mike\/Sites\/thosegreenmountains\/thosegreenmountains\.github\.com\/sass\/main\.scss}line{font-family:\00003710}}
+[data-layout="enhanced"].has-profile-bar .nav-arrow__down {
+  bottom: 74px;
+}
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mike\/Sites\/thosegreenmountains\/thosegreenmountains\.github\.com\/sass\/main\.scss}line{font-family:\00003667}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mike\/Sites\/thosegreenmountains\/thosegreenmountains\.github\.com\/sass\/main\.scss}line{font-family:\00003721}}
 .logo {
   -webkit-background-size: 400px;
   -moz-background-size: 400px;
@@ -967,7 +1009,7 @@ a:hover {
   background-size: 400px;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mike\/Sites\/thosegreenmountains\/thosegreenmountains\.github\.com\/sass\/main\.scss}line{font-family:\00003671}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mike\/Sites\/thosegreenmountains\/thosegreenmountains\.github\.com\/sass\/main\.scss}line{font-family:\00003725}}
 .logo__small {
   display: inline-block;
   width: 100px;
@@ -979,7 +1021,7 @@ a:hover {
   background-size: 100px;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mike\/Sites\/thosegreenmountains\/thosegreenmountains\.github\.com\/sass\/main\.scss}line{font-family:\00003679}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mike\/Sites\/thosegreenmountains\/thosegreenmountains\.github\.com\/sass\/main\.scss}line{font-family:\00003733}}
 .logo__mansfield {
   text-indent: -119988px;
   overflow: hidden;
@@ -989,7 +1031,7 @@ a:hover {
   background-position: 50% 50%;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mike\/Sites\/thosegreenmountains\/thosegreenmountains\.github\.com\/sass\/main\.scss}line{font-family:\00003683}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mike\/Sites\/thosegreenmountains\/thosegreenmountains\.github\.com\/sass\/main\.scss}line{font-family:\00003737}}
 .logo__killington {
   text-indent: -119988px;
   overflow: hidden;
@@ -999,7 +1041,7 @@ a:hover {
   background-position: 50% 50%;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mike\/Sites\/thosegreenmountains\/thosegreenmountains\.github\.com\/sass\/main\.scss}line{font-family:\00003687}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mike\/Sites\/thosegreenmountains\/thosegreenmountains\.github\.com\/sass\/main\.scss}line{font-family:\00003741}}
 .logo__ellen {
   text-indent: -119988px;
   overflow: hidden;
@@ -1009,7 +1051,7 @@ a:hover {
   background-position: 50% 50%;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mike\/Sites\/thosegreenmountains\/thosegreenmountains\.github\.com\/sass\/main\.scss}line{font-family:\00003691}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mike\/Sites\/thosegreenmountains\/thosegreenmountains\.github\.com\/sass\/main\.scss}line{font-family:\00003745}}
 .logo__camelshump {
   text-indent: -119988px;
   overflow: hidden;
@@ -1019,7 +1061,7 @@ a:hover {
   background-position: 50% 50%;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mike\/Sites\/thosegreenmountains\/thosegreenmountains\.github\.com\/sass\/main\.scss}line{font-family:\00003695}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mike\/Sites\/thosegreenmountains\/thosegreenmountains\.github\.com\/sass\/main\.scss}line{font-family:\00003749}}
 .logo__abraham {
   text-indent: -119988px;
   overflow: hidden;
@@ -1029,7 +1071,7 @@ a:hover {
   background-position: 50% 50%;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mike\/Sites\/thosegreenmountains\/thosegreenmountains\.github\.com\/sass\/main\.scss}line{font-family:\00003699}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mike\/Sites\/thosegreenmountains\/thosegreenmountains\.github\.com\/sass\/main\.scss}line{font-family:\00003753}}
 .logo__stratton {
   text-indent: -119988px;
   overflow: hidden;
@@ -1039,7 +1081,7 @@ a:hover {
   background-position: 50% 50%;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mike\/Sites\/thosegreenmountains\/thosegreenmountains\.github\.com\/sass\/main\.scss}line{font-family:\00003703}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mike\/Sites\/thosegreenmountains\/thosegreenmountains\.github\.com\/sass\/main\.scss}line{font-family:\00003757}}
 .logo__pico {
   text-indent: -119988px;
   overflow: hidden;
@@ -1049,7 +1091,7 @@ a:hover {
   background-position: 50% 50%;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mike\/Sites\/thosegreenmountains\/thosegreenmountains\.github\.com\/sass\/main\.scss}line{font-family:\00003707}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mike\/Sites\/thosegreenmountains\/thosegreenmountains\.github\.com\/sass\/main\.scss}line{font-family:\00003761}}
 .logo__jay {
   text-indent: -119988px;
   overflow: hidden;
@@ -1060,7 +1102,7 @@ a:hover {
 }
 
 @media only screen and (max-height: 1440px) and (max-width: 2560px) {
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mike\/Sites\/thosegreenmountains\/thosegreenmountains\.github\.com\/sass\/main\.scss}line{font-family:\00003718}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mike\/Sites\/thosegreenmountains\/thosegreenmountains\.github\.com\/sass\/main\.scss}line{font-family:\00003772}}
   .bg[data-level-v="1"] .bg__back {
     -webkit-transform: translate(0, 0%);
     -moz-transform: translate(0, 0%);
@@ -1068,7 +1110,7 @@ a:hover {
     -o-transform: translate(0, 0%);
     transform: translate(0, 0%);
   }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mike\/Sites\/thosegreenmountains\/thosegreenmountains\.github\.com\/sass\/main\.scss}line{font-family:\00003719}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mike\/Sites\/thosegreenmountains\/thosegreenmountains\.github\.com\/sass\/main\.scss}line{font-family:\00003773}}
   .bg[data-level-v="1"] .bg__mid {
     -webkit-transform: translate(0, 30%);
     -moz-transform: translate(0, 30%);
@@ -1076,7 +1118,7 @@ a:hover {
     -o-transform: translate(0, 30%);
     transform: translate(0, 30%);
   }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mike\/Sites\/thosegreenmountains\/thosegreenmountains\.github\.com\/sass\/main\.scss}line{font-family:\00003720}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mike\/Sites\/thosegreenmountains\/thosegreenmountains\.github\.com\/sass\/main\.scss}line{font-family:\00003774}}
   .bg[data-level-v="1"] .bg__fore {
     -webkit-transform: translate(0, 100%);
     -moz-transform: translate(0, 100%);
@@ -1084,7 +1126,7 @@ a:hover {
     -o-transform: translate(0, 100%);
     transform: translate(0, 100%);
   }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mike\/Sites\/thosegreenmountains\/thosegreenmountains\.github\.com\/sass\/main\.scss}line{font-family:\00003724}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mike\/Sites\/thosegreenmountains\/thosegreenmountains\.github\.com\/sass\/main\.scss}line{font-family:\00003778}}
   .bg[data-level-v="2"] .bg__back {
     -webkit-transform: translate(0, 5%);
     -moz-transform: translate(0, 5%);
@@ -1092,7 +1134,7 @@ a:hover {
     -o-transform: translate(0, 5%);
     transform: translate(0, 5%);
   }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mike\/Sites\/thosegreenmountains\/thosegreenmountains\.github\.com\/sass\/main\.scss}line{font-family:\00003725}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mike\/Sites\/thosegreenmountains\/thosegreenmountains\.github\.com\/sass\/main\.scss}line{font-family:\00003779}}
   .bg[data-level-v="2"] .bg__mid {
     -webkit-transform: translate(0, 15%);
     -moz-transform: translate(0, 15%);
@@ -1100,7 +1142,7 @@ a:hover {
     -o-transform: translate(0, 15%);
     transform: translate(0, 15%);
   }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mike\/Sites\/thosegreenmountains\/thosegreenmountains\.github\.com\/sass\/main\.scss}line{font-family:\00003726}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mike\/Sites\/thosegreenmountains\/thosegreenmountains\.github\.com\/sass\/main\.scss}line{font-family:\00003780}}
   .bg[data-level-v="2"] .bg__fore {
     -webkit-transform: translate(0, 100%);
     -moz-transform: translate(0, 100%);
@@ -1108,7 +1150,7 @@ a:hover {
     -o-transform: translate(0, 100%);
     transform: translate(0, 100%);
   }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mike\/Sites\/thosegreenmountains\/thosegreenmountains\.github\.com\/sass\/main\.scss}line{font-family:\00003730}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mike\/Sites\/thosegreenmountains\/thosegreenmountains\.github\.com\/sass\/main\.scss}line{font-family:\00003784}}
   .bg[data-level-v="3"] .bg__back {
     -webkit-transform: translate(0, 8%);
     -moz-transform: translate(0, 8%);
@@ -1116,7 +1158,7 @@ a:hover {
     -o-transform: translate(0, 8%);
     transform: translate(0, 8%);
   }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mike\/Sites\/thosegreenmountains\/thosegreenmountains\.github\.com\/sass\/main\.scss}line{font-family:\00003731}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mike\/Sites\/thosegreenmountains\/thosegreenmountains\.github\.com\/sass\/main\.scss}line{font-family:\00003785}}
   .bg[data-level-v="3"] .bg__mid {
     -webkit-transform: translate(0, 8%);
     -moz-transform: translate(0, 8%);
@@ -1124,7 +1166,7 @@ a:hover {
     -o-transform: translate(0, 8%);
     transform: translate(0, 8%);
   }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mike\/Sites\/thosegreenmountains\/thosegreenmountains\.github\.com\/sass\/main\.scss}line{font-family:\00003732}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mike\/Sites\/thosegreenmountains\/thosegreenmountains\.github\.com\/sass\/main\.scss}line{font-family:\00003786}}
   .bg[data-level-v="3"] .bg__fore {
     -webkit-transform: translate(0, 0%);
     -moz-transform: translate(0, 0%);
@@ -1134,7 +1176,7 @@ a:hover {
   }
 }
 @media only screen and (max-height: 1080px) and (max-width: 1920px) {
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mike\/Sites\/thosegreenmountains\/thosegreenmountains\.github\.com\/sass\/main\.scss}line{font-family:\00003744}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mike\/Sites\/thosegreenmountains\/thosegreenmountains\.github\.com\/sass\/main\.scss}line{font-family:\00003798}}
   .bg[data-level-v="1"] .bg__back {
     -webkit-transform: translate(0, 25%);
     -moz-transform: translate(0, 25%);
@@ -1142,7 +1184,7 @@ a:hover {
     -o-transform: translate(0, 25%);
     transform: translate(0, 25%);
   }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mike\/Sites\/thosegreenmountains\/thosegreenmountains\.github\.com\/sass\/main\.scss}line{font-family:\00003745}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mike\/Sites\/thosegreenmountains\/thosegreenmountains\.github\.com\/sass\/main\.scss}line{font-family:\00003799}}
   .bg[data-level-v="1"] .bg__mid {
     -webkit-transform: translate(0, 40%);
     -moz-transform: translate(0, 40%);
@@ -1150,7 +1192,7 @@ a:hover {
     -o-transform: translate(0, 40%);
     transform: translate(0, 40%);
   }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mike\/Sites\/thosegreenmountains\/thosegreenmountains\.github\.com\/sass\/main\.scss}line{font-family:\00003746}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mike\/Sites\/thosegreenmountains\/thosegreenmountains\.github\.com\/sass\/main\.scss}line{font-family:\00003800}}
   .bg[data-level-v="1"] .bg__fore {
     -webkit-transform: translate(0, 100%);
     -moz-transform: translate(0, 100%);
@@ -1158,7 +1200,7 @@ a:hover {
     -o-transform: translate(0, 100%);
     transform: translate(0, 100%);
   }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mike\/Sites\/thosegreenmountains\/thosegreenmountains\.github\.com\/sass\/main\.scss}line{font-family:\00003750}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mike\/Sites\/thosegreenmountains\/thosegreenmountains\.github\.com\/sass\/main\.scss}line{font-family:\00003804}}
   .bg[data-level-v="2"] .bg__back {
     -webkit-transform: translate(0, 27%);
     -moz-transform: translate(0, 27%);
@@ -1166,7 +1208,7 @@ a:hover {
     -o-transform: translate(0, 27%);
     transform: translate(0, 27%);
   }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mike\/Sites\/thosegreenmountains\/thosegreenmountains\.github\.com\/sass\/main\.scss}line{font-family:\00003751}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mike\/Sites\/thosegreenmountains\/thosegreenmountains\.github\.com\/sass\/main\.scss}line{font-family:\00003805}}
   .bg[data-level-v="2"] .bg__mid {
     -webkit-transform: translate(0, 30%);
     -moz-transform: translate(0, 30%);
@@ -1174,7 +1216,7 @@ a:hover {
     -o-transform: translate(0, 30%);
     transform: translate(0, 30%);
   }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mike\/Sites\/thosegreenmountains\/thosegreenmountains\.github\.com\/sass\/main\.scss}line{font-family:\00003752}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mike\/Sites\/thosegreenmountains\/thosegreenmountains\.github\.com\/sass\/main\.scss}line{font-family:\00003806}}
   .bg[data-level-v="2"] .bg__fore {
     -webkit-transform: translate(0, 100%);
     -moz-transform: translate(0, 100%);
@@ -1182,7 +1224,7 @@ a:hover {
     -o-transform: translate(0, 100%);
     transform: translate(0, 100%);
   }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mike\/Sites\/thosegreenmountains\/thosegreenmountains\.github\.com\/sass\/main\.scss}line{font-family:\00003756}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mike\/Sites\/thosegreenmountains\/thosegreenmountains\.github\.com\/sass\/main\.scss}line{font-family:\00003810}}
   .bg[data-level-v="3"] .bg__back {
     -webkit-transform: translate(0, 28%);
     -moz-transform: translate(0, 28%);
@@ -1190,7 +1232,7 @@ a:hover {
     -o-transform: translate(0, 28%);
     transform: translate(0, 28%);
   }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mike\/Sites\/thosegreenmountains\/thosegreenmountains\.github\.com\/sass\/main\.scss}line{font-family:\00003757}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mike\/Sites\/thosegreenmountains\/thosegreenmountains\.github\.com\/sass\/main\.scss}line{font-family:\00003811}}
   .bg[data-level-v="3"] .bg__mid {
     -webkit-transform: translate(0, 22%);
     -moz-transform: translate(0, 22%);
@@ -1198,7 +1240,7 @@ a:hover {
     -o-transform: translate(0, 22%);
     transform: translate(0, 22%);
   }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mike\/Sites\/thosegreenmountains\/thosegreenmountains\.github\.com\/sass\/main\.scss}line{font-family:\00003758}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mike\/Sites\/thosegreenmountains\/thosegreenmountains\.github\.com\/sass\/main\.scss}line{font-family:\00003812}}
   .bg[data-level-v="3"] .bg__fore {
     -webkit-transform: translate(0, 25%);
     -moz-transform: translate(0, 25%);
@@ -1208,7 +1250,7 @@ a:hover {
   }
 }
 @media only screen and (max-height: 1024px) and (max-width: 1280px) {
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mike\/Sites\/thosegreenmountains\/thosegreenmountains\.github\.com\/sass\/main\.scss}line{font-family:\00003770}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mike\/Sites\/thosegreenmountains\/thosegreenmountains\.github\.com\/sass\/main\.scss}line{font-family:\00003824}}
   .bg[data-level-v="1"] .bg__back {
     -webkit-transform: translate(0, 38%);
     -moz-transform: translate(0, 38%);
@@ -1216,7 +1258,7 @@ a:hover {
     -o-transform: translate(0, 38%);
     transform: translate(0, 38%);
   }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mike\/Sites\/thosegreenmountains\/thosegreenmountains\.github\.com\/sass\/main\.scss}line{font-family:\00003771}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mike\/Sites\/thosegreenmountains\/thosegreenmountains\.github\.com\/sass\/main\.scss}line{font-family:\00003825}}
   .bg[data-level-v="1"] .bg__mid {
     -webkit-transform: translate(0, 70%);
     -moz-transform: translate(0, 70%);
@@ -1224,7 +1266,7 @@ a:hover {
     -o-transform: translate(0, 70%);
     transform: translate(0, 70%);
   }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mike\/Sites\/thosegreenmountains\/thosegreenmountains\.github\.com\/sass\/main\.scss}line{font-family:\00003772}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mike\/Sites\/thosegreenmountains\/thosegreenmountains\.github\.com\/sass\/main\.scss}line{font-family:\00003826}}
   .bg[data-level-v="1"] .bg__fore {
     -webkit-transform: translate(0, 100%);
     -moz-transform: translate(0, 100%);
@@ -1232,7 +1274,7 @@ a:hover {
     -o-transform: translate(0, 100%);
     transform: translate(0, 100%);
   }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mike\/Sites\/thosegreenmountains\/thosegreenmountains\.github\.com\/sass\/main\.scss}line{font-family:\00003776}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mike\/Sites\/thosegreenmountains\/thosegreenmountains\.github\.com\/sass\/main\.scss}line{font-family:\00003830}}
   .bg[data-level-v="2"] .bg__back {
     -webkit-transform: translate(0, 40%);
     -moz-transform: translate(0, 40%);
@@ -1240,7 +1282,7 @@ a:hover {
     -o-transform: translate(0, 40%);
     transform: translate(0, 40%);
   }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mike\/Sites\/thosegreenmountains\/thosegreenmountains\.github\.com\/sass\/main\.scss}line{font-family:\00003777}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mike\/Sites\/thosegreenmountains\/thosegreenmountains\.github\.com\/sass\/main\.scss}line{font-family:\00003831}}
   .bg[data-level-v="2"] .bg__mid {
     -webkit-transform: translate(0, 30%);
     -moz-transform: translate(0, 30%);
@@ -1248,7 +1290,7 @@ a:hover {
     -o-transform: translate(0, 30%);
     transform: translate(0, 30%);
   }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mike\/Sites\/thosegreenmountains\/thosegreenmountains\.github\.com\/sass\/main\.scss}line{font-family:\00003778}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mike\/Sites\/thosegreenmountains\/thosegreenmountains\.github\.com\/sass\/main\.scss}line{font-family:\00003832}}
   .bg[data-level-v="2"] .bg__fore {
     -webkit-transform: translate(0, 100%);
     -moz-transform: translate(0, 100%);
@@ -1256,7 +1298,7 @@ a:hover {
     -o-transform: translate(0, 100%);
     transform: translate(0, 100%);
   }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mike\/Sites\/thosegreenmountains\/thosegreenmountains\.github\.com\/sass\/main\.scss}line{font-family:\00003782}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mike\/Sites\/thosegreenmountains\/thosegreenmountains\.github\.com\/sass\/main\.scss}line{font-family:\00003836}}
   .bg[data-level-v="3"] .bg__back {
     -webkit-transform: translate(0, 41%);
     -moz-transform: translate(0, 41%);
@@ -1264,7 +1306,7 @@ a:hover {
     -o-transform: translate(0, 41%);
     transform: translate(0, 41%);
   }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mike\/Sites\/thosegreenmountains\/thosegreenmountains\.github\.com\/sass\/main\.scss}line{font-family:\00003783}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mike\/Sites\/thosegreenmountains\/thosegreenmountains\.github\.com\/sass\/main\.scss}line{font-family:\00003837}}
   .bg[data-level-v="3"] .bg__mid {
     -webkit-transform: translate(0, 28%);
     -moz-transform: translate(0, 28%);
@@ -1272,7 +1314,7 @@ a:hover {
     -o-transform: translate(0, 28%);
     transform: translate(0, 28%);
   }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mike\/Sites\/thosegreenmountains\/thosegreenmountains\.github\.com\/sass\/main\.scss}line{font-family:\00003784}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mike\/Sites\/thosegreenmountains\/thosegreenmountains\.github\.com\/sass\/main\.scss}line{font-family:\00003838}}
   .bg[data-level-v="3"] .bg__fore {
     -webkit-transform: translate(0, 30%);
     -moz-transform: translate(0, 30%);
@@ -1282,7 +1324,7 @@ a:hover {
   }
 }
 @media only screen and (max-height: 768px) and (max-width: 1024px) {
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mike\/Sites\/thosegreenmountains\/thosegreenmountains\.github\.com\/sass\/main\.scss}line{font-family:\00003795}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mike\/Sites\/thosegreenmountains\/thosegreenmountains\.github\.com\/sass\/main\.scss}line{font-family:\00003849}}
   .bg[data-level-v="1"] .bg__back {
     -webkit-transform: translate(0, 52%);
     -moz-transform: translate(0, 52%);
@@ -1290,7 +1332,7 @@ a:hover {
     -o-transform: translate(0, 52%);
     transform: translate(0, 52%);
   }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mike\/Sites\/thosegreenmountains\/thosegreenmountains\.github\.com\/sass\/main\.scss}line{font-family:\00003796}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mike\/Sites\/thosegreenmountains\/thosegreenmountains\.github\.com\/sass\/main\.scss}line{font-family:\00003850}}
   .bg[data-level-v="1"] .bg__mid {
     -webkit-transform: translate(0, 78%);
     -moz-transform: translate(0, 78%);
@@ -1298,7 +1340,7 @@ a:hover {
     -o-transform: translate(0, 78%);
     transform: translate(0, 78%);
   }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mike\/Sites\/thosegreenmountains\/thosegreenmountains\.github\.com\/sass\/main\.scss}line{font-family:\00003797}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mike\/Sites\/thosegreenmountains\/thosegreenmountains\.github\.com\/sass\/main\.scss}line{font-family:\00003851}}
   .bg[data-level-v="1"] .bg__fore {
     -webkit-transform: translate(0, 100%);
     -moz-transform: translate(0, 100%);
@@ -1306,7 +1348,7 @@ a:hover {
     -o-transform: translate(0, 100%);
     transform: translate(0, 100%);
   }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mike\/Sites\/thosegreenmountains\/thosegreenmountains\.github\.com\/sass\/main\.scss}line{font-family:\00003801}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mike\/Sites\/thosegreenmountains\/thosegreenmountains\.github\.com\/sass\/main\.scss}line{font-family:\00003855}}
   .bg[data-level-v="2"] .bg__back {
     -webkit-transform: translate(0, 54%);
     -moz-transform: translate(0, 54%);
@@ -1314,7 +1356,7 @@ a:hover {
     -o-transform: translate(0, 54%);
     transform: translate(0, 54%);
   }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mike\/Sites\/thosegreenmountains\/thosegreenmountains\.github\.com\/sass\/main\.scss}line{font-family:\00003802}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mike\/Sites\/thosegreenmountains\/thosegreenmountains\.github\.com\/sass\/main\.scss}line{font-family:\00003856}}
   .bg[data-level-v="2"] .bg__mid {
     -webkit-transform: translate(0, 55%);
     -moz-transform: translate(0, 55%);
@@ -1322,7 +1364,7 @@ a:hover {
     -o-transform: translate(0, 55%);
     transform: translate(0, 55%);
   }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mike\/Sites\/thosegreenmountains\/thosegreenmountains\.github\.com\/sass\/main\.scss}line{font-family:\00003803}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mike\/Sites\/thosegreenmountains\/thosegreenmountains\.github\.com\/sass\/main\.scss}line{font-family:\00003857}}
   .bg[data-level-v="2"] .bg__fore {
     -webkit-transform: translate(0, 100%);
     -moz-transform: translate(0, 100%);
@@ -1330,7 +1372,7 @@ a:hover {
     -o-transform: translate(0, 100%);
     transform: translate(0, 100%);
   }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mike\/Sites\/thosegreenmountains\/thosegreenmountains\.github\.com\/sass\/main\.scss}line{font-family:\00003807}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mike\/Sites\/thosegreenmountains\/thosegreenmountains\.github\.com\/sass\/main\.scss}line{font-family:\00003861}}
   .bg[data-level-v="3"] .bg__back {
     -webkit-transform: translate(0, 55%);
     -moz-transform: translate(0, 55%);
@@ -1338,7 +1380,7 @@ a:hover {
     -o-transform: translate(0, 55%);
     transform: translate(0, 55%);
   }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mike\/Sites\/thosegreenmountains\/thosegreenmountains\.github\.com\/sass\/main\.scss}line{font-family:\00003808}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mike\/Sites\/thosegreenmountains\/thosegreenmountains\.github\.com\/sass\/main\.scss}line{font-family:\00003862}}
   .bg[data-level-v="3"] .bg__mid {
     -webkit-transform: translate(0, 45%);
     -moz-transform: translate(0, 45%);
@@ -1346,7 +1388,7 @@ a:hover {
     -o-transform: translate(0, 45%);
     transform: translate(0, 45%);
   }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mike\/Sites\/thosegreenmountains\/thosegreenmountains\.github\.com\/sass\/main\.scss}line{font-family:\00003809}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mike\/Sites\/thosegreenmountains\/thosegreenmountains\.github\.com\/sass\/main\.scss}line{font-family:\00003863}}
   .bg[data-level-v="3"] .bg__fore {
     -webkit-transform: translate(0, 45%);
     -moz-transform: translate(0, 45%);
@@ -1356,7 +1398,7 @@ a:hover {
   }
 }
 @media only screen and (min-height: 1440px) and (min-width: 2560px) {
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mike\/Sites\/thosegreenmountains\/thosegreenmountains\.github\.com\/sass\/main\.scss}line{font-family:\00003821}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mike\/Sites\/thosegreenmountains\/thosegreenmountains\.github\.com\/sass\/main\.scss}line{font-family:\00003875}}
   .bg[data-level-v="1"] .bg__back {
     -webkit-transform: translate(0, 0%);
     -moz-transform: translate(0, 0%);
@@ -1364,7 +1406,7 @@ a:hover {
     -o-transform: translate(0, 0%);
     transform: translate(0, 0%);
   }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mike\/Sites\/thosegreenmountains\/thosegreenmountains\.github\.com\/sass\/main\.scss}line{font-family:\00003822}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mike\/Sites\/thosegreenmountains\/thosegreenmountains\.github\.com\/sass\/main\.scss}line{font-family:\00003876}}
   .bg[data-level-v="1"] .bg__mid {
     -webkit-transform: translate(0, 30%);
     -moz-transform: translate(0, 30%);
@@ -1372,7 +1414,7 @@ a:hover {
     -o-transform: translate(0, 30%);
     transform: translate(0, 30%);
   }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mike\/Sites\/thosegreenmountains\/thosegreenmountains\.github\.com\/sass\/main\.scss}line{font-family:\00003823}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mike\/Sites\/thosegreenmountains\/thosegreenmountains\.github\.com\/sass\/main\.scss}line{font-family:\00003877}}
   .bg[data-level-v="1"] .bg__fore {
     -webkit-transform: translate(0, 100%);
     -moz-transform: translate(0, 100%);
@@ -1380,7 +1422,7 @@ a:hover {
     -o-transform: translate(0, 100%);
     transform: translate(0, 100%);
   }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mike\/Sites\/thosegreenmountains\/thosegreenmountains\.github\.com\/sass\/main\.scss}line{font-family:\00003827}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mike\/Sites\/thosegreenmountains\/thosegreenmountains\.github\.com\/sass\/main\.scss}line{font-family:\00003881}}
   .bg[data-level-v="2"] .bg__back {
     -webkit-transform: translate(0, 5%);
     -moz-transform: translate(0, 5%);
@@ -1388,7 +1430,7 @@ a:hover {
     -o-transform: translate(0, 5%);
     transform: translate(0, 5%);
   }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mike\/Sites\/thosegreenmountains\/thosegreenmountains\.github\.com\/sass\/main\.scss}line{font-family:\00003828}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mike\/Sites\/thosegreenmountains\/thosegreenmountains\.github\.com\/sass\/main\.scss}line{font-family:\00003882}}
   .bg[data-level-v="2"] .bg__mid {
     -webkit-transform: translate(0, 15%);
     -moz-transform: translate(0, 15%);
@@ -1396,7 +1438,7 @@ a:hover {
     -o-transform: translate(0, 15%);
     transform: translate(0, 15%);
   }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mike\/Sites\/thosegreenmountains\/thosegreenmountains\.github\.com\/sass\/main\.scss}line{font-family:\00003829}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mike\/Sites\/thosegreenmountains\/thosegreenmountains\.github\.com\/sass\/main\.scss}line{font-family:\00003883}}
   .bg[data-level-v="2"] .bg__fore {
     -webkit-transform: translate(0, 100%);
     -moz-transform: translate(0, 100%);
@@ -1404,7 +1446,7 @@ a:hover {
     -o-transform: translate(0, 100%);
     transform: translate(0, 100%);
   }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mike\/Sites\/thosegreenmountains\/thosegreenmountains\.github\.com\/sass\/main\.scss}line{font-family:\00003833}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mike\/Sites\/thosegreenmountains\/thosegreenmountains\.github\.com\/sass\/main\.scss}line{font-family:\00003887}}
   .bg[data-level-v="3"] .bg__back {
     -webkit-transform: translate(0, 8%);
     -moz-transform: translate(0, 8%);
@@ -1412,7 +1454,7 @@ a:hover {
     -o-transform: translate(0, 8%);
     transform: translate(0, 8%);
   }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mike\/Sites\/thosegreenmountains\/thosegreenmountains\.github\.com\/sass\/main\.scss}line{font-family:\00003834}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mike\/Sites\/thosegreenmountains\/thosegreenmountains\.github\.com\/sass\/main\.scss}line{font-family:\00003888}}
   .bg[data-level-v="3"] .bg__mid {
     -webkit-transform: translate(0, 8%);
     -moz-transform: translate(0, 8%);
@@ -1420,7 +1462,7 @@ a:hover {
     -o-transform: translate(0, 8%);
     transform: translate(0, 8%);
   }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mike\/Sites\/thosegreenmountains\/thosegreenmountains\.github\.com\/sass\/main\.scss}line{font-family:\00003835}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/mike\/Sites\/thosegreenmountains\/thosegreenmountains\.github\.com\/sass\/main\.scss}line{font-family:\00003889}}
   .bg[data-level-v="3"] .bg__fore {
     -webkit-transform: translate(0, 0%);
     -moz-transform: translate(0, 0%);
