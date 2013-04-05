@@ -23,6 +23,7 @@
     // Cache some DOM elements common to both
     // layouts.
 
+    this.$html = $("html");
     this.$body = $("body");
 
     // If the browser supports both css transforms
@@ -72,7 +73,7 @@
     this.$body.removeClass(isPreloadingClass);
 
     // Set the layout type on the body element
-    this.$body.data('layout', 'enhanced');
+    this.$html.data('layout', 'enhanced');
 
     // Let the mountains fade in, and then
     // enable animations for them.
@@ -121,7 +122,7 @@
   function initSimple() {
 
     // Set the layout type on the body element
-    this.$body.data('layout', 'simple');
+    this.$html.data('layout', 'simple');
 
   }
 
