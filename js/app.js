@@ -17,6 +17,7 @@
   var navArrows = {};
   var navArrowOpacity = 0.5;
   var showArrows = false;
+  var delayedIntro = null;
 
   TGM.init = function() {
 
@@ -25,6 +26,7 @@
 
     this.$html = $("html");
     this.$body = $("body");
+    this.$window = $(window);
 
     // If the browser supports both css transforms
     // and transitions, we'll init the full featured
@@ -112,7 +114,7 @@
     slideTo( 0, 0 );
 
     // Show the nav arrows after a delay
-    setTimeout(function() {
+    delayedIntro = setTimeout(function() {
       showArrows = true;
       slideTo(0, 0);
     }, 6000);
@@ -130,6 +132,11 @@
   }
 
   function slideTo( level, slide ) {
+
+    if ( delayedIntro ) {
+      showArrows = true;
+      clearTimeout( delayedIntro );
+    }
 
     var up = level > 0;
     var right = (slide < slideCount - 1 && level === 1);
@@ -482,7 +489,10 @@
     });
     
     // Show the info box
-    TGM.$info.css({'opacity': 0, 'top': '-10px'}).show().animate({
+    TGM.$info.css({
+      'opacity': 0, 
+      'top': '-10px'
+    }).show().animate({
       opacity: 1,
       top: '0px'
     }, 500, 'ease');

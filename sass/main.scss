@@ -136,6 +136,10 @@ a {
   .details__heading {
   
     margin-top: 0;
+    margin-right: -20px;
+    margin-left: -20px;
+    padding-right: 20px;
+    padding-left: 20px;
     background-color: rgba(255, 255, 255, 0.2);
     @include padding-leader;
     @include padding-trailer;
@@ -158,6 +162,7 @@ a {
 
   .overlay__content {
     text-align: center;
+    box-shadow: 0 -1px 1px -1px darken($base-color, 10%);
     border-top: 1px solid lighten($base-color, 5%);
     @include adjust-font-size-to(14px);
     @include padding-leader;
@@ -462,22 +467,41 @@ a {
   .overlay__content {
     display: none;
     position: absolute;
+    width: 700px;
     padding: 20px;
     top: 0;
-    max-width: 800px;
+    left: 50%;
+    margin-left: -350px;
     background: white;
     z-index: 200;
     color: #666;
     box-shadow: 0 0 40px rgba(0, 0, 0, 0.1);
+    border: 1px solid rgba(0, 0, 0, 0.1);
+
+    p {
+      &:last-of-type {
+        margin-bottom: 0;
+      }
+    }
   }
 
   .overlay__hide {
     position: absolute;
-    text-indent: 200%;
-    overflow: hidden;
-    white-space: nowrap;
     width: 20px;
     height: 20px;
+    top: 0;
+    right: 0;
+    font-size: 10px;
+    text-align: center;
+    line-height: 20px;
+    font-family: sans-serif;
+    font-style: normal;
+    cursor: pointer;
+    color: #ccc;
+
+    &:hover {
+      color: #333;
+    }
   }
 
   //////////////////////////////////////
