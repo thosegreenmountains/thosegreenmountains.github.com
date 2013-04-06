@@ -124,6 +124,9 @@
     // Set the layout type on the body element
     this.$html.data('layout', 'simple');
 
+    // Remove the size attributes on the logo images
+    $('.details__heading img').attr({ width: '', height: ''});
+
   }
 
   function slideTo( level, slide ) {

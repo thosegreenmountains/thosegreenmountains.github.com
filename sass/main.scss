@@ -32,10 +32,6 @@ body {
   font-family: 'Cutive', serif;
   position: relative;
   -webkit-font-smoothing: antialiased;
-  @include background(
-    url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAMAAABg3Am1AAAAYFBMVEV/f39/f39JSUmqqqptbW3m5uYzMzOpqalwcHC2traUlJQnJyfBwcFsbGxJSUmlpaVgYGCAgIBqamoAAAAAAAD///8AAAAAAAAAAAD///////////////8AAAD///8AAAA2VInhAAAAIHRSTlMKAgcDBwcFBAgICQYFCQgHAwsFBQMGAQYCBQQCAQQDAOGbKK4AAAT0SURBVEgNBcEJgqMwDABBb0IgQIABn7Il9f9/uVVhlib/TgKxSv1p/krXlSJxMXTzb+vj7OmxITf5jhquPiJ1oThyK5mjq2enMm2ldBHyaLUmjtRMIXyIqRCR8iMaaYxcjOH8/vC4rjh7vyc/SGM0CNzoszciHbbE4L6TJKcYdv1AHjrIWfAPIkFHoQC9f99AijBDNedzGy0jWS+/Uro00SHoDWwDTBHuXoELCdhPGoWIxFqJvOQ7hBjyveU6EiyZ5KhX0qrAla9mY6LYAYXcqRkkcI/A4J4T2RtxDE/9UmISkcJfEyvUMaoB5B7IS88CpDryhfM81gXaKbu2ZYWSvpzR5smMQuAk5/Q3kuzc0OnDJ0qjp8Gl3FjZdWF55qnWIwc40WyiCVGgQzsMwFpO1LrJQmnJJj8oaCi9dWecR6nWZ5cb/OaB9ruGyfOVqsrViYc/MIXB72Lm2z2tO22xUVcKmnNk6OYLeIlPK9ho7WyB1VjvqRz1XSpcMsqm9M4Y5TaWf+s7JaohM0sfI/SXVMzJe1OHJnh7jwkYgMdv3PKdGdDGmlgCfKFyLfUWqP/60nXKwLA2qGSsNeiFrKQphmSWXxQ0CXJB4UIu6AGgNgEavORcpOA9YLzyx5dkkP7q4Cn9HjxTifjGjf+A3OwHVv8IZO9wNQRmQe9KbJ+FaJ3iwHc02JxYq/RB8D4UJ8dv3IhIZzRviUbcWsqaJTcxAEzBw5e2PAiGlqDOsDf5A7knVntw2HOig94lQUD3JZ2veaH2jGFq4v1UFj54lZiadEadGhWSBMggRear365+swEYb+p1jgha/4lGQA6JzxZ+zC5/HPCCYfjRIYrrt92lJs4MDWjHqKN2QueXefNVp0FrFbttnhq7qYJdaDpOX/bVDpwrwJ2pkx3v+XNzni7ZZi9JRulT1XY6Fco9d8qhvINCZwIno8xSl7UeuI3+3Vn/XTA2KK8O3QqE/cIZecIq5ZM7KFDbTV56lkiB16fzLeMp/SrB/1ajz3EADybf/QuIRDop7uQeez+5smHl4goXumOlD2PoXLFN3Y3YAc6OzxdgJHJessTgTePwCJjoAX1nEJdjqU/fgQa0yEnFMUqA9G+ioAyYyffRgB3n312YUpOqSqJP1HNWggSJ7AjR0hg0IuQrX8PjrFBYrjwXqXBuHfcADKy/h8HedvkrZsglvGRAgtYEzQu0C/0SkHKiI1008pxKLHPjYErN683e/oRzpfOwdN/ZwjC5AXoVhl0DNh5VLeiX0aDUN0uKXM530Vf44rEPiSRn/dd0KsmkOmMZxDoSTDj3J9/2prUzVOOvpF96qAbmDeEEplZL9wFxK1A+VHhUCKl/0PSQs+lAZrKVXo+xuAFXHKX/IxPR/Sn+0pAG2cGhxS86sjXS56wzLb+vNFneKdkTjMX59dA7ynE49wxPG2Ra0zWXOqk8Ax5sNGAkBpnwMRw+bfBKSfDIaX6QhBWSA3dPDeDJ6zIRSkZlBfjBtW8Mqns+JwOoha8dXqhULKa6h6RyHq2PceC8b2G7mlYgqW6c1QDQuka86GyBGYuH44WD7ul1dohdT1kx38pDK70PLu8XqoRBgwT02tc2cH1ozTCK3egCyq7AhdL9DBu9269nl2+b67Gt3DjGjMngFEr/QOW4miJew3s4QG12OAB9gvqXROLTBG962kVrWUkN5T/LM9TJitqLyQAAAABJRU5ErkJggg==),
-    linear-gradient($body-gradient)
-  );
 }
 
 #{headings()} {
@@ -72,12 +68,7 @@ a {
 //////////////////////////////////////
 
 [data-layout="simple"] {
-  
-  #header {
-    h1 {
-      margin-top: -307px;
-    }
-  }
+
   // Force the HTML and BODY
   // elements to only be 100%
   &, body {
@@ -89,6 +80,13 @@ a {
 
   body {
     padding: 0 20px;
+    background-color: $base-color;
+  }
+
+  #header {
+    h1 {
+      margin-top: -307px;
+    }
   }
 
   // Hide the navigation, the page is
@@ -116,14 +114,37 @@ a {
   .overlay__hide {
     display: none;
   }
+  
+  // Separate logos visually
+  .details {
+    // border-top: 1px solid darken($base-color, 10%);
+    // border-bottom: 1px solid lighten($base-color, 10%);
+    // @include padding-leader;
+    // @include padding-trailer;
+
+    &:first-child {
+      border-top: none;
+    }
+  }
+
+  .details__content {
+    max-width: 400px;
+    margin: 0 auto;
+  }
 
   // Logos
   .details__heading {
+  
+    margin-top: 0;
+    background-color: rgba(255, 255, 255, 0.2);
+    @include padding-leader;
+    @include padding-trailer;
 
     img {
       width: 100%;
+      max-width: 400px;
       display: block;
-      margin: 0;
+      margin: 0 auto;
     }
 
     span {
@@ -133,6 +154,20 @@ a {
 
   }
 
+  // Footer
+
+  .overlay__content {
+    text-align: center;
+    border-top: 1px solid lighten($base-color, 5%);
+    @include adjust-font-size-to(14px);
+    @include padding-leader;
+    @include padding-trailer;
+
+    p {
+      margin: 0;
+    }
+  }
+
 }
 
 //////////////////////////////////////
@@ -140,7 +175,13 @@ a {
 //////////////////////////////////////
 
 [data-layout="enhanced"] {
-
+  
+  body {
+    @include background(
+      url('data:image/png;base64,#{$noise}'),
+      linear-gradient($body-gradient)
+    );
+  }
   // Logomark
 
   body::after {
@@ -374,7 +415,7 @@ a {
   .details__wrapper {
     padding: 40px;
     width: 90%;
-    max-width: 800px;
+    max-width: 700px;
     min-height: 100%;
     margin: 0 auto;
     background: rgba(0, 0, 0, 0.2);
@@ -959,5 +1000,33 @@ a {
     }
 
   }
+
+}
+
+@media only screen and (max-width: 800px) {
+
+  [data-layout="enhanced"] {
+
+    body {
+      font-size: 80%;
+    }
+
+    .details__wrapper {
+      padding: 30px;
+    }
+
+    .details__heading {
+      
+      img {
+        width: 80px;
+        height: 80px;
+      }
+    }
+
+  }
+
+}
+
+@media only screen and (max-width: 650px) {
 
 }
