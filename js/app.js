@@ -14,10 +14,11 @@
   var widthBreakpoint = 650;
   var isPreloadingClass = 'is-loading';
   var hasProfileClass = 'has-profile-bar';
-  var navArrows = {};
+  var arrows = {};
   var navArrowOpacity = 0.5;
   var showArrows = false;
   var delayedIntro = null;
+  var maxBodyHeight = null;
 
   TGM.init = function() {
 
@@ -42,7 +43,7 @@
       initSimple.call(this);
     }
 
-  }
+  };
 
   ////////////////////////////////
   // PRIVATE METHODS
@@ -60,16 +61,16 @@
     this.$navigation = $("#navigation");
     this.$levels = $(".level");
     this.$slides = $('.slide');
-    this.$arrows = $("#arrows");
-    this.$navArrows = $("#nav-arrows i");
+    this.$arrows = $("#nav-arrows i");
     this.$bg = $("#bg");
     this.$info = $("#info");
     this.$logomark = $("body::after");
+    this.maxBodyHeight = parseInt(this.$body.css('max-height'), 10);
 
-    navArrows.up = $(".nav-arrow__up");
-    navArrows.right = $(".nav-arrow__right");
-    navArrows.down = $(".nav-arrow__down");
-    navArrows.left = $(".nav-arrow__left");
+    arrows.up = $(".nav-arrow__up");
+    arrows.right = $(".nav-arrow__right");
+    arrows.down = $(".nav-arrow__down");
+    arrows.left = $(".nav-arrow__left");
 
     // Remove preload class from body
     this.$body.removeClass(isPreloadingClass);
@@ -105,7 +106,7 @@
 
     // Trigger navigation when you click
     // on nav arrows
-    this.$navArrows.on('click', arrowClicked);
+    this.$arrows.on('click', arrowClicked);
 
     // Sets the initial layout
     windowResized();
@@ -148,7 +149,7 @@
 
     // Adjust parallax
     setParallax( 'vertical', level );
- 
+
     if ( level !== 0 ) {
       setParallax( 'horizontal', slide );
     }
@@ -168,13 +169,13 @@
 
   function setSelectorClass( selector, index ) {
 
-    var $elements = $(selector)
-    var index = Math.max(Math.min(index, $elements.length - 1), 0);
+    var $elements = $(selector);
+    index = Math.max(Math.min(index, $elements.length - 1), 0);
 
     if ($elements.length) {
 
       $elements.each(function(i, el) {
-          
+
         // Remove all classes
         $(this).removeClass('past present future');
 
@@ -199,7 +200,7 @@
   }
 
   function navigateLeft() {
-    
+
     switch ( getCurrentLevelName() ) {
 
       case "navigation":
@@ -309,7 +310,7 @@
 
       case 'horizontal':
         level = Math.max(Math.min(level, slideCount), 0);
-        TGM.$bg.data('level-h', level + 1)
+        TGM.$bg.data('level-h', level + 1);
         break;
 
     }
@@ -318,29 +319,24 @@
 
   function setArrows( up, right, down, left ) {
 
-    $.each(navArrows, function(index, arrow) {
+    $.each(arrows, function(index, arrow) {
       arrow.css('opacity', 0);
     });
-    TGM.$arrows.removeClass('up right down left');
 
     if (up) {
-      TGM.$arrows.addClass('up');
-      navArrows.up.css('opacity', navArrowOpacity);
+      arrows.up.css('opacity', navArrowOpacity);
     }
-    
+
     if (right) {
-      TGM.$arrows.addClass('right');
-      navArrows.right.css('opacity', navArrowOpacity);
+      arrows.right.css('opacity', navArrowOpacity);
     }
-    
+
     if (down) {
-      TGM.$arrows.addClass('down');
-      navArrows.down.css('opacity', navArrowOpacity);
+      arrows.down.css('opacity', navArrowOpacity);
     }
-    
-    if (left) { 
-      TGM.$arrows.addClass('left');
-      navArrows.left.css('opacity', navArrowOpacity);
+
+    if (left) {
+      arrows.left.css('opacity', navArrowOpacity);
     }
 
   }
@@ -431,8 +427,6 @@
   function arrowClicked( e ) {
 
     e.preventDefault();
-    console.log(e);
-    console.log($(this).data('direction'));
 
     switch ($(this).data('direction')) {
 
@@ -460,6 +454,7 @@
   function windowResized( e ) {
     setupProgressBar();
     setProgress( slideIndex );
+    centerBodyElement();
   }
 
   // Show information panel
@@ -472,7 +467,7 @@
     if (!TGM.$blackout) {
       TGM.$blackout = $('<div class="overlay" />');
     }
-    
+
     // When you click on the overlay itself, trigger
     // the hideInfo event. 
     TGM.$blackout.on('click', function(e) {
@@ -487,10 +482,10 @@
     TGM.$info.find('.js-hide-info').on('click', function(e) {
       $(document).trigger('hideInfo');
     });
-    
+
     // Show the info box
     TGM.$info.css({
-      'opacity': 0, 
+      'opacity': 0,
       'top': '-10px'
     }).show().animate({
       opacity: 1,
@@ -501,7 +496,7 @@
 
   // Hide the information panel
   function hideInfo(e) {
-    
+
     e.preventDefault();
 
     // Remove the click event for the whiteout and
@@ -527,6 +522,16 @@
     return currentLevel.attr('id');
   }
 
+  function centerBodyElement() {
+    if ( TGM.$window.height() > TGM.maxBodyHeight ) {
+      TGM.$body.css({
+        'margin-top' : (TGM.$window.height() - TGM.maxBodyHeight) / 2
+      });
+    } else {
+      TGM.$body.css({ 'margin-top' : '0' });
+    }
+  }
+
 })(window.TGM = window.TGM || {}, Zepto);
 
 $(function() {
@@ -547,7 +552,7 @@ $(function() {
   $.each( images, function(i, img) {
 
     var image = $('<img />').attr('src', '/images/' + img);
-    
+
     image.on( 'load', function() {
       preloaded--;
       if (preloaded === 0) {

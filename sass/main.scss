@@ -21,11 +21,12 @@
 }
 
 html, body {
-  margin: 0;
+  margin: 0 auto;
   padding: 0;
   width: 100%;
+  max-width: 1920px;
   height: 100%;
-  overflow: hidden;
+  max-height: 1080px;
 }
 
 body {
@@ -74,7 +75,6 @@ a {
   &, body {
     width: auto;
     height: auto;
-    overflow: visible;
     color: #444;
   }
 
@@ -182,6 +182,15 @@ a {
 [data-layout="enhanced"] {
   
   body {
+    background: #f1f1f1;
+  }
+
+  #wrapper {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    position: relative;
+
     @include background(
       url('data:image/png;base64,#{$noise}'),
       linear-gradient($body-gradient)
@@ -351,6 +360,9 @@ a {
     left: 50%;
     margin-left: -($intro-width/2);
     color: white;
+    cursor: default;
+    -webkit-user-select: none;
+    user-select: none;
     -webkit-animation-delay: 3s;
     -moz-animation-delay: 3s;
     -o-animation-delay: 3s;
@@ -454,7 +466,7 @@ a {
 
   .overlay {
     // @extend %animation;
-    position: fixed;
+    position: absolute;
     left: 0;
     top: 0;
     right: 0;
@@ -491,9 +503,9 @@ a {
     height: 20px;
     top: 0;
     right: 0;
-    font-size: 10px;
+    font-size: 15px;
     text-align: center;
-    line-height: 20px;
+    line-height: 18px;
     font-family: sans-serif;
     font-style: normal;
     cursor: pointer;
@@ -512,7 +524,7 @@ a {
     
     height: 100%;
     width: 100%;
-    position: fixed;
+    position: absolute;
     top: 0;
     left: 0;
     text-indent: -150%;
@@ -598,7 +610,7 @@ a {
 
   .progress {
 
-    position: fixed;
+    position: absolute;
     bottom: -$progress-bar-height;
     left: 0;
     width: 100%;
@@ -619,7 +631,7 @@ a {
     li {
       text-align: center;
       display: inline-block;
-      width: 50%;
+      width: 100%;
       height: $progress-bar-height;
       margin-right: -4px;
       vertical-align: middle;
@@ -856,7 +868,7 @@ a {
     }
 
     .progress {
-      @include transition-property(bottom box-shadow);
+      @include transition-property(bottom);
       @include transition-duration(0.5s);
       @include transition-timing-function(ease-in-out);
     }
@@ -879,8 +891,23 @@ a {
 
 @media only screen and (max-height: 1440px) and (max-width: 2560px) {
   
+  @include body-label('1440x2560');
+
   [data-layout="enhanced"] {
-  
+    
+    // Adjust vertical position of intro text
+    // and intro arrow
+
+    .intro {
+      bottom: 35%;
+    }
+
+    .nav-arrow__down {
+      bottom: 30%;
+    }
+
+    // Adjust background positions
+
     .bg {
       
       &[data-level-v="1"] {
@@ -908,8 +935,23 @@ a {
 }
 
 @media only screen and (max-height: 1080px) and (max-width: 1920px) {
-    
+  
+  @include body-label('1080x1920');
+
   [data-layout="enhanced"] {
+      
+    // Adjust vertical position of intro text
+    // and intro arrow
+
+    .intro {
+      bottom: 27%;
+    }
+
+    .nav-arrow__down {
+      bottom: 21%;
+    }
+
+    // Adjust background positions
 
     .bg {
       
@@ -939,6 +981,8 @@ a {
 
 @media only screen and (max-height: 1024px) and (max-width: 1280px) {
   
+  @include body-label('1024x1280');
+
   [data-layout="enhanced"] {
 
     .bg {
@@ -969,6 +1013,8 @@ a {
 
 @media only screen and (max-height: 768px) and (max-width: 1024px) {
   
+  @include body-label('768x1024');
+
   [data-layout="enhanced"] {
 
     .bg {
@@ -997,37 +1043,9 @@ a {
 
 }
 
-@media only screen and (min-height: 1440px) and (min-width: 2560px) {
-    
-  [data-layout="enhanced"] {
-
-    .bg {
-
-      &[data-level-v="1"] {
-        .bg__back { @include transform(translate(0, 0%)); }
-        .bg__mid  { @include transform(translate(0, 30%)); }
-        .bg__fore { @include transform(translate(0, 100%)); }
-      }
-
-      &[data-level-v="2"] {
-        .bg__back { @include transform(translate(0, 5%)); }
-        .bg__mid  { @include transform(translate(0, 15%)); }
-        .bg__fore { @include transform(translate(0, 100%)); }
-      }
-
-      &[data-level-v="3"]{
-        .bg__back { @include transform(translate(0, 8%)); }
-        .bg__mid  { @include transform(translate(0, 8%)); }
-        .bg__fore { @include transform(translate(0, 0%)); }
-      }
-
-    }
-
-  }
-
-}
-
 @media only screen and (max-width: 800px) {
+
+  @include body-label('max 800');
 
   [data-layout="enhanced"] {
 
@@ -1051,6 +1069,10 @@ a {
 
 }
 
-@media only screen and (max-width: 650px) {
+@media only screen and (min-height: 1080px), only screen and (min-width: 1920px) {
+  
+  #wrapper {
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+  }
 
 }
