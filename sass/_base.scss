@@ -1,0 +1,95 @@
+//////////////////////////////////////
+// Config
+//////////////////////////////////////
+
+ @import 'config';
+
+//////////////////////////////////////
+// Fonts
+//////////////////////////////////////
+
+@import url(http://fonts.googleapis.com/css?family=Raleway:800|Cutive);
+
+//////////////////////////////////////
+// Global
+//////////////////////////////////////
+
+* {
+  @include box-sizing(border-box);
+}
+
+html, body {
+  margin: 0 auto;
+  padding: 0;
+  width: 100%;
+  max-width: 1920px;
+  height: 100%;
+  max-height: 1080px;
+}
+
+body {
+  font-family: 'Cutive', serif;
+  position: relative;
+  -webkit-font-smoothing: antialiased;
+  opacity: 1;
+  @include transition(0.25s opacity ease);
+}
+
+#{headings()} {
+  font-family: 'Raleway', sans-serif;
+  font-weight: 800;
+}
+
+p {
+  margin: 0;
+  @include trailer;
+}
+
+a {
+  @include link-colors(lighten(#333, 5%), lighten(#333, 10%));
+}
+
+.enhanced-text {
+  display: none;
+}
+
+//////////////////////////////////////
+// COMMON LAYOUT
+//////////////////////////////////////
+
+#header {
+
+  h1 {
+    margin: -297px auto 0;
+    width: 200px;
+    height: 594px;
+    @include replace-text('logo.svg');
+  }
+
+}
+
+.overlay__content {
+
+  p {
+    &:last-of-type {
+      margin-bottom: 0;
+    }
+  }
+
+  ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    @include trailer(0.5);
+  }
+
+  li {
+    &::before { content: '- '; }
+  }
+
+  img {
+    display: block;
+    margin: 0 auto;
+  }
+
+}

@@ -12,7 +12,6 @@
   var parallaxCount = 3;
   var lastNav = 0;
   var widthBreakpoint = 650;
-  var isPreloadingClass = 'is-loading';
   var hasProfileClass = 'has-profile-bar';
   var arrows = {};
   var navArrowOpacity = 0.5;
@@ -72,12 +71,6 @@
     arrows.down = $(".nav-arrow__down");
     arrows.left = $(".nav-arrow__left");
 
-    // Remove preload class from body
-    this.$body.removeClass(isPreloadingClass);
-
-    // Set the layout type on the body element
-    this.$html.data('layout', 'enhanced');
-
     // Let the mountains fade in, and then
     // enable animations for them.
     setTimeout( function() {
@@ -123,9 +116,6 @@
   }
 
   function initSimple() {
-
-    // Set the layout type on the body element
-    this.$html.data('layout', 'simple');
 
     // Remove the size attributes on the logo images
     $('.details__heading img').attr({ width: '', height: ''});
@@ -365,11 +355,13 @@
       TGM.$profileBG.appendTo(TGM.$profile);
     }
 
-    TGM.$profileBG.css({
-      width: TGM.$profile.width(),
-      height: TGM.$profile.height()
-    });
-    TGM.$indicator.width( TGM.$profile.width() / slideCount );
+    setTimeout(function() {
+      TGM.$profileBG.css({
+        width: TGM.$profile.width(),
+        height: TGM.$profile.height()
+      });
+      TGM.$indicator.width( TGM.$profile.width() / slideCount );
+    }, 1000);
 
   }
 
@@ -485,11 +477,9 @@
 
     // Show the info box
     TGM.$info.css({
-      'opacity': 0,
-      'top': '-10px'
+      'opacity': 0
     }).show().animate({
-      opacity: 1,
-      top: '0px'
+      opacity: 1
     }, 500, 'ease');
 
   }
@@ -510,8 +500,7 @@
     // Hide the info box itself and remove the click
     // event from its hide link
     TGM.$info.animate({
-      opacity: 0,
-      top: '-10px'
+      opacity: 0
     }, 500, 'ease', function() {
       $(this).hide();
     }).find('.js-hide-info').off('click');
@@ -535,6 +524,20 @@
 })(window.TGM = window.TGM || {}, Zepto);
 
 $(function() {
+
+  // Append correct stylesheet
+  var stylesheet = document.createElement('link');
+  stylesheet.rel = "stylesheet";
+  
+  if (Modernizr.csstransforms && Modernizr.csstransitions && $('body').width() > 650) {
+    stylesheet.href = "/css/enhanced.min.css";
+  } else {
+    stylesheet.href = "/css/simple.min.css";
+  }
+
+  $('head').append(stylesheet);
+
+  // Preload images
 
   var images = [
     'arrow-down.svg',

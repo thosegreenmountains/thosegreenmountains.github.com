@@ -27,9 +27,13 @@ module.exports = function( grunt ) {
     },
 
     cssmin: {
-      minify: {
-        src: ['css/main.css'],
-        dest: 'css/<%= pkg.name %>.min.css'
+      simple: {
+        src: ['css/simple.css'],
+        dest: 'css/simple.min.css'
+      },
+      enhanced: {
+        src: ['css/enhanced.css'],
+        dest: 'css/enhanced.min.css'
       }
     },
 
@@ -43,8 +47,22 @@ module.exports = function( grunt ) {
     },
 
     watch: {
-      files: ['js/app.js', 'css/main.css'],
-      tasks: ['default']
+      assets: {
+        files: ['js/app.js', '**/*.css'],
+        tasks: ['default']
+      },
+      sass: {
+        files: ['**/*.scss'],
+        tasks: ['compass']
+      }
+    },
+
+    compass: {
+      dist: {
+        options: {
+          config: 'config.rb'
+        }
+      }
     }
 
   });
@@ -55,6 +73,7 @@ module.exports = function( grunt ) {
   grunt.loadNpmTasks('grunt-contrib-uglify');
   grunt.loadNpmTasks('grunt-contrib-watch');
   grunt.loadNpmTasks('grunt-contrib-cssmin');
+  grunt.loadNpmTasks('grunt-contrib-compass');
 
   // Setup default task
   grunt.registerTask('default', ['jshint', 'concat', 'cssmin', 'uglify']);
