@@ -193,7 +193,7 @@ body::after {
   max-width: 90%;
   
   position: absolute;
-  bottom: 234px;
+  bottom: 224px;
   left: 50%;
 
   margin: 0 auto;
@@ -455,8 +455,8 @@ body::after {
 
 .bg__back {
   z-index: 1;
-  height: image-height('bg/backOptimized.png');
-  background-image: image-url('bg/backOptimized.png');
+  height: image-height($bg-back-image);
+  background-image: image-url($bg-back-image);
   background-size: cover;
   opacity: 0.4;
   width: 116%;
@@ -465,8 +465,8 @@ body::after {
 
 .bg__mid {
   z-index: 2;
-  height: image-height('bg/mid.png');
-  background-image: image-url('bg/mid.png');
+  height: image-height($bg-mid-image);
+  background-image: image-url($bg-mid-image);
   background-size: cover;
   opacity: 0.6;
   width: 121%;
@@ -475,8 +475,8 @@ body::after {
 
 .bg__fore {
   z-index: 3;
-  height: image-height('bg/fore.png');
-  background-image: image-url('bg/fore.png');
+  height: image-height($bg-fore-image);
+  background-image: image-url($bg-fore-image);
   background-size: cover;
   opacity: 0.7;
 }
@@ -703,11 +703,11 @@ body::after {
   }
 
   .intro {
-    bottom: 294px;
+    bottom: 264px;
   }
 
   .nav-arrow__down {
-    bottom: 234px;
+    bottom: 224px;
   }
 
   .details__wrapper {
@@ -724,7 +724,7 @@ body::after {
 
 }
 
-@media only screen and (min-height: 1080px) and (min-width: 1920px) {
+@media only screen and (min-height: 1080px), only screen and (min-width: 1920px) {
   
   body {
     position: absolute;
