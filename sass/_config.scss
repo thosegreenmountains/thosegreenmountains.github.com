@@ -10,6 +10,10 @@ $base-color: rgb(157, 216, 255);
 $body-gradient: ($base-color, lighten($base-color, 15%));
 $link-color: darken($base-color, 60%);
 
+// Preload
+$preload-image: 'preload.svg';
+$preload-image-size: 100px;
+
 // Logo
 $logo-small-width: 100px;
 

@@ -1,9 +1,17 @@
 //////////////////////////////////////
+// Config
+//////////////////////////////////////
+
+@import 'config';
+
+//////////////////////////////////////
 // ENHANCED LAYOUT
 //////////////////////////////////////
 
-@import 'base';
-@include establish-baseline;
+html, body {
+  width: 100%;
+  height: 100%;
+}
 
 body {
   background: #f1f1f1;
@@ -171,33 +179,32 @@ body::after {
 
   h1 {
     @extend %fadeInDown;
-    -webkit-animation-delay: 1s;
-    -moz-animation-delay: 1s;
-    -o-animation-delay: 1s;
-    animation-delay: 1s;
+    @include animation-delay(1s);
   }
 
 }
 
 .intro {
   @extend %fadeInUp;
-  width: $intro-width;
-  max-width: 90%;
-  margin: 0 auto;
-  position: absolute;
-  bottom: ($nav-arrow-edge-offset * 2) + $nav-arrow-size;
-  left: 50%;
-  margin-left: -($intro-width/2);
   color: white;
   cursor: default;
-  -webkit-user-select: none;
-  user-select: none;
-  -webkit-animation-delay: 3s;
-  -moz-animation-delay: 3s;
-  -o-animation-delay: 3s;
-  animation-delay: 3s;
+  
+  width: $intro-width;
+  max-width: 90%;
+  
+  position: absolute;
+  bottom: 234px;
+  left: 50%;
 
-  a { @include link-colors(white, #ddd); }
+  margin: 0 auto;
+  margin-left: -($intro-width/2);
+  
+  @include user-select(none);
+  @include animation-delay(3s);
+
+  a {
+    @include link-colors(white, #ddd);
+  }
 
 }
 
@@ -393,6 +400,26 @@ body::after {
     @include transition-duration(6s);
   }
 
+  // Vertical levels
+  
+  &[data-level-v="1"] {
+    .bg__back { @include transform(translate(0, 25%)); }
+    .bg__mid  { @include transform(translate(0, 40%)); }
+    .bg__fore { @include transform(translate(0, 99%)); }
+  }
+
+  &[data-level-v="2"] {
+    .bg__back { @include transform(translate(0, 27%)); }
+    .bg__mid  { @include transform(translate(0, 30%)); }
+    .bg__fore { @include transform(translate(0, 99%)); }
+  }
+
+  &[data-level-v="3"]{
+    .bg__back { @include transform(translate(0, 28%)); }
+    .bg__mid  { @include transform(translate(0, 22%)); }
+    .bg__fore { @include transform(translate(0, 25%)); }
+  }
+
   // Horizontal levels
 
   &[data-level-h="2"] {
@@ -424,41 +451,12 @@ body::after {
     .bg__mid { left: -21%; }
   }
 
-  &[data-level-h="2"] {
-    .bg__back { @include translateX(-9%); }
-    .bg__mid { @include translateX(-3%); }
-  }
-  &[data-level-h="3"] {
-    .bg__back { @include translateX(-10%); }
-    .bg__mid { @include translateX(-6%); }
-  }
-  &[data-level-h="4"] {
-    .bg__back { @include translateX(-11%); }
-    .bg__mid { @include translateX(-9%); }
-  }
-  &[data-level-h="5"] {
-    .bg__back { @include translateX(-12%); }
-    .bg__mid { @include translateX(-12%); }
-  }
-  &[data-level-h="6"] {
-    .bg__back { @include translateX(-13%); }
-    .bg__mid { @include translateX(-15%); }
-  }
-  &[data-level-h="7"] {
-    .bg__back { @include translateX(-14%); }
-    .bg__mid { @include translateX(-18%); }
-  }
-  &[data-level-h="8"] {
-    .bg__back { @include translateX(-15%); } 
-    .bg__mid { @include translateX(-21%); }
-  }
-
 }
 
 .bg__back {
   z-index: 1;
-  height: image-height('bg/back.png');
-  background-image: image-url('bg/back.png');
+  height: image-height('bg/backOptimized.png');
+  background-image: image-url('bg/backOptimized.png');
   background-size: cover;
   opacity: 0.4;
   width: 116%;
@@ -563,7 +561,7 @@ body::after {
 }
 
 .nav-arrow__down {
-  bottom: $nav-arrow-edge-offset;
+  bottom: 184px;
   left: 50%;
   margin-left: $nav-arrow-size / -2;
   @include background(image-url('arrow-down.svg') center center no-repeat);
@@ -639,19 +637,7 @@ body::after {
 
 .is-loading {
   
-  .bg {
-    * { @include transition(none); }
-  }
-  
-  .bg__back,
-  .bg__mid,
-  .bg__fore {
-    opacity: 0 !important;
-  }
-
-  .progress {
-    @include transition(none);
-  }
+  * { @include transition(none); }
 
 }
 
@@ -698,140 +684,30 @@ body::after {
 
 // Responsive
 
-@media only screen and (max-height: 1440px) and (max-width: 2560px) {
-  
-  // Adjust vertical position of intro text
-  // and intro arrow
-
-  .intro {
-    bottom: 35%;
-  }
-
-  .nav-arrow__down {
-    bottom: 30%;
-  }
-
-  // Adjust background positions
-
-  .bg {
-    
-    &[data-level-v="1"] {
-      .bg__back { @include transform(translate(0, 0%)); }
-      .bg__mid  { @include transform(translate(0, 30%)); }
-      .bg__fore { @include transform(translate(0, 99%)); }
-    }
-
-    &[data-level-v="2"] {
-      .bg__back { @include transform(translate(0, 5%)); }
-      .bg__mid  { @include transform(translate(0, 15%)); }
-      .bg__fore { @include transform(translate(0, 99%)); }
-    }
-
-    &[data-level-v="3"]{
-      .bg__back { @include transform(translate(0, 8%)); }
-      .bg__mid  { @include transform(translate(0, 8%)); }
-      .bg__fore { @include transform(translate(0, 0%)); }
-    }
-
-  }
-
-}
-
 @media only screen and (max-height: 1080px) and (max-width: 1920px) {
-  
-  // Adjust vertical position of intro text
-  // and intro arrow
-
-  .intro {
-    bottom: 24%;
-  }
-
-  .nav-arrow__down {
-    bottom: 16%;
-  }
-
-  // Adjust background positions
-
-  .bg {
-    
-    &[data-level-v="1"] {
-      .bg__back { @include transform(translate(0, 25%)); }
-      .bg__mid  { @include transform(translate(0, 40%)); }
-      .bg__fore { @include transform(translate(0, 99%)); }
-    }
-
-    &[data-level-v="2"] {
-      .bg__back { @include transform(translate(0, 27%)); }
-      .bg__mid  { @include transform(translate(0, 30%)); }
-      .bg__fore { @include transform(translate(0, 99%)); }
-    }
-
-    &[data-level-v="3"]{
-      .bg__back { @include transform(translate(0, 28%)); }
-      .bg__mid  { @include transform(translate(0, 22%)); }
-      .bg__fore { @include transform(translate(0, 25%)); }
-    }
-
-  }
 
 }
 
 @media only screen and (max-height: 1024px) and (max-width: 1280px) {
-  
-  .bg {
-    
-    &[data-level-v="1"] {
-      .bg__back { @include transform(translate(0, 38%)); }
-      .bg__mid  { @include transform(translate(0, 70%)); }
-      .bg__fore { @include transform(translate(0, 99%)); }
-    }
-
-    &[data-level-v="2"] {
-      .bg__back { @include transform(translate(0, 40%)); }
-      .bg__mid  { @include transform(translate(0, 30%)); }
-      .bg__fore { @include transform(translate(0, 99%)); }
-    }
-
-    &[data-level-v="3"]{
-      .bg__back { @include transform(translate(0, 41%)); }
-      .bg__mid  { @include transform(translate(0, 28%)); }
-      .bg__fore { @include transform(translate(0, 30%)); }
-    }
-
-  }
 
 }
 
 @media only screen and (max-height: 768px) and (max-width: 1024px) {
-  
-  .bg {
-    
-    &[data-level-v="1"] {
-      .bg__back { @include transform(translate(0, 52%)); }
-      .bg__mid  { @include transform(translate(0, 78%)); }
-      .bg__fore { @include transform(translate(0, 99%)); }
-    }
-
-    &[data-level-v="2"] {
-      .bg__back { @include transform(translate(0, 54%)); }
-      .bg__mid  { @include transform(translate(0, 55%)); }
-      .bg__fore { @include transform(translate(0, 99%)); }
-    }
-
-    &[data-level-v="3"]{
-      .bg__back { @include transform(translate(0, 55%)); }
-      .bg__mid  { @include transform(translate(0, 45%)); }
-      .bg__fore { @include transform(translate(0, 45%)); }
-    }
-
-  }
 
 }
 
 @media only screen and (max-width: 800px) {
 
   #mountains {
-    font-size: 80%;
+    font-size: 90%;
+  }
+
+  .intro {
+    bottom: 294px;
+  }
+
+  .nav-arrow__down {
+    bottom: 234px;
   }
 
   .details__wrapper {
@@ -848,10 +724,20 @@ body::after {
 
 }
 
-@media only screen and (min-height: 1080px), only screen and (min-width: 1920px) {
+@media only screen and (min-height: 1080px) and (min-width: 1920px) {
   
+  body {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-top: -540px;
+    margin-left: -960px;
+    max-height: 1080px;
+    max-width: 1920px;
+  }
+
   #wrapper {
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
   }
-
+  
 }

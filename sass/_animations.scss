@@ -1,53 +1,15 @@
 // Pulse
 
 %pulse {
-  -webkit-animation-name: pulse;
-  -moz-animation-name: pulse;
-  -o-animation-name: pulse;
-  animation-name: pulse;
-
-  -webkit-animation-duration: 1s;
-  -moz-animation-duration: 1s;
-  -o-animation-duration: 1s;
-  animation-duration: 1s;
-
-  -webkit-animation-timing-function: ease-in-out;
-  -moz-animation-timing-function: ease-in-out;
-  -o-animation-timing-function: ease-in-out;
-  animation-timing-function: ease-in-out;
-
-  -webkit-animation-iteration-count: infinite;
-  -moz-animation-iteration-count: infinite;
-  -o-animation-iteration-count: infinite;
-  animation-iteration-count: infinite;
-
-  -webkit-animation-fill-mode: both;
-  -moz-animation-fill-mode: both;
-  -o-animation-fill-mode: both;
-  animation-fill-mode: both;
-
-  -webkit-animation-direction: alternate;
-  -moz-animation-direction: alternate;
-  -o-animation-direction: alternate;
-  animation-direction: alternate;
+  @include animation-name(pulse);
+  @include animation-duration(1s);
+  @include animation-timing-function(ease-in-out);
+  @include animation-iteration-count(infinite);
+  @include animation-fill-mode(both);
+  @include animation-direction(alternate);
 }
 
-@-webkit-keyframes pulse {
-  0%    { opacity: 0.3; }
-  100%  { opacity: 0.9; }
-}
-
-@-moz-keyframes pulse {
-  0%    { opacity: 0.3; }
-  100%  { opacity: 0.9; }
-}
-
-@-o-keyframes pulse {
-  0%    { opacity: 0.3; }
-  100%  { opacity: 0.9; }
-}
-
-@keyframes pulse {
+@include keyframes(pulse) {
   0%    { opacity: 0.3; }
   100%  { opacity: 0.9; }
 }
@@ -55,143 +17,41 @@
 // Fade In (Down)
 
 %fadeInDown {
-  -webkit-animation-name: fadeInDown;
-  -moz-animation-name: fadeInDown;
-  -o-animation-name: fadeInDown;
-  animation-name: fadeInDown;
-
-  -webkit-animation-duration: 2s;
-  -moz-animation-duration: 2s;
-  -o-animation-duration: 2s;
-  animation-duration: 2s;
-
-  -webkit-animation-timing-function: ease-in-out;
-  -moz-animation-timing-function: ease-in-out;
-  -o-animation-timing-function: ease-in-out;
-  animation-timing-function: ease-in-out;
-
-  -webkit-animation-fill-mode: both;
-  -moz-animation-fill-mode: both;
-  -o-animation-fill-mode: both;
-  animation-fill-mode: both;
+  @include animation-name(fadeInDown);
+  @include animation-duration(2s);
+  @include animation-timing-function(ease-in-out);
+  @include animation-fill-mode(both);
 }
 
-@-webkit-keyframes fadeInDown {
+@include keyframes(fadeInDown) {
   0% {
     opacity: 0;
-    -webkit-transform: translateY(-20px);
+    @include transform(translateY(-20px));
   }
 
   100% {
     opacity: 1;
-    -webkit-transform: translateY(0);
-  }
-}
-
-@-moz-keyframes fadeInDown {
-  0% {
-    opacity: 0;
-    -moz-transform: translateY(-20px);
-  }
-
-  100% {
-    opacity: 1;
-    -moz-transform: translateY(0);
-  }
-}
-
-@-o-keyframes fadeInDown {
-  0% {
-    opacity: 0;
-    -o-transform: translateY(-20px);
-  }
-
-  100% {
-    opacity: 1;
-    -o-transform: translateY(0);
-  }
-}
-
-@keyframes fadeInDown {
-  0% {
-    opacity: 0;
-    transform: translateY(-20px);
-  }
-
-  100% {
-    opacity: 1;
-    transform: translateY(0);
+    @include transform(translateY(0));
   }
 }
 
 // Fade In (Up)
 
 %fadeInUp {
-  -webkit-animation-name: fadeInUp;
-  -moz-animation-name: fadeInUp;
-  -o-animation-name: fadeInUp;
-  animation-name: fadeInUp;
-
-  -webkit-animation-duration: 2s;
-  -moz-animation-duration: 2s;
-  -o-animation-duration: 2s;
-  animation-duration: 2s;
-
-  -webkit-animation-timing-function: ease-in-out;
-  -moz-animation-timing-function: ease-in-out;
-  -o-animation-timing-function: ease-in-out;
-  animation-timing-function: ease-in-out;
-
-  -webkit-animation-fill-mode: both;
-  -moz-animation-fill-mode: both;
-  -o-animation-fill-mode: both;
-  animation-fill-mode: both;
+  @include animation-name(fadeInUp);
+  @include animation-duration(2s);
+  @include animation-timing-function(ease-in-out);
+  @include animation-fill-mode(both);
 }
 
-@-webkit-keyframes fadeInUp {
+@include keyframes(fadeInUp) {
   0% {
     opacity: 0;
-    -webkit-transform: translateY(20px);
+    @include transform(translateY(20px));
   }
 
   100% {
     opacity: 1;
-    -webkit-transform: translateY(0);
-  }
-}
-
-@-moz-keyframes fadeInUp {
-  0% {
-    opacity: 0;
-    -moz-transform: translateY(20px);
-  }
-
-  100% {
-    opacity: 1;
-    -moz-transform: translateY(0);
-  }
-}
-
-@-o-keyframes fadeInUp {
-  0% {
-    opacity: 0;
-    -o-transform: translateY(20px);
-  }
-
-  100% {
-    opacity: 1;
-    -o-transform: translateY(0);
-  }
-}
-
-@keyframes fadeInUp {
-  0% {
-    opacity: 0;
-    transform: translateY(20px);
-  }
-
-  100% {
-    opacity: 1;
-    transform: translateY(0);
+    @include transform(translateY(0));
   }
 }

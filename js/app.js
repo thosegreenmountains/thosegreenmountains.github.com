@@ -21,6 +21,12 @@
 
   TGM.init = function() {
 
+    var $preloader = $('.preload');
+    $preloader.css('opacity', 0);
+    setTimeout(function() {
+      $preloader.remove();
+    }, 1000);
+
     // Cache some DOM elements common to both
     // layouts.
 
@@ -75,7 +81,7 @@
     // enable animations for them.
     setTimeout( function() {
       TGM.$body.addClass('is-animated');
-    }, 100 );
+    }, 500 );
 
     // Count the elements in the DOM. Allows us
     // to easily add/remove pieces.
@@ -446,7 +452,6 @@
   function windowResized( e ) {
     setupProgressBar();
     setProgress( slideIndex );
-    centerBodyElement();
   }
 
   // Show information panel
@@ -511,34 +516,11 @@
     return currentLevel.attr('id');
   }
 
-  function centerBodyElement() {
-    if ( TGM.$window.height() > TGM.maxBodyHeight ) {
-      TGM.$body.css({
-        'margin-top' : (TGM.$window.height() - TGM.maxBodyHeight) / 2
-      });
-    } else {
-      TGM.$body.css({ 'margin-top' : '0' });
-    }
-  }
-
 })(window.TGM = window.TGM || {}, Zepto);
 
 $(function() {
 
-  // Append correct stylesheet
-  var stylesheet = document.createElement('link');
-  stylesheet.rel = "stylesheet";
-  
-  if (Modernizr.csstransforms && Modernizr.csstransitions && $('body').width() > 650) {
-    stylesheet.href = "/css/enhanced.min.css";
-  } else {
-    stylesheet.href = "/css/simple.min.css";
-  }
-
-  $('head').append(stylesheet);
-
-  // Preload images
-
+  // The array of images to preload
   var images = [
     'arrow-down.svg',
     'noise.png',
@@ -550,19 +532,53 @@ $(function() {
     'bg/mid.png'
   ];
 
-  var preloaded = images.length;
+  // Keep track of which resources are loaded.
+  var imagesToLoad = images.length;
+  var stylesheetIsLoaded = false;
+  
+  // Preload the stylesheet
+  var href = null;
+  var stylesheet = null;
 
+  if (Modernizr.csstransforms && Modernizr.csstransitions && $('body').width() > 650) {
+    href = "/css/enhanced.min.css";
+  } else {
+    href = "/css/simple.min.css";
+  }
+
+  stylesheet = $('<link />').attr({
+    rel: "stylesheet",
+    media: "print",
+    href: href
+  }).appendTo("head").on('load', function() {
+    stylesheetIsLoaded = true;
+    preloadCheck();
+  });
+
+  // Preload images
   $.each( images, function(i, img) {
 
     var image = $('<img />').attr('src', '/images/' + img);
 
     image.on( 'load', function() {
-      preloaded--;
-      if (preloaded === 0) {
-        TGM.init();
-      }
+      imagesToLoad--;
+      preloadCheck();
     });
 
   });
+
+  var preloadCheck = function() {
+    if (imagesToLoad === 0 && stylesheetIsLoaded === true) {
+      
+      $("#wrapper").show();
+      $('body').removeClass('is-loading');
+      stylesheet.attr('media', '');
+      
+      setTimeout(function() {
+        TGM.init();
+      }, 500);
+
+    }
+  };
 
 });

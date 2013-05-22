@@ -27,6 +27,10 @@ module.exports = function( grunt ) {
     },
 
     cssmin: {
+      base: {
+        src: ['css/base.css'],
+        dest: 'css/base.min.css'
+      },
       simple: {
         src: ['css/simple.css'],
         dest: 'css/simple.min.css'

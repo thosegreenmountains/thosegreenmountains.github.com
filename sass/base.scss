@@ -2,17 +2,13 @@
 // Config
 //////////////////////////////////////
 
- @import 'config';
-
-//////////////////////////////////////
-// Fonts
-//////////////////////////////////////
-
-@import url(http://fonts.googleapis.com/css?family=Raleway:800|Cutive);
+@import 'config';
 
 //////////////////////////////////////
 // Global
 //////////////////////////////////////
+
+@include establish-baseline;
 
 * {
   @include box-sizing(border-box);
@@ -21,17 +17,12 @@
 html, body {
   margin: 0 auto;
   padding: 0;
-  width: 100%;
-  max-width: 1920px;
-  height: 100%;
-  max-height: 1080px;
 }
 
 body {
   font-family: 'Cutive', serif;
-  position: relative;
+  background-color: rgb(157, 216, 255);
   -webkit-font-smoothing: antialiased;
-  opacity: 1;
   @include transition(0.25s opacity ease);
 }
 
@@ -62,10 +53,40 @@ a {
   h1 {
     margin: -297px auto 0;
     width: 200px;
-    height: 594px;
+    height: 564px;
     @include replace-text('logo.svg');
+    background-position: center bottom;
   }
 
+}
+
+.preload {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  z-index: 9000;
+  background-color: rgb(157, 216, 255);
+  cursor: default;
+  @include adjust-font-size-to(16px);
+  @include user-select(none);
+  @include transition(1s opacity ease);
+}
+
+.preload__text {
+  font-family: 'Arial Black', arial, sans-serif;
+  color: white;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-top: -($preload-image-size / 2);
+  margin-left: -($preload-image-size / 2);
+  text-align: center;
+  width: $preload-image-size;
+  height: 0;
+  padding-top: $preload-image-size + 10px;
+  @include background(image-url($preload-image) center top no-repeat);
 }
 
 .overlay__content {
