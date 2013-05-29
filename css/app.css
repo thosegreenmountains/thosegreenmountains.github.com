@@ -242,27 +242,38 @@ html, body {
 /* line 22, ../sass/app.scss */
 body {
   font-family: 'Cutive', serif;
-  background-color: #9dd8ff;
   -webkit-font-smoothing: antialiased;
-  -webkit-transition: 0.25s opacity ease;
-  -moz-transition: 0.25s opacity ease;
-  -o-transition: 0.25s opacity ease;
-  transition: 0.25s opacity ease;
+  -webkit-transition-property: background;
+  -moz-transition-property: background;
+  -o-transition-property: background;
+  transition-property: background;
+  -webkit-transition-duration: 0.25s;
+  -moz-transition-duration: 0.25s;
+  -o-transition-duration: 0.25s;
+  transition-duration: 0.25s;
+  -webkit-transition-timing-function: ease;
+  -moz-transition-timing-function: ease;
+  -o-transition-timing-function: ease;
+  transition-timing-function: ease;
+}
+/* line 29, ../sass/app.scss */
+.is-loading body {
+  background-color: #9dd8ff;
 }
 
-/* line 29, ../sass/app.scss */
+/* line 34, ../sass/app.scss */
 h1, h2, h3, h4, h5, h6 {
   font-family: 'Raleway', sans-serif;
   font-weight: 800;
 }
 
-/* line 34, ../sass/app.scss */
+/* line 39, ../sass/app.scss */
 p {
   margin: 0;
   margin-bottom: 1.6875em;
 }
 
-/* line 39, ../sass/app.scss */
+/* line 44, ../sass/app.scss */
 a {
   color: #404040;
 }
@@ -271,17 +282,17 @@ a:hover {
   color: #4d4d4d;
 }
 
-/* line 43, ../sass/app.scss */
+/* line 48, ../sass/app.scss */
 .enhanced-text {
   display: none;
 }
 
-/* line 51, ../sass/app.scss */
+/* line 56, ../sass/app.scss */
 #wrapper {
   opacity: 0;
   visibility: hidden;
 }
-/* line 56, ../sass/app.scss */
+/* line 61, ../sass/app.scss */
 .is-loading #wrapper, .is-loading #wrapper * {
   -webkit-transition: none !important;
   -moz-transition: none !important;
@@ -290,7 +301,7 @@ a:hover {
   transition: none !important;
 }
 
-/* line 68, ../sass/app.scss */
+/* line 73, ../sass/app.scss */
 #header h1 {
   margin: -297px auto 0;
   width: 200px;
@@ -304,7 +315,7 @@ a:hover {
   background-position: center bottom;
 }
 
-/* line 78, ../sass/app.scss */
+/* line 83, ../sass/app.scss */
 .preload {
   position: fixed;
   top: 0;
@@ -322,7 +333,7 @@ a:hover {
   user-select: none;
 }
 
-/* line 91, ../sass/app.scss */
+/* line 96, ../sass/app.scss */
 .preload__text {
   font-family: 'Arial Black', arial, sans-serif;
   color: white;
@@ -338,22 +349,22 @@ a:hover {
   background: url('/images/preload.svg?1369199488') center top no-repeat;
 }
 
-/* line 109, ../sass/app.scss */
+/* line 114, ../sass/app.scss */
 .overlay__content p:last-of-type {
   margin-bottom: 0;
 }
-/* line 114, ../sass/app.scss */
+/* line 119, ../sass/app.scss */
 .overlay__content ul {
   list-style: none;
   padding: 0;
   margin: 0;
   margin-bottom: 0.84375em;
 }
-/* line 122, ../sass/app.scss */
+/* line 127, ../sass/app.scss */
 .overlay__content li::before {
   content: '- ';
 }
-/* line 125, ../sass/app.scss */
+/* line 130, ../sass/app.scss */
 .overlay__content img {
   display: block;
   margin: 0 auto;
@@ -366,36 +377,46 @@ a:hover {
 }
 /* line 14, ../sass/_simple.scss */
 .is-simple {
-  background: none;
+  background: url('/images/mobile-bg.jpg?1368909159') center center no-repeat;
+  background-size: cover;
+  height: 100%;
+  overflow: hidden;
 }
-/* line 18, ../sass/_simple.scss */
+/* line 21, ../sass/_simple.scss */
 .is-simple body {
   color: white;
-  padding: 0 20px;
-  background-color: #9dd8ff;
+  padding: 0;
+  height: 100%;
+  overflow: auto;
+  overflow: scroll;
+  -webkit-overflow-scrolling: touch;
 }
-/* line 24, ../sass/_simple.scss */
+/* line 30, ../sass/_simple.scss */
 .is-simple a {
   color: white;
 }
-/* line 28, ../sass/_simple.scss */
+/* line 34, ../sass/_simple.scss */
+.is-simple #wrapper {
+  padding: 0 20px;
+}
+/* line 38, ../sass/_simple.scss */
 .is-simple #mountains {
   position: relative;
   z-index: 1;
   overflow: hidden;
 }
-/* line 35, ../sass/_simple.scss */
+/* line 45, ../sass/_simple.scss */
 .is-simple #header h1 {
   width: 180px;
   height: 529px;
-  margin-top: -200px;
+  margin-top: -275px;
   background-size: contain;
 }
-/* line 45, ../sass/_simple.scss */
+/* line 55, ../sass/_simple.scss */
 .is-simple #navigation {
   display: none;
 }
-/* line 50, ../sass/_simple.scss */
+/* line 60, ../sass/_simple.scss */
 .is-simple .intro {
   max-width: 500px;
   text-align: center;
@@ -405,19 +426,19 @@ a:hover {
   margin-top: 1.5em;
   margin-bottom: 1.5em;
 }
-/* line 61, ../sass/_simple.scss */
+/* line 71, ../sass/_simple.scss */
 .is-simple .progress {
   display: none;
 }
-/* line 66, ../sass/_simple.scss */
+/* line 76, ../sass/_simple.scss */
 .is-simple .overlay__hide {
   display: none;
 }
-/* line 73, ../sass/_simple.scss */
+/* line 83, ../sass/_simple.scss */
 .is-simple .details:first-child {
   border-top: none;
 }
-/* line 78, ../sass/_simple.scss */
+/* line 88, ../sass/_simple.scss */
 .is-simple .details__content {
   background: rgba(0, 0, 0, 0.2);
   padding: 10px;
@@ -425,15 +446,15 @@ a:hover {
   max-width: 400px;
   margin: 0 auto;
 }
-/* line 85, ../sass/_simple.scss */
+/* line 95, ../sass/_simple.scss */
 .is-simple .details__content :first-child {
   margin-top: 0;
 }
-/* line 88, ../sass/_simple.scss */
+/* line 98, ../sass/_simple.scss */
 .is-simple .details__content :last-child {
   margin-bottom: 0;
 }
-/* line 94, ../sass/_simple.scss */
+/* line 104, ../sass/_simple.scss */
 .is-simple .details__heading {
   margin-top: 0;
   margin-right: -20px;
@@ -443,18 +464,18 @@ a:hover {
   padding-top: 1.5em;
   padding-bottom: 1.5em;
 }
-/* line 104, ../sass/_simple.scss */
+/* line 114, ../sass/_simple.scss */
 .is-simple .details__heading img {
   width: 100%;
   max-width: 300px;
   display: block;
   margin: 0 auto;
 }
-/* line 111, ../sass/_simple.scss */
+/* line 121, ../sass/_simple.scss */
 .is-simple .details__heading span {
   display: block;
 }
-/* line 120, ../sass/_simple.scss */
+/* line 130, ../sass/_simple.scss */
 .is-simple .overlay__content {
   position: relative;
   z-index: 1;
@@ -464,14 +485,13 @@ a:hover {
   padding-top: 1.5em;
   padding-bottom: 1.5em;
 }
-/* line 132, ../sass/_simple.scss */
+/* line 142, ../sass/_simple.scss */
 .is-simple #bg {
-  position: fixed;
+  position: absolute;
   top: 0;
   left: 0;
-  right: 0;
-  bottom: 0;
-  background: url('/images/mobile-bg.jpg?1368909159') center center no-repeat;
+  width: 100%;
+  height: 100%;
   background-size: cover;
 }
 

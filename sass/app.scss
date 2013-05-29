@@ -21,9 +21,14 @@ html, body {
 
 body {
   font-family: 'Cutive', serif;
-  background-color: rgb(157, 216, 255);
   -webkit-font-smoothing: antialiased;
-  @include transition(0.25s opacity ease);
+  @include transition-property(background);
+  @include transition-duration(0.25s);
+  @include transition-timing-function(ease);
+
+  .is-loading & {
+    background-color: rgb(157, 216, 255);
+  }
 }
 
 #{headings()} {

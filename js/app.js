@@ -154,6 +154,17 @@
     // Remove the size attributes on the logo images
     $('.details__heading img').attr({ width: '', height: ''});
 
+    TGM.$preloader.animate({ opacity: 0, visibility: 'hidden' }, 1000);
+
+    TGM.$wrapper.animate({ opacity: 1, visibility: 'visible' }, 1000);
+    setTimeout(function() {
+      TGM.$preloader.remove();
+      TGM.$body.removeClass('is-loading');
+      window.scrollTo(0, 0);
+    }, 1000);
+
+    TGM.$html.height( window.innerHeight + 60 );
+
   }
 
   function slideTo( level, slide ) {
