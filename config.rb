@@ -7,5 +7,5 @@ images_dir = "images"
 javascripts_dir = "js"
 output_style = :expanded
 sass_options = {
-  :debug_info => true
+  :debug_info => false
 }

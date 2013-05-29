@@ -21,19 +21,15 @@
 
   TGM.init = function() {
 
-    var $preloader = $('.preload');
-    $preloader.css('opacity', 0);
-    setTimeout(function() {
-      $preloader.remove();
-    }, 1000);
-
     // Cache some DOM elements common to both
     // layouts.
 
     this.$html = $("html");
     this.$body = $("body");
+    this.$wrapper = $("#wrapper");
     this.$window = $(window);
-
+    this.$preloader = $('.preload');
+    
     // If the browser supports both css transforms
     // and transitions, we'll init the full featured
     // layout and start up the JS for it.
@@ -56,6 +52,8 @@
 
   function initEnhanced() {
 
+    TGM.$html.addClass('is-enhanced');
+
     ////////////////////////////////
     // SETUP
     ////////////////////////////////
@@ -72,16 +70,36 @@
     this.$logomark = $("body::after");
     this.maxBodyHeight = parseInt(this.$body.css('max-height'), 10);
 
+    this.$bgs = {
+      fore: $('.bg__fore'),
+      mid: $('.bg__mid'),
+      back: $('.bg__back')
+    };
+
+    // A hacky transform matrix for positioning the
+    // background elements. This is done in JS rather
+    // than CSS so that we can set X and Y
+    // independently... darn limitations of CSS.
+
+    this.parallaxConfig = {
+      fore: {
+        x: [0, 0],
+        y: [100, 25]
+      },
+      mid: {
+        x: [0, -14],
+        y: [50, 40]
+      },
+      back: {
+        x: [0, -5],
+        y: [25, 21]
+      }
+    };
+
     arrows.up = $(".nav-arrow__up");
     arrows.right = $(".nav-arrow__right");
     arrows.down = $(".nav-arrow__down");
     arrows.left = $(".nav-arrow__left");
-
-    // Let the mountains fade in, and then
-    // enable animations for them.
-    setTimeout( function() {
-      TGM.$body.addClass('is-animated');
-    }, 500 );
 
     // Count the elements in the DOM. Allows us
     // to easily add/remove pieces.
@@ -119,9 +137,19 @@
       slideTo(0, 0);
     }, 6000);
 
+    
+    TGM.$preloader.animate({ opacity: 0, visibility: 'hidden' }, 1000);
+
+    TGM.$wrapper.animate({ opacity: 1, visibility: 'visible' }, 1000);
+    setTimeout(function() {
+      TGM.$preloader.remove();
+      TGM.$body.removeClass('is-loading');
+    }, 1000);
   }
 
   function initSimple() {
+
+    TGM.$html.addClass('is-simple');
 
     // Remove the size attributes on the logo images
     $('.details__heading img').attr({ width: '', height: ''});
@@ -144,22 +172,11 @@
     if (showArrows) setArrows( up, right, down, left );
 
     // Adjust parallax
-    setParallax( 'vertical', level );
-
-    if ( level !== 0 ) {
-      setParallax( 'horizontal', slide );
-    }
-    else {
-      setParallax( 'horizontal', 0 );
-    }
+    setParallax( slide, level );
 
     levelIndex = setSelectorClass('.level', level);
     slideIndex = setSelectorClass('.level.present .slide', slide);
     currentLevel = $('.level.present').first();
-
-    // console.log('Level Index: ', levelIndex);
-    // console.log('Slide Index: ', slideIndex);
-    // console.log('Current Level: ', currentLevel);
 
   }
 
@@ -229,7 +246,6 @@
 
       case "navigation":
         showProgress( false );
-        setParallax( 'horizontal', 1 );
         slideTo( levelIndex - 1, slideIndex );
         showLogomark( false );
         break;
@@ -295,21 +311,46 @@
 
   }
 
-  function setParallax( direction, level ) {
+  function setParallax( xIndex, yIndex ) {
 
-    switch (direction) {
+    ['fore', 'mid', 'back'].forEach(function(id) {
 
-      case 'vertical':
-        level = Math.max(Math.min(level, parallaxCount - 1), 0);
-          TGM.$bg.data('level-v', level + 1);
-        break;
+      var $el = TGM.$bgs[id];
+      
+      // A slide's transforms along the X and Y axes are
+      // calculated as a percentage of a range, defined
+      // in our config.
+      //
+      // First, we figure out the "progress" through the slides
+      // or levels (horizontal VS vertical).
+      //
+      // After taking the difference of the start and end of the
+      // defined ranges, we subtract a portion of the total from
+      // the top of the range, effectively "stepping" through
+      // our ranges.
 
-      case 'horizontal':
-        level = Math.max(Math.min(level, slideCount), 0);
-        TGM.$bg.data('level-h', level + 1);
-        break;
+      var xProgress = xIndex / (slideCount - 1);
+      var xDiff = Math.abs(TGM.parallaxConfig[id].x[1] - TGM.parallaxConfig[id].x[0]);
+      var x = TGM.parallaxConfig[id].x[0] - (xDiff * xProgress);
 
-    }
+      var yProgress = yIndex / (levelCount - 1);
+      var yDiff = Math.abs(TGM.parallaxConfig[id].y[1] - TGM.parallaxConfig[id].y[0]);
+      var y = TGM.parallaxConfig[id].y[0] - (yDiff * yProgress);
+
+      // Build a translate string that we can reuse when setting CSS
+      var transform = "translateX(" + x + "%) translateY(" + y + "%)";
+      
+      // And finally set the transform in CSS, using all those
+      // goddamn browser prefixes.
+      $el.css({
+        '-webkit-transform': transform,
+        '-moz-transform': transform,
+        '-ms-transform': transform,
+        '-o-transform': transform,
+        'transform': transform
+      });
+
+    });
 
   }
 
@@ -340,9 +381,9 @@
   function showProgress( show ) {
 
     if (show === true) {
-      TGM.$body.addClass(hasProfileClass);
+      TGM.$html.addClass(hasProfileClass);
     } else {
-      TGM.$body.removeClass(hasProfileClass);
+      TGM.$html.removeClass(hasProfileClass);
     }
 
   }
@@ -450,6 +491,13 @@
 
   // Handle window resizing
   function windowResized( e ) {
+
+    if (TGM.$window.width() > 1920 && TGM.$window.height() > 1080) {
+      TGM.$body.addClass('is-letterboxed');
+    } else {
+      TGM.$body.removeClass('is-letterboxed');
+    }
+
     setupProgressBar();
     setProgress( slideIndex );
   }
@@ -481,10 +529,9 @@
     });
 
     // Show the info box
-    TGM.$info.css({
-      'opacity': 0
-    }).show().animate({
-      opacity: 1
+    TGM.$info.animate({
+      opacity: 1,
+      visibility: 'visible'
     }, 500, 'ease');
 
   }
@@ -505,10 +552,9 @@
     // Hide the info box itself and remove the click
     // event from its hide link
     TGM.$info.animate({
-      opacity: 0
-    }, 500, 'ease', function() {
-      $(this).hide();
-    }).find('.js-hide-info').off('click');
+      opacity: 0,
+      visibility: 'hidden'
+    }, 500, 'ease').find('.js-hide-info').off('click');
 
   }
 
@@ -534,27 +580,10 @@ $(function() {
 
   // Keep track of which resources are loaded.
   var imagesToLoad = images.length;
-  var stylesheetIsLoaded = false;
   
   // Preload the stylesheet
   var href = null;
-  var stylesheet = null;
-
-  if (Modernizr.csstransforms && Modernizr.csstransitions && $('body').width() > 650) {
-    href = "/css/enhanced.min.css";
-  } else {
-    href = "/css/simple.min.css";
-  }
-
-  stylesheet = $('<link />').attr({
-    rel: "stylesheet",
-    media: "print",
-    href: href
-  }).appendTo("head").on('load', function() {
-    stylesheetIsLoaded = true;
-    preloadCheck();
-  });
-
+  
   // Preload images
   $.each( images, function(i, img) {
 
@@ -568,16 +597,8 @@ $(function() {
   });
 
   var preloadCheck = function() {
-    if (imagesToLoad === 0 && stylesheetIsLoaded === true) {
-      
-      $("#wrapper").show();
-      $('body').removeClass('is-loading');
-      stylesheet.attr('media', '');
-      
-      setTimeout(function() {
-        TGM.init();
-      }, 500);
-
+    if (imagesToLoad === 0) {
+      TGM.init();
     }
   };
 

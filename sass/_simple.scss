@@ -1,0 +1,142 @@
+//////////////////////////////////////
+// SIMPLE LAYOUT
+//////////////////////////////////////
+
+$base-font-size: 16px;
+$base-line-height: $base-font-size * 1.5;
+
+.is-simple {
+
+  @include establish-baseline;
+
+  // Force the HTML and BODY
+  // elements to only be 100%
+  & {
+    background: none;
+  }
+
+  body {
+    color: white;
+    padding: 0 20px;
+    background-color: $base-color;
+  }
+
+  a {
+    color: white;
+  }
+
+  #mountains {
+    position: relative;
+    z-index: 1;
+    overflow: hidden;
+  }
+
+  #header {
+    h1 {
+      width: 180px;
+      height: 529px;
+      margin-top: -200px;
+      background-size: contain;
+    }
+  }
+
+  // Hide the navigation, the page is
+  // too short for it to be important.
+  #navigation {
+    display: none;
+  }
+
+  // Intro
+  .intro {
+    max-width: 500px;
+    text-align: center;
+    margin-right: auto;
+    margin-left: auto;
+    color: white;
+    @include leader;
+    @include trailer;
+  }
+
+  // Hide the progress bar
+  .progress {
+    display: none;
+  }
+
+  // Hide the extra link in the footer
+  .overlay__hide {
+    display: none;
+  }
+
+  // Separate logos visually
+  .details {
+
+    &:first-child {
+      border-top: none;
+    }
+  }
+
+  .details__content {
+    background: rgba(0, 0, 0, 0.2);
+    padding: 10px;
+    border-radius: 10px;
+    max-width: 400px;
+    margin: 0 auto;
+    
+    :first-child {
+      margin-top: 0;
+    }
+    :last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  // Logos
+  .details__heading {
+
+    margin-top: 0;
+    margin-right: -20px;
+    margin-left: -20px;
+    padding-right: 20px;
+    padding-left: 20px;
+    @include padding-leader;
+    @include padding-trailer;
+
+    img {
+      width: 100%;
+      max-width: 300px;
+      display: block;
+      margin: 0 auto;
+    }
+
+    span {
+      display: block;
+      @extend %hide;
+    }
+
+  }
+
+  // Footer
+
+  .overlay__content {
+    position: relative;
+    z-index: 1;
+    border-top: 2px solid white;
+    overflow: hidden;
+    @include leader;
+    @include padding-leader;
+    @include padding-trailer;
+  }
+
+  // Background
+
+  #bg {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    @include background(image-url('mobile-bg.jpg') center center no-repeat);
+    background-size: cover;
+  }
+
+}

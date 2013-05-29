@@ -1,85 +1,92 @@
-module.exports = function( grunt ) {
+/*global require, module*/
 
-  // Grunt config
-  grunt.initConfig({
+(function() {
 
-    pkg: grunt.file.readJSON('package.json'),
-    
-    concat: {
-      options: {
-        separator: ';'
-      },
-      dist: {
-        src: ['js/zepto.js', 'js/app.js'],
-        dest: 'js/dist/<%= pkg.name %>.js'
-      }
-    },
+  "use strict";
 
-    uglify: {
-      options: {
-        banner: '/*! <%= pkg.name %> <%= grunt.template.today("dd-mm-yyyy") %> */\n'
-      },
-      dist: {
-        files: {
-          'js/dist/<%= pkg.name %>.min.js': ['<%= concat.dist.dest %>']
-        }
-      }
-    },
+  var path = require('path');
+  var lrSnippet = require('grunt-contrib-livereload/lib/utils').livereloadSnippet;
 
-    cssmin: {
-      base: {
-        src: ['css/base.css'],
-        dest: 'css/base.min.css'
-      },
-      simple: {
-        src: ['css/simple.css'],
-        dest: 'css/simple.min.css'
-      },
-      enhanced: {
-        src: ['css/enhanced.css'],
-        dest: 'css/enhanced.min.css'
-      }
-    },
+  var folderMount = function folderMount(connect, point) {
+    return connect.static(path.resolve(point));
+  };
 
-    jshint: {
-      files: ['Gruntfile.js', 'js/app.js'],
-      options: {
-        globals: {
-          jQuery: true
-        }
-      }
-    },
+  module.exports = function( grunt ) {
 
-    watch: {
-      assets: {
-        files: ['js/app.js', '**/*.css'],
-        tasks: ['default']
-      },
-      sass: {
-        files: ['**/*.scss'],
-        tasks: ['compass']
-      }
-    },
+    // Grunt config
+    grunt.initConfig({
 
-    compass: {
-      dist: {
+      pkg: grunt.file.readJSON('package.json'),
+      concat: {
         options: {
-          config: 'config.rb'
+          separator: ';'
+        },
+        dist: {
+          src: ['js/zepto.js', 'js/app.js'],
+          dest: 'js/dist/<%= pkg.name %>.js'
+        }
+      },
+
+      uglify: {
+        options: {
+          banner: '/*! <%= pkg.name %> <%= grunt.template.today("dd-mm-yyyy") %> */\n'
+        },
+        dist: {
+          files: {
+            'js/dist/<%= pkg.name %>.min.js': ['<%= concat.dist.dest %>']
+          }
+        }
+      },
+
+      cssmin: {
+        'css/app.min.css': ['css/app.css']
+      },
+
+      jshint: {
+        files: ['Gruntfile.js', 'js/app.js'],
+        options: {
+          globals: {
+            jQuery: true
+          }
+        }
+      },
+
+      compass: {
+        dist: {
+          options: {
+            config: 'config.rb'
+          }
+        }
+      },
+
+      watch: {
+        css: {
+          files: ['**/*.css'],
+          tasks: ['cssmin']
+        },
+        js: {
+          files: ['js/app.js'],
+          tasks: ['jshint', 'concat', 'uglify']
+        },
+        sass: {
+          files: ['**/*.scss'],
+          tasks: ['compass']
         }
       }
-    }
 
-  });
+    });
 
-  // Load tasks
-  grunt.loadNpmTasks('grunt-contrib-jshint');
-  grunt.loadNpmTasks('grunt-contrib-concat');
-  grunt.loadNpmTasks('grunt-contrib-uglify');
-  grunt.loadNpmTasks('grunt-contrib-watch');
-  grunt.loadNpmTasks('grunt-contrib-cssmin');
-  grunt.loadNpmTasks('grunt-contrib-compass');
+    // Load tasks
+    grunt.loadNpmTasks('grunt-contrib-jshint');
+    grunt.loadNpmTasks('grunt-contrib-concat');
+    grunt.loadNpmTasks('grunt-contrib-uglify');
+    grunt.loadNpmTasks('grunt-contrib-watch');
+    grunt.loadNpmTasks('grunt-contrib-cssmin');
+    grunt.loadNpmTasks('grunt-contrib-compass');
 
-  // Setup default task
-  grunt.registerTask('default', ['jshint', 'concat', 'cssmin', 'uglify']);
+    // Setup default task
+    grunt.registerTask('default', ['watch']);
 
-};
+  };
+
+}());
