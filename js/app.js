@@ -413,13 +413,11 @@
       TGM.$profileBG.appendTo(TGM.$profile);
     }
 
-    setTimeout(function() {
-      TGM.$profileBG.css({
-        width: TGM.$profile.width(),
-        height: TGM.$profile.height()
-      });
-      TGM.$indicator.width( TGM.$profile.width() / slideCount );
-    }, 1000);
+    TGM.$profileBG.css({
+      width: TGM.$profile.width(),
+      height: TGM.$profile.height()
+    });
+    TGM.$indicator.width( TGM.$profile.width() / slideCount );
 
   }
 
