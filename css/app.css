@@ -1148,7 +1148,7 @@ a:hover {
   -o-transition-timing-function: ease;
   transition-timing-function: ease;
 }
-@media only screen and (max-height: 800px) {
+@media only screen and (max-height: 650px) {
   /* line 618, ../sass/_enhanced.scss */
   .is-enhanced #header h1 {
     width: 100px;
