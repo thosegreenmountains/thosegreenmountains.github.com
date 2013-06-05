@@ -1573,12 +1573,13 @@ window.Zepto = Zepto
   var levelCount = null;
   var levelIndex = 0;
   var slideIndex = 0;
+  var infoIsVisible = false;
   var currentLevel = '';
   var parallaxCount = 3;
   var lastNav = 0;
   var widthBreakpoint = 650;
   var hasProfileClass = 'has-profile-bar';
-  var arrows = {};
+  var arrows = [];
   var navArrowOpacity = 0.5;
   var showArrows = false;
   var delayedIntro = null;
@@ -1661,10 +1662,10 @@ window.Zepto = Zepto
       }
     };
 
-    arrows.up = $(".nav-arrow__up");
-    arrows.right = $(".nav-arrow__right");
-    arrows.down = $(".nav-arrow__down");
-    arrows.left = $(".nav-arrow__left");
+    arrows[0] = $(".nav-arrow__up");
+    arrows[1] = $(".nav-arrow__right");
+    arrows[2] = $(".nav-arrow__down");
+    arrows[3] = $(".nav-arrow__left");
 
     // Count the elements in the DOM. Allows us
     // to easily add/remove pieces.
@@ -1739,13 +1740,17 @@ window.Zepto = Zepto
       clearTimeout( delayedIntro );
     }
 
+    if (infoIsVisible) {
+      $(document).trigger('hideInfo');
+    }
+
     var up = level > 0;
     var right = (slide < slideCount - 1 && level === 1);
     var down = level < levelCount - 1;
     var left = (slide > 0 && level === 1);
 
     // Set directions for navigation arrows
-    if (showArrows) setArrows( up, right, down, left );
+    if (showArrows) setArrows( [up, right, down, left] );
 
     // Adjust parallax
     setParallax( slide, level );
@@ -1930,27 +1935,26 @@ window.Zepto = Zepto
 
   }
 
-  function setArrows( up, right, down, left ) {
+  function setArrows( arrowsState ) {
 
-    $.each(arrows, function(index, arrow) {
-      arrow.css('opacity', 0);
+    // Reset the opacity and visibility of each arrow
+    arrows.forEach(function(arrow) {
+      arrow.css({
+        'opacity': 0,
+        'visibility': 'hidden'
+      });
     });
 
-    if (up) {
-      arrows.up.css('opacity', navArrowOpacity);
-    }
-
-    if (right) {
-      arrows.right.css('opacity', navArrowOpacity);
-    }
-
-    if (down) {
-      arrows.down.css('opacity', navArrowOpacity);
-    }
-
-    if (left) {
-      arrows.left.css('opacity', navArrowOpacity);
-    }
+    // Now set the opacity and visibility back for
+    // the arrows that should be showing.
+    arrowsState.forEach(function(state, i) {
+      if (state === true) {
+        arrows[i].css({
+          'opacity': navArrowOpacity,
+          'visibility': 'visible'
+        });
+      }
+    });
 
   }
 
@@ -2080,7 +2084,11 @@ window.Zepto = Zepto
   function showInfo( e ) {
 
     // Prevent the default click event
-    e.preventDefault();
+    if (e) {
+      e.preventDefault();
+    }
+
+    infoIsVisible = true;
 
     // Create the overlay if it doesn't already exist
     if (!TGM.$blackout) {
@@ -2113,7 +2121,12 @@ window.Zepto = Zepto
   // Hide the information panel
   function hideInfo(e) {
 
-    e.preventDefault();
+    // Prevent the default click event
+    if (e) {
+      e.preventDefault();
+    }
+
+    infoIsVisible = false;
 
     // Remove the click event for the whiteout and
     // detach it from the DOM
