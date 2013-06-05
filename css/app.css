@@ -1148,16 +1148,26 @@ a:hover {
   -o-transition-timing-function: ease;
   transition-timing-function: ease;
 }
+@media only screen and (max-height: 800px) {
+  /* line 618, ../sass/_enhanced.scss */
+  .is-enhanced #header h1 {
+    width: 100px;
+    height: 150px;
+    margin-top: 0;
+    margin-left: 20px;
+    background-size: 100%;
+  }
+}
 @media only screen and (max-width: 800px) {
-  /* line 628, ../sass/_enhanced.scss */
+  /* line 632, ../sass/_enhanced.scss */
   .is-enhanced #mountains {
     font-size: 90%;
   }
-  /* line 632, ../sass/_enhanced.scss */
+  /* line 636, ../sass/_enhanced.scss */
   .is-enhanced .details__wrapper {
     padding: 30px;
   }
-  /* line 638, ../sass/_enhanced.scss */
+  /* line 642, ../sass/_enhanced.scss */
   .is-enhanced .details__heading img {
     width: 80px;
     height: 80px;

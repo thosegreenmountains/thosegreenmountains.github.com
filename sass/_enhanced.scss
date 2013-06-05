@@ -611,15 +611,19 @@
 
   // Responsive
 
-  @media only screen and (max-height: 1080px) and (max-width: 1920px) {
+  @media only screen and (max-height: 800px) {
 
-  }
+    #header {
 
-  @media only screen and (max-height: 1024px) and (max-width: 1280px) {
+      h1 {
+        width: 100px;
+        height: 150px;
+        margin-top: 0;
+        margin-left: 20px;
+        background-size: 100%;
+      }
 
-  }
-
-  @media only screen and (max-height: 768px) and (max-width: 1024px) {
+    }
 
   }
 
