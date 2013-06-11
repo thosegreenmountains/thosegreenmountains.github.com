@@ -1724,6 +1724,13 @@ window.Zepto = Zepto
 
     });
 
+    // Let's just see how much people click
+    // on the profile... for funsies.
+    $("#profile").on('click', function(e) {
+      // @GA
+      _gaq.push(['_trackEvent', 'Navigation', 'Clicked Profile']);
+    });
+
   }
 
   function initSimple() {
