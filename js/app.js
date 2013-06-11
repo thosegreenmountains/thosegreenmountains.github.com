@@ -136,16 +136,26 @@
     delayedIntro = setTimeout(function() {
       showArrows = true;
       slideTo(0, 0);
-    }, 6000);
+    }, 5000);
 
-    
-    TGM.$preloader.animate({ opacity: 0, visibility: 'hidden' }, 1000);
+    // Fade out the preloader element...
+    TGM.$preloader.animate({ opacity: 0, visibility: 'hidden' }, 500, 'ease', function() { 
 
-    TGM.$wrapper.animate({ opacity: 1, visibility: 'visible' }, 1000);
-    setTimeout(function() {
-      TGM.$preloader.remove();
-      TGM.$body.removeClass('is-loading');
-    }, 1000);
+      // ...and then remove a class from the
+      // #wrapper, allowing it to fade in.
+      TGM.$wrapper.removeClass('is-transparent');
+
+      // Give the wrapper a second to transition in and 
+      // then remove the preloader element. We also remove
+      // the 'is-loading' class here, which effectively
+      // enables transitions inside the #wrapper element.
+      setTimeout(function() {
+        TGM.$preloader.remove();
+        TGM.$body.removeClass('is-loading');
+      }, 1000);
+
+    });
+
   }
 
   function initSimple() {
@@ -600,6 +610,8 @@ $(function() {
     'bg/mid.png'
   ];
 
+  var dropboxUrl = "https://dl.dropboxusercontent.com/u/720540/sites/thosegreenmountains/";
+
   // Keep track of which resources are loaded.
   var imagesToLoad = images.length;
   
@@ -609,7 +621,7 @@ $(function() {
   // Preload images
   $.each( images, function(i, img) {
 
-    var image = $('<img />').attr('src', '/images/' + img);
+    var image = $('<img />').attr('src', dropboxUrl + img);
 
     image.on( 'load', function() {
       imagesToLoad--;

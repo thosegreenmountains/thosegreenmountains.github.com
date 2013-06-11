@@ -513,7 +513,7 @@
     left: 50%;
     top: $nav-arrow-edge-offset;
     margin-left: $nav-arrow-size / -2;
-    @include background(image-url('arrow-up.svg') center center no-repeat);
+    @include background(image-url($arrow-up-image) center center no-repeat);
 
     &:hover {
       margin-top: -1px;
@@ -528,7 +528,7 @@
     right: $nav-arrow-edge-offset;
     top: 50%;
     margin-top: $nav-arrow-size / -2;
-    @include background(image-url('arrow-right.svg') center center no-repeat);
+    @include background(image-url($arrow-right-image) center center no-repeat);
 
     &:hover {
       margin-right: -1px;
@@ -542,7 +542,7 @@
     bottom: 20%;
     left: 50%;
     margin-left: $nav-arrow-size / -2;
-    @include background(image-url('arrow-down.svg') center center no-repeat);
+    @include background(image-url($arrow-down-image) center center no-repeat);
 
     &:hover {
       margin-bottom: -1px;
@@ -556,7 +556,7 @@
     left: $nav-arrow-edge-offset;
     top: 50%;
     margin-top: $nav-arrow-size / -2;
-    @include background(image-url('arrow-left.svg') center center no-repeat);
+    @include background(image-url($arrow-left-image) center center no-repeat);
 
     &:hover {
       margin-left: -1px;
@@ -580,7 +580,6 @@
     @include transition-property(opacity top bottom);
     @include transition-duration(1s);
     @include transition-timing-function(ease);
-    @include background-size(cover);
   }
 
   .profile {

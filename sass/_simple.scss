@@ -12,7 +12,7 @@ $base-line-height: $base-font-size * 1.5;
   // Force the HTML and BODY
   // elements to only be 100%
   & {
-    @include background(image-url('mobile-bg.jpg') center center no-repeat);
+    @include background(image-url($mobile-bg-image) center center no-repeat);
     background-size: cover;
     height: 100%;
     overflow: hidden;

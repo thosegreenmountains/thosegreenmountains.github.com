@@ -54,16 +54,29 @@ a {
 //////////////////////////////////////
 
 #wrapper {
-  opacity: 0;
-  visibility: hidden;
 
-  .is-loading &,
-  .is-loading & * {
-    -webkit-transition: none !important;
-    -moz-transition: none !important;
-    -ms-transition: none !important;
-    -o-transition: none !important;
-    transition: none !important;
+  @include transition-property(opacity, visibility);
+  @include transition-duration(1s, 0s);
+  @include transition-timing-function(ease);
+
+  // Disable any sort of transitions on elements inside
+  // the wrapper until we explitly say it's OK (by removing
+  // the class).
+  * {
+    .is-loading & {
+      -webkit-transition: none !important;
+      -moz-transition: none !important;
+      -ms-transition: none !important;
+      -o-transition: none !important;
+      transition: none !important;
+    }
+  }
+  
+  // Make sure the wrapper isn't initially visible. We remove
+  // this class to fade it in once we're ready.
+  &.is-transparent {
+    opacity: 0;
+    visibility: hidden;
   }
 
 }
@@ -93,15 +106,13 @@ a {
   @include user-select(none);
 }
 
-.preload__text {
-  font-family: 'Arial Black', arial, sans-serif;
-  color: white;
+.preload__graphic {
+  @extend %pulse;
   position: absolute;
   top: 50%;
   left: 50%;
   margin-top: -($preload-image-size / 2);
   margin-left: -($preload-image-size / 2);
-  text-align: center;
   width: $preload-image-size;
   height: 0;
   padding-top: $preload-image-size + 10px;

@@ -1,3 +1,5 @@
+$use-dropbox-images: true;
+
 // Typography
 $base-font-size: 16px;
 $base-line-height: 27px;
@@ -11,13 +13,7 @@ $body-gradient: ($base-color, lighten($base-color, 15%));
 $link-color: darken($base-color, 60%);
 
 // Preload
-$preload-image: 'preload.svg';
 $preload-image-size: 100px;
-
-// Backgrounds
-$bg-fore-image: 'bg/foreOptimized.png';
-$bg-mid-image: 'bg/midOptimized.png';
-$bg-back-image: 'bg/backOptimized2.png';
 
 // Logo
 $logo-small-width: 100px;
@@ -72,6 +68,36 @@ $intro-width: 35em;
   @include hide-text;
 }
 
-// Images
+/////////////////////////////////////////////////////
+// IMAGES
+/////////////////////////////////////////////////////
 
+// Root
+$dropbox-image-root: 'https://dl.dropboxusercontent.com/u/720540/sites/thosegreenmountains/';
+
+// Backgrounds
+$bg-fore-image: 'bg/fore.png';
+$bg-mid-image: 'bg/mid.png';
+$bg-back-image: 'bg/back.png';
+
+// Arrows
+$arrow-up-image: 'arrow-up.svg';
+$arrow-right-image: 'arrow-right.svg';
+$arrow-down-image: 'arrow-down.svg';
+$arrow-left-image: 'arrow-left.svg';
+
+// Mobile
+$mobile-bg-image: 'mobile-bg.jpg';
+
+// Preloader
+$preload-image: 'preload.svg';
+
+@if $use-dropbox-images {
+  $bg-fore-image: $dropbox-image-root + $bg-fore-image;
+  $bg-mid-image: $dropbox-image-root + $bg-mid-image;
+  $bg-back-image: $dropbox-image-root + $bg-back-image;
+  $preload-image: $dropbox-image-root + $preload-image;
+}
+
+// Noise
 $noise: 'iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAMAAABg3Am1AAAAYFBMVEV/f39/f39JSUmqqqptbW3m5uYzMzOpqalwcHC2traUlJQnJyfBwcFsbGxJSUmlpaVgYGCAgIBqamoAAAAAAAD///8AAAAAAAAAAAD///////////////8AAAD///8AAAA2VInhAAAAIHRSTlMKAgcDBwcFBAgICQYFCQgHAwsFBQMGAQYCBQQCAQQDAOGbKK4AAAT0SURBVEgNBcEJgqMwDABBb0IgQIABn7Il9f9/uVVhlib/TgKxSv1p/krXlSJxMXTzb+vj7OmxITf5jhquPiJ1oThyK5mjq2enMm2ldBHyaLUmjtRMIXyIqRCR8iMaaYxcjOH8/vC4rjh7vyc/SGM0CNzoszciHbbE4L6TJKcYdv1AHjrIWfAPIkFHoQC9f99AijBDNedzGy0jWS+/Uro00SHoDWwDTBHuXoELCdhPGoWIxFqJvOQ7hBjyveU6EiyZ5KhX0qrAla9mY6LYAYXcqRkkcI/A4J4T2RtxDE/9UmISkcJfEyvUMaoB5B7IS88CpDryhfM81gXaKbu2ZYWSvpzR5smMQuAk5/Q3kuzc0OnDJ0qjp8Gl3FjZdWF55qnWIwc40WyiCVGgQzsMwFpO1LrJQmnJJj8oaCi9dWecR6nWZ5cb/OaB9ruGyfOVqsrViYc/MIXB72Lm2z2tO22xUVcKmnNk6OYLeIlPK9ho7WyB1VjvqRz1XSpcMsqm9M4Y5TaWf+s7JaohM0sfI/SXVMzJe1OHJnh7jwkYgMdv3PKdGdDGmlgCfKFyLfUWqP/60nXKwLA2qGSsNeiFrKQphmSWXxQ0CXJB4UIu6AGgNgEavORcpOA9YLzyx5dkkP7q4Cn9HjxTifjGjf+A3OwHVv8IZO9wNQRmQe9KbJ+FaJ3iwHc02JxYq/RB8D4UJ8dv3IhIZzRviUbcWsqaJTcxAEzBw5e2PAiGlqDOsDf5A7knVntw2HOig94lQUD3JZ2veaH2jGFq4v1UFj54lZiadEadGhWSBMggRear365+swEYb+p1jgha/4lGQA6JzxZ+zC5/HPCCYfjRIYrrt92lJs4MDWjHqKN2QueXefNVp0FrFbttnhq7qYJdaDpOX/bVDpwrwJ2pkx3v+XNzni7ZZi9JRulT1XY6Fco9d8qhvINCZwIno8xSl7UeuI3+3Vn/XTA2KK8O3QqE/cIZecIq5ZM7KFDbTV56lkiB16fzLeMp/SrB/1ajz3EADybf/QuIRDop7uQeez+5smHl4goXumOlD2PoXLFN3Y3YAc6OzxdgJHJessTgTePwCJjoAX1nEJdjqU/fgQa0yEnFMUqA9G+ioAyYyffRgB3n312YUpOqSqJP1HNWggSJ7AjR0hg0IuQrX8PjrFBYrjwXqXBuHfcADKy/h8HedvkrZsglvGRAgtYEzQu0C/0SkHKiI1008pxKLHPjYErN683e/oRzpfOwdN/ZwjC5AXoVhl0DNh5VLeiX0aDUN0uKXM530Vf44rEPiSRn/dd0KsmkOmMZxDoSTDj3J9/2prUzVOOvpF96qAbmDeEEplZL9wFxK1A+VHhUCKl/0PSQs+lAZrKVXo+xuAFXHKX/IxPR/Sn+0pAG2cGhxS86sjXS56wzLb+vNFneKdkTjMX59dA7ynE49wxPG2Ra0zWXOqk8Ax5sNGAkBpnwMRw+bfBKSfDIaX6QhBWSA3dPDeDJ6zIRSkZlBfjBtW8Mqns+JwOoha8dXqhULKa6h6RyHq2PceC8b2G7mlYgqW6c1QDQuka86GyBGYuH44WD7ul1dohdT1kx38pDK70PLu8XqoRBgwT02tc2cH1ozTCK3egCyq7AhdL9DBu9269nl2+b67Gt3DjGjMngFEr/QOW4miJew3s4QG12OAB9gvqXROLTBG962kVrWUkN5T/LM9TJitqLyQAAAABJRU5ErkJggg==';

@@ -1,3 +1,31 @@
+/* line 3, ../sass/_animations.scss */
+.preload__graphic {
+  -webkit-animation-name: pulse;
+  -moz-animation-name: pulse;
+  -o-animation-name: pulse;
+  animation-name: pulse;
+  -webkit-animation-duration: 1s;
+  -moz-animation-duration: 1s;
+  -o-animation-duration: 1s;
+  animation-duration: 1s;
+  -webkit-animation-timing-function: ease-in-out;
+  -moz-animation-timing-function: ease-in-out;
+  -o-animation-timing-function: ease-in-out;
+  animation-timing-function: ease-in-out;
+  -webkit-animation-iteration-count: infinite;
+  -moz-animation-iteration-count: infinite;
+  -o-animation-iteration-count: infinite;
+  animation-iteration-count: infinite;
+  -webkit-animation-fill-mode: both;
+  -moz-animation-fill-mode: both;
+  -o-animation-fill-mode: both;
+  animation-fill-mode: both;
+  -webkit-animation-direction: alternate;
+  -moz-animation-direction: alternate;
+  -o-animation-direction: alternate;
+  animation-direction: alternate;
+}
+
 @-moz-keyframes pulse {
   /* line 13, ../sass/_animations.scss */
   0% {
@@ -210,7 +238,7 @@
   }
 }
 
-/* line 68, ../sass/_config.scss */
+/* line 64, ../sass/_config.scss */
 .is-simple .details__heading span, .is-enhanced #navigation h1, .is-enhanced #navigation span {
   height: 0;
   width: 0;
@@ -289,19 +317,34 @@ a:hover {
 
 /* line 56, ../sass/app.scss */
 #wrapper {
-  opacity: 0;
-  visibility: hidden;
+  -webkit-transition-property: opacity, visibility;
+  -moz-transition-property: opacity, visibility;
+  -o-transition-property: opacity, visibility;
+  transition-property: opacity, visibility;
+  -webkit-transition-duration: 1s, 0s;
+  -moz-transition-duration: 1s, 0s;
+  -o-transition-duration: 1s, 0s;
+  transition-duration: 1s, 0s;
+  -webkit-transition-timing-function: ease;
+  -moz-transition-timing-function: ease;
+  -o-transition-timing-function: ease;
+  transition-timing-function: ease;
 }
-/* line 61, ../sass/app.scss */
-.is-loading #wrapper, .is-loading #wrapper * {
+/* line 66, ../sass/app.scss */
+.is-loading #wrapper * {
   -webkit-transition: none !important;
   -moz-transition: none !important;
   -ms-transition: none !important;
   -o-transition: none !important;
   transition: none !important;
 }
+/* line 77, ../sass/app.scss */
+#wrapper.is-transparent {
+  opacity: 0;
+  visibility: hidden;
+}
 
-/* line 73, ../sass/app.scss */
+/* line 86, ../sass/app.scss */
 #header h1 {
   margin: -297px auto 0;
   width: 200px;
@@ -315,7 +358,7 @@ a:hover {
   background-position: center bottom;
 }
 
-/* line 83, ../sass/app.scss */
+/* line 96, ../sass/app.scss */
 .preload {
   position: fixed;
   top: 0;
@@ -333,38 +376,35 @@ a:hover {
   user-select: none;
 }
 
-/* line 96, ../sass/app.scss */
-.preload__text {
-  font-family: 'Arial Black', arial, sans-serif;
-  color: white;
+/* line 109, ../sass/app.scss */
+.preload__graphic {
   position: absolute;
   top: 50%;
   left: 50%;
   margin-top: -50px;
   margin-left: -50px;
-  text-align: center;
   width: 100px;
   height: 0;
   padding-top: 110px;
-  background: url('/images/preload.svg?1369199488') center top no-repeat;
+  background: url(https://dl.dropboxusercontent.com/u/720540/sites/thosegreenmountains/preload.svg) center top no-repeat;
 }
 
-/* line 114, ../sass/app.scss */
+/* line 125, ../sass/app.scss */
 .overlay__content p:last-of-type {
   margin-bottom: 0;
 }
-/* line 119, ../sass/app.scss */
+/* line 130, ../sass/app.scss */
 .overlay__content ul {
   list-style: none;
   padding: 0;
   margin: 0;
   margin-bottom: 0.84375em;
 }
-/* line 127, ../sass/app.scss */
+/* line 138, ../sass/app.scss */
 .overlay__content li::before {
   content: '- ';
 }
-/* line 130, ../sass/app.scss */
+/* line 141, ../sass/app.scss */
 .overlay__content img {
   display: block;
   margin: 0 auto;
@@ -940,7 +980,7 @@ a:hover {
 .is-enhanced .bg__back {
   z-index: 1;
   height: 75%;
-  background-image: url('/images/bg/backOptimized2.png?1369201952');
+  background-image: url(https://dl.dropboxusercontent.com/u/720540/sites/thosegreenmountains/bg/back.png);
   background-size: cover;
   opacity: 0.4;
   width: 116%;
@@ -950,7 +990,7 @@ a:hover {
 .is-enhanced .bg__mid {
   z-index: 2;
   height: 50%;
-  background-image: url('/images/bg/midOptimized.png?1369201414');
+  background-image: url(https://dl.dropboxusercontent.com/u/720540/sites/thosegreenmountains/bg/mid.png);
   background-size: cover;
   opacity: 0.6;
   width: 121%;
@@ -960,7 +1000,7 @@ a:hover {
 .is-enhanced .bg__fore {
   z-index: 3;
   height: 25%;
-  background-image: url('/images/bg/foreOptimized.png?1369201414');
+  background-image: url(https://dl.dropboxusercontent.com/u/720540/sites/thosegreenmountains/bg/fore.png);
   background-size: cover;
   opacity: 0.7;
 }
@@ -1029,7 +1069,7 @@ a:hover {
   left: 50%;
   top: 20px;
   margin-left: -16px;
-  background: url('/images/arrow-up.svg?1368676053') center center no-repeat;
+  background: url('/images/arrow-up.svg?1370912046') center center no-repeat;
 }
 /* line 518, ../sass/_enhanced.scss */
 .is-enhanced .nav-arrow__up:hover {
@@ -1044,7 +1084,7 @@ a:hover {
   right: 20px;
   top: 50%;
   margin-top: -16px;
-  background: url('/images/arrow-right.svg?1368676053') center center no-repeat;
+  background: url('/images/arrow-right.svg?1370912033') center center no-repeat;
 }
 /* line 533, ../sass/_enhanced.scss */
 .is-enhanced .nav-arrow__right:hover {
@@ -1059,7 +1099,7 @@ a:hover {
   bottom: 20%;
   left: 50%;
   margin-left: -16px;
-  background: url('/images/arrow-down.svg?1368676053') center center no-repeat;
+  background: url('/images/arrow-down.svg?1370911983') center center no-repeat;
 }
 /* line 547, ../sass/_enhanced.scss */
 .is-enhanced .nav-arrow__down:hover {
@@ -1074,7 +1114,7 @@ a:hover {
   left: 20px;
   top: 50%;
   margin-top: -16px;
-  background: url('/images/arrow-left.svg?1368676053') center center no-repeat;
+  background: url('/images/arrow-left.svg?1370912011') center center no-repeat;
 }
 /* line 561, ../sass/_enhanced.scss */
 .is-enhanced .nav-arrow__left:hover {
@@ -1108,19 +1148,15 @@ a:hover {
   -moz-transition-timing-function: ease;
   -o-transition-timing-function: ease;
   transition-timing-function: ease;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
 }
-/* line 586, ../sass/_enhanced.scss */
+/* line 585, ../sass/_enhanced.scss */
 .is-enhanced .profile {
   position: relative;
   margin-right: 80px;
   height: 54px;
   background: #ddd;
 }
-/* line 593, ../sass/_enhanced.scss */
+/* line 592, ../sass/_enhanced.scss */
 .is-enhanced .profile__bg {
   position: absolute;
   left: 0;
@@ -1128,7 +1164,7 @@ a:hover {
   width: 100%;
   height: 80% !important;
 }
-/* line 601, ../sass/_enhanced.scss */
+/* line 600, ../sass/_enhanced.scss */
 .is-enhanced .profile__indicator {
   position: absolute;
   height: 100%;
@@ -1149,7 +1185,7 @@ a:hover {
   transition-timing-function: ease;
 }
 @media only screen and (max-height: 650px) {
-  /* line 618, ../sass/_enhanced.scss */
+  /* line 617, ../sass/_enhanced.scss */
   .is-enhanced #header h1 {
     width: 100px;
     height: 150px;
@@ -1159,15 +1195,15 @@ a:hover {
   }
 }
 @media only screen and (max-width: 800px) {
-  /* line 632, ../sass/_enhanced.scss */
+  /* line 631, ../sass/_enhanced.scss */
   .is-enhanced #mountains {
     font-size: 90%;
   }
-  /* line 636, ../sass/_enhanced.scss */
+  /* line 635, ../sass/_enhanced.scss */
   .is-enhanced .details__wrapper {
     padding: 30px;
   }
-  /* line 642, ../sass/_enhanced.scss */
+  /* line 641, ../sass/_enhanced.scss */
   .is-enhanced .details__heading img {
     width: 80px;
     height: 80px;
