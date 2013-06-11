@@ -417,7 +417,7 @@ a:hover {
 }
 /* line 14, ../sass/_simple.scss */
 .is-simple {
-  background: url("mobile-bg.jpg") center center no-repeat;
+  background: url("https://dl.dropboxusercontent.com/u/720540/sites/thosegreenmountains/mobile-bg.jpg") center center no-repeat;
   background-size: cover;
   height: 100%;
   overflow: hidden;
