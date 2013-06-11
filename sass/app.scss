@@ -87,7 +87,7 @@ a {
     margin: -297px auto 0;
     width: 200px;
     height: 564px;
-    @include replace-text('logo.svg');
+    @include replace-text($logo-image);
     background-position: center bottom;
   }
 
@@ -116,7 +116,7 @@ a {
   width: $preload-image-size;
   height: 0;
   padding-top: $preload-image-size + 10px;
-  @include background(image-url($preload-image) center top no-repeat);
+  @include background(url($preload-image) center top no-repeat);
 }
 
 .overlay__content {

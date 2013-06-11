@@ -352,7 +352,7 @@ a:hover {
   text-indent: -119988px;
   overflow: hidden;
   text-align: left;
-  background-image: url('/images/logo.svg?1368676053');
+  background-image: url(https://dl.dropboxusercontent.com/u/720540/sites/thosegreenmountains/logo.svg);
   background-repeat: no-repeat;
   background-position: 50% 50%;
   background-position: center bottom;
@@ -386,7 +386,7 @@ a:hover {
   width: 100px;
   height: 0;
   padding-top: 110px;
-  background: url(https://dl.dropboxusercontent.com/u/720540/sites/thosegreenmountains/preload.svg) center top no-repeat;
+  background: url("https://dl.dropboxusercontent.com/u/720540/sites/thosegreenmountains/preload.svg") center top no-repeat;
 }
 
 /* line 125, ../sass/app.scss */
@@ -417,7 +417,7 @@ a:hover {
 }
 /* line 14, ../sass/_simple.scss */
 .is-simple {
-  background: url('/images/mobile-bg.jpg?1368909159') center center no-repeat;
+  background: url("mobile-bg.jpg") center center no-repeat;
   background-size: cover;
   height: 100%;
   overflow: hidden;
@@ -980,7 +980,7 @@ a:hover {
 .is-enhanced .bg__back {
   z-index: 1;
   height: 75%;
-  background-image: url(https://dl.dropboxusercontent.com/u/720540/sites/thosegreenmountains/bg/back.png);
+  background-image: url("https://dl.dropboxusercontent.com/u/720540/sites/thosegreenmountains/bg/back.png");
   background-size: cover;
   opacity: 0.4;
   width: 116%;
@@ -990,7 +990,7 @@ a:hover {
 .is-enhanced .bg__mid {
   z-index: 2;
   height: 50%;
-  background-image: url(https://dl.dropboxusercontent.com/u/720540/sites/thosegreenmountains/bg/mid.png);
+  background-image: url("https://dl.dropboxusercontent.com/u/720540/sites/thosegreenmountains/bg/mid.png");
   background-size: cover;
   opacity: 0.6;
   width: 121%;
@@ -1000,7 +1000,7 @@ a:hover {
 .is-enhanced .bg__fore {
   z-index: 3;
   height: 25%;
-  background-image: url(https://dl.dropboxusercontent.com/u/720540/sites/thosegreenmountains/bg/fore.png);
+  background-image: url("https://dl.dropboxusercontent.com/u/720540/sites/thosegreenmountains/bg/fore.png");
   background-size: cover;
   opacity: 0.7;
 }
@@ -1069,7 +1069,7 @@ a:hover {
   left: 50%;
   top: 20px;
   margin-left: -16px;
-  background: url('/images/arrow-up.svg?1370912046') center center no-repeat;
+  background: url("https://dl.dropboxusercontent.com/u/720540/sites/thosegreenmountains/arrow-up.svg") center center no-repeat;
 }
 /* line 518, ../sass/_enhanced.scss */
 .is-enhanced .nav-arrow__up:hover {
@@ -1084,7 +1084,7 @@ a:hover {
   right: 20px;
   top: 50%;
   margin-top: -16px;
-  background: url('/images/arrow-right.svg?1370912033') center center no-repeat;
+  background: url("https://dl.dropboxusercontent.com/u/720540/sites/thosegreenmountains/arrow-right.svg") center center no-repeat;
 }
 /* line 533, ../sass/_enhanced.scss */
 .is-enhanced .nav-arrow__right:hover {
@@ -1099,7 +1099,7 @@ a:hover {
   bottom: 20%;
   left: 50%;
   margin-left: -16px;
-  background: url('/images/arrow-down.svg?1370911983') center center no-repeat;
+  background: url("https://dl.dropboxusercontent.com/u/720540/sites/thosegreenmountains/arrow-down.svg") center center no-repeat;
 }
 /* line 547, ../sass/_enhanced.scss */
 .is-enhanced .nav-arrow__down:hover {
@@ -1114,7 +1114,7 @@ a:hover {
   left: 20px;
   top: 50%;
   margin-top: -16px;
-  background: url('/images/arrow-left.svg?1370912011') center center no-repeat;
+  background: url("https://dl.dropboxusercontent.com/u/720540/sites/thosegreenmountains/arrow-left.svg") center center no-repeat;
 }
 /* line 561, ../sass/_enhanced.scss */
 .is-enhanced .nav-arrow__left:hover {

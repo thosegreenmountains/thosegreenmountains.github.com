@@ -1988,7 +1988,7 @@ window.Zepto = Zepto
   function setupProgressBar() {
 
     if (!TGM.$profileBG) {
-      TGM.$profileBG = $('<img class="profile__bg" src="/images/profile.svg#svgView(preserveAspectRatio(none))" alt="" />');
+      TGM.$profileBG = $('<img class="profile__bg" src="https://dl.dropboxusercontent.com/u/720540/sites/thosegreenmountains/profile.svg#svgView(preserveAspectRatio(none))" alt="" />');
       TGM.$profileBG.appendTo(TGM.$profile);
     }
 
