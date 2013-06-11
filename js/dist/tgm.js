@@ -1618,6 +1618,9 @@ window.Zepto = Zepto
 
   function initEnhanced() {
 
+    // @GA
+    _gaq.push(['_trackEvent', 'Layout', 'Enhanced']);
+
     TGM.$html.addClass('is-enhanced');
 
     ////////////////////////////////
@@ -1725,6 +1728,9 @@ window.Zepto = Zepto
 
   function initSimple() {
 
+    // @GA
+    _gaq.push(['_trackEvent', 'Layout', 'Simple']);
+
     TGM.$html.addClass('is-simple');
 
     // Remove the size attributes on the logo images
@@ -1821,6 +1827,12 @@ window.Zepto = Zepto
         // nav.
         setSelectorClass( '#details .slide', lastNav );
 
+        // @GA
+        setTimeout(function() {
+          var navigationSlideName = getCurrentNavigationSlideName();
+          _gaq.push(['_trackEvent', 'Content', 'Navigation Slide', navigationSlideName]);
+        }, 0);
+
         break;
 
       case "details":
@@ -1838,12 +1850,10 @@ window.Zepto = Zepto
       case "navigation":
         showProgress( false );
         slideTo( levelIndex - 1, slideIndex );
-        showLogomark( false );
         break;
 
       case "details":
         slideTo( levelIndex - 1, lastNav );
-        showLogomark( true );
         break;
 
     }
@@ -1869,6 +1879,12 @@ window.Zepto = Zepto
         // nav.
         setSelectorClass( '#details .slide', lastNav );
 
+        // @GA
+        setTimeout(function() {
+          var navigationSlideName = getCurrentNavigationSlideName();
+          _gaq.push(['_trackEvent', 'Content', 'Navigation Slide', navigationSlideName]);
+        }, 0);
+
         break;
 
       case "details":
@@ -1886,12 +1902,18 @@ window.Zepto = Zepto
       case "header":
         slideTo( 1, lastNav, 1 );
         showProgress( true );
-        showLogomark( true );
         break;
 
       case "navigation":
+
         slideTo( levelIndex + 1, slideIndex );
-        showLogomark( false );
+
+        // @GA
+        setTimeout(function() {
+          var mountainName = getCurrentDetailSlideName();
+          _gaq.push(['_trackEvent', 'Content', 'Detail Slide', mountainName]);
+        }, 0);
+
         break;
 
       case "details":
@@ -2000,29 +2022,11 @@ window.Zepto = Zepto
 
   }
 
-  // Shows or hides the logomark on the navigation slides
-  function showLogomark( state ) {
-
-    if ( state ) {
-
-      setTimeout(function() {
-        TGM.$logomark.animate({
-          opacity: 0.6
-        }, 1000, 'ease');
-      }, 1000);
-
-    } else {
-
-      TGM.$logomark.animate({
-        opacity: 0
-      }, 200);
-
-    }
-
-  }
-
   // Handle key presses
   function keyPressed( e ) {
+
+    // @GA
+    _gaq.push(['_trackEvent', 'Navigation', 'Via Keyboard']);
 
     switch (e.which) {
 
@@ -2052,6 +2056,9 @@ window.Zepto = Zepto
 
   // Handle navigation arrow clicks
   function arrowClicked( e ) {
+
+    // @GA
+    _gaq.push(['_trackEvent', 'Navigation', 'Via Clicking']);
 
     e.preventDefault();
 
@@ -2093,6 +2100,9 @@ window.Zepto = Zepto
   // Show information panel
   function showInfo( e ) {
 
+    // @GA
+    _gaq.push(['_trackEvent', 'Info', 'Viewed Info']);
+
     // Prevent the default click event
     if (e) {
       e.preventDefault();
@@ -2131,6 +2141,9 @@ window.Zepto = Zepto
   // Hide the information panel
   function hideInfo(e) {
 
+    // @GA
+    _gaq.push(['_trackEvent', 'Info', 'Hide Info']);
+
     // Prevent the default click event
     if (e) {
       e.preventDefault();
@@ -2157,6 +2170,14 @@ window.Zepto = Zepto
 
   function getCurrentLevelName() {
     return currentLevel.attr('id');
+  }
+
+  function getCurrentDetailSlideName() {
+    return $("#details .present .details__heading").text().trim();
+  }
+
+  function getCurrentNavigationSlideName() {
+    return $("#navigation .present").text().trim();
   }
 
 })(window.TGM = window.TGM || {}, Zepto);

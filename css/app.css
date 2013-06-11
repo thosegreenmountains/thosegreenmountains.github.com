@@ -759,13 +759,14 @@ a:hover {
 }
 /* line 212, ../sass/_enhanced.scss */
 .is-enhanced .intro a {
+  display: inline-block;
   color: white;
 }
 /* line 24, ../../../../.rvm/gems/ruby-1.9.3-p392@thosegreenmountains/gems/compass-0.13.alpha.4/frameworks/compass/stylesheets/compass/typography/links/_link-colors.scss */
 .is-enhanced .intro a:hover {
   color: #dddddd;
 }
-/* line 218, ../sass/_enhanced.scss */
+/* line 219, ../sass/_enhanced.scss */
 .is-enhanced .intro__heading {
   text-align: center;
   font-weight: bold;
@@ -773,7 +774,7 @@ a:hover {
   font-size: 1.75em;
   line-height: 1.28571em;
 }
-/* line 225, ../sass/_enhanced.scss */
+/* line 226, ../sass/_enhanced.scss */
 .is-enhanced .intro__navigation {
   margin: 0 auto;
   text-align: center;
@@ -782,11 +783,11 @@ a:hover {
   font-size: 0.875em;
   line-height: 1.71429em;
 }
-/* line 239, ../sass/_enhanced.scss */
+/* line 240, ../sass/_enhanced.scss */
 .is-enhanced #navigation h1, .is-enhanced #navigation span {
   display: block;
 }
-/* line 244, ../sass/_enhanced.scss */
+/* line 245, ../sass/_enhanced.scss */
 .is-enhanced #navigation a {
   position: relative;
   display: block;
@@ -794,7 +795,7 @@ a:hover {
   width: 100%;
   cursor: default;
 }
-/* line 252, ../sass/_enhanced.scss */
+/* line 253, ../sass/_enhanced.scss */
 .is-enhanced #navigation img {
   position: absolute;
   top: 50%;
@@ -802,11 +803,11 @@ a:hover {
   margin-left: -200px;
   margin-top: -200px;
 }
-/* line 260, ../sass/_enhanced.scss */
+/* line 261, ../sass/_enhanced.scss */
 .is-enhanced #navigation .slide {
   padding-bottom: 54px;
 }
-/* line 270, ../sass/_enhanced.scss */
+/* line 271, ../sass/_enhanced.scss */
 .is-enhanced .details {
   max-height: 100%;
   overflow-y: auto;
@@ -814,7 +815,7 @@ a:hover {
   padding-bottom: 54px;
   color: white;
 }
-/* line 278, ../sass/_enhanced.scss */
+/* line 279, ../sass/_enhanced.scss */
 .is-enhanced .details__wrapper {
   padding: 40px;
   width: 90%;
@@ -826,7 +827,7 @@ a:hover {
   -moz-box-shadow: inset 0 0 20px -3px rgba(0, 0, 0, 0.2);
   box-shadow: inset 0 0 20px -3px rgba(0, 0, 0, 0.2);
 }
-/* line 288, ../sass/_enhanced.scss */
+/* line 289, ../sass/_enhanced.scss */
 .is-enhanced .details__heading {
   font-family: 'Raleway', sans-serif;
   font-weight: 800;
@@ -837,18 +838,18 @@ a:hover {
   font-size: 2.75em;
   line-height: 1.09091em;
 }
-/* line 297, ../sass/_enhanced.scss */
+/* line 298, ../sass/_enhanced.scss */
 .is-enhanced .details__heading img {
   display: inline-block;
   vertical-align: middle;
   margin-right: 0.375em;
 }
-/* line 304, ../sass/_enhanced.scss */
+/* line 305, ../sass/_enhanced.scss */
 .is-enhanced .details__content {
   height: 100%;
   padding-top: 1.5em;
 }
-/* line 313, ../sass/_enhanced.scss */
+/* line 314, ../sass/_enhanced.scss */
 .is-enhanced .overlay {
   position: absolute;
   left: 0;
@@ -859,7 +860,7 @@ a:hover {
   background: rgba(255, 255, 255, 0.8);
   z-index: 100;
 }
-/* line 324, ../sass/_enhanced.scss */
+/* line 325, ../sass/_enhanced.scss */
 .is-enhanced .overlay__content {
   opacity: 0;
   visibility: hidden;
@@ -878,14 +879,14 @@ a:hover {
   font-size: 0.875em;
   line-height: 1.88571em;
 }
-/* line 342, ../sass/_enhanced.scss */
+/* line 343, ../sass/_enhanced.scss */
 .is-enhanced .overlay__content::before, .is-enhanced .overlay__content::after {
   content: '';
   position: absolute;
   left: 0;
   width: 100%;
 }
-/* line 349, ../sass/_enhanced.scss */
+/* line 350, ../sass/_enhanced.scss */
 .is-enhanced .overlay__content::after {
   height: 20px;
   bottom: 0;
@@ -894,14 +895,14 @@ a:hover {
   background: -o-linear-gradient(rgba(255, 255, 255, 0), #ffffff);
   background: linear-gradient(rgba(255, 255, 255, 0), #ffffff);
 }
-/* line 357, ../sass/_enhanced.scss */
+/* line 358, ../sass/_enhanced.scss */
 .is-enhanced .overlay__content-container {
   overflow-y: scroll;
   max-height: 100%;
   padding: 40px;
   -webkit-overflow-scrolling: touch;
 }
-/* line 364, ../sass/_enhanced.scss */
+/* line 365, ../sass/_enhanced.scss */
 .is-enhanced .overlay__hide {
   position: absolute;
   width: 20px;
@@ -916,11 +917,11 @@ a:hover {
   cursor: pointer;
   color: #ccc;
 }
-/* line 378, ../sass/_enhanced.scss */
+/* line 379, ../sass/_enhanced.scss */
 .is-enhanced .overlay__hide:hover {
   color: #333;
 }
-/* line 387, ../sass/_enhanced.scss */
+/* line 388, ../sass/_enhanced.scss */
 .is-enhanced .bg {
   height: 100%;
   width: 100%;
@@ -929,7 +930,7 @@ a:hover {
   left: 0;
   text-indent: -150%;
 }
-/* line 398, ../sass/_enhanced.scss */
+/* line 399, ../sass/_enhanced.scss */
 .is-enhanced .bg__back,
 .is-enhanced .bg__mid,
 .is-enhanced .bg__fore {
@@ -954,7 +955,7 @@ a:hover {
   -o-transition-duration: 1s;
   transition-duration: 1s;
 }
-/* line 412, ../sass/_enhanced.scss */
+/* line 413, ../sass/_enhanced.scss */
 .is-enhanced .bg__back {
   z-index: 1;
   height: 75%;
@@ -964,7 +965,7 @@ a:hover {
   width: 116%;
   left: -8%;
 }
-/* line 422, ../sass/_enhanced.scss */
+/* line 423, ../sass/_enhanced.scss */
 .is-enhanced .bg__mid {
   z-index: 2;
   height: 50%;
@@ -974,7 +975,7 @@ a:hover {
   width: 121%;
   left: 0%;
 }
-/* line 432, ../sass/_enhanced.scss */
+/* line 433, ../sass/_enhanced.scss */
 .is-enhanced .bg__fore {
   z-index: 3;
   height: 25%;
@@ -982,7 +983,7 @@ a:hover {
   background-size: cover;
   opacity: 0.7;
 }
-/* line 444, ../sass/_enhanced.scss */
+/* line 445, ../sass/_enhanced.scss */
 .is-enhanced .progress {
   position: absolute;
   bottom: -54px;
@@ -1004,7 +1005,7 @@ a:hover {
   -o-transition-timing-function: ease;
   transition-timing-function: ease;
 }
-/* line 458, ../sass/_enhanced.scss */
+/* line 459, ../sass/_enhanced.scss */
 .is-enhanced .progress ul {
   list-style: none;
   padding: 0;
@@ -1014,7 +1015,7 @@ a:hover {
   height: 100%;
   overflow: hidden;
 }
-/* line 468, ../sass/_enhanced.scss */
+/* line 469, ../sass/_enhanced.scss */
 .is-enhanced .progress li {
   text-align: center;
   display: inline-block;
@@ -1025,7 +1026,7 @@ a:hover {
   position: relative;
   border-left: 1px solid #b2b2b3;
 }
-/* line 479, ../sass/_enhanced.scss */
+/* line 480, ../sass/_enhanced.scss */
 .is-enhanced .progress a, .is-enhanced .progress span {
   display: block;
   text-decoration: none;
@@ -1038,71 +1039,71 @@ a:hover {
   line-height: 1.33333em;
   line-height: 54px;
 }
-/* line 490, ../sass/_enhanced.scss */
+/* line 491, ../sass/_enhanced.scss */
 .is-enhanced .progress a:hover, .is-enhanced .progress span:hover {
   background: #fafafa;
 }
-/* line 497, ../sass/_enhanced.scss */
+/* line 498, ../sass/_enhanced.scss */
 .is-enhanced .nav-arrow__up {
   left: 50%;
   top: 20px;
   margin-left: -16px;
   background: url("https://dl.dropboxusercontent.com/u/720540/sites/thosegreenmountains/arrow-up.svg") center center no-repeat;
 }
-/* line 503, ../sass/_enhanced.scss */
+/* line 504, ../sass/_enhanced.scss */
 .is-enhanced .nav-arrow__up:hover {
   margin-top: -1px;
 }
-/* line 506, ../sass/_enhanced.scss */
+/* line 507, ../sass/_enhanced.scss */
 .is-enhanced .nav-arrow__up:active {
   margin-right: -1px;
 }
-/* line 512, ../sass/_enhanced.scss */
+/* line 513, ../sass/_enhanced.scss */
 .is-enhanced .nav-arrow__right {
   right: 20px;
   top: 50%;
   margin-top: -16px;
   background: url("https://dl.dropboxusercontent.com/u/720540/sites/thosegreenmountains/arrow-right.svg") center center no-repeat;
 }
-/* line 518, ../sass/_enhanced.scss */
+/* line 519, ../sass/_enhanced.scss */
 .is-enhanced .nav-arrow__right:hover {
   margin-right: -1px;
 }
-/* line 521, ../sass/_enhanced.scss */
+/* line 522, ../sass/_enhanced.scss */
 .is-enhanced .nav-arrow__right:active {
   margin-bottom: -1px;
 }
-/* line 526, ../sass/_enhanced.scss */
+/* line 527, ../sass/_enhanced.scss */
 .is-enhanced .nav-arrow__down {
   bottom: 20%;
   left: 50%;
   margin-left: -16px;
   background: url("https://dl.dropboxusercontent.com/u/720540/sites/thosegreenmountains/arrow-down.svg") center center no-repeat;
 }
-/* line 532, ../sass/_enhanced.scss */
+/* line 533, ../sass/_enhanced.scss */
 .is-enhanced .nav-arrow__down:hover {
   margin-bottom: -1px;
 }
-/* line 535, ../sass/_enhanced.scss */
+/* line 536, ../sass/_enhanced.scss */
 .is-enhanced .nav-arrow__down:active {
   margin-right: -1px;
 }
-/* line 540, ../sass/_enhanced.scss */
+/* line 541, ../sass/_enhanced.scss */
 .is-enhanced .nav-arrow__left {
   left: 20px;
   top: 50%;
   margin-top: -16px;
   background: url("https://dl.dropboxusercontent.com/u/720540/sites/thosegreenmountains/arrow-left.svg") center center no-repeat;
 }
-/* line 546, ../sass/_enhanced.scss */
+/* line 547, ../sass/_enhanced.scss */
 .is-enhanced .nav-arrow__left:hover {
   margin-left: -1px;
 }
-/* line 549, ../sass/_enhanced.scss */
+/* line 550, ../sass/_enhanced.scss */
 .is-enhanced .nav-arrow__left:active {
   margin-bottom: -1px;
 }
-/* line 557, ../sass/_enhanced.scss */
+/* line 558, ../sass/_enhanced.scss */
 .is-enhanced .nav-arrow__up,
 .is-enhanced .nav-arrow__right,
 .is-enhanced .nav-arrow__down,
@@ -1127,14 +1128,14 @@ a:hover {
   -o-transition-timing-function: ease;
   transition-timing-function: ease;
 }
-/* line 570, ../sass/_enhanced.scss */
+/* line 571, ../sass/_enhanced.scss */
 .is-enhanced .profile {
   position: relative;
   margin-right: 80px;
   height: 54px;
   background: #ddd;
 }
-/* line 577, ../sass/_enhanced.scss */
+/* line 578, ../sass/_enhanced.scss */
 .is-enhanced .profile__bg {
   position: absolute;
   left: 0;
@@ -1142,7 +1143,7 @@ a:hover {
   width: 100%;
   height: 80% !important;
 }
-/* line 585, ../sass/_enhanced.scss */
+/* line 586, ../sass/_enhanced.scss */
 .is-enhanced .profile__indicator {
   position: absolute;
   height: 100%;
@@ -1163,7 +1164,7 @@ a:hover {
   transition-timing-function: ease;
 }
 @media only screen and (max-height: 650px) {
-  /* line 602, ../sass/_enhanced.scss */
+  /* line 603, ../sass/_enhanced.scss */
   .is-enhanced #header h1 {
     width: 100px;
     height: 150px;
@@ -1173,15 +1174,15 @@ a:hover {
   }
 }
 @media only screen and (max-width: 800px) {
-  /* line 616, ../sass/_enhanced.scss */
+  /* line 617, ../sass/_enhanced.scss */
   .is-enhanced #mountains {
     font-size: 90%;
   }
-  /* line 620, ../sass/_enhanced.scss */
+  /* line 621, ../sass/_enhanced.scss */
   .is-enhanced .details__wrapper {
     padding: 30px;
   }
-  /* line 626, ../sass/_enhanced.scss */
+  /* line 627, ../sass/_enhanced.scss */
   .is-enhanced .details__heading img {
     width: 80px;
     height: 80px;
