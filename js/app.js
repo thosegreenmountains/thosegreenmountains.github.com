@@ -272,12 +272,12 @@
         // nav.
         setSelectorClass( '#details .slide', lastNav );
 
-        // Mark the nav slide as viewed for goal tracking
-        markNavSlideAsViewed(lastNav);
-
-        // @GA
         setTimeout(function() {
+          // Mark the nav slide as viewed for goal tracking
+          markNavSlideAsViewed(lastNav);
+
           var navigationSlideName = getCurrentNavigationSlideName();
+          // @GA
           _gaq.push(['_trackEvent', 'Content', 'Navigation Slide', navigationSlideName]);
         }, 0);
 
@@ -327,12 +327,12 @@
         // nav.
         setSelectorClass( '#details .slide', lastNav );
 
-        // Mark the nav slide as viewed for goal tracking
-        markNavSlideAsViewed(lastNav);
-
-        // @GA
         setTimeout(function() {
+          // Mark the nav slide as viewed for goal tracking
+          markNavSlideAsViewed(lastNav);
+
           var navigationSlideName = getCurrentNavigationSlideName();
+          // @GA
           _gaq.push(['_trackEvent', 'Content', 'Navigation Slide', navigationSlideName]);
         }, 0);
 

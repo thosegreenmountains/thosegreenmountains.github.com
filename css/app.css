@@ -387,24 +387,25 @@ a:hover {
   height: 0;
   padding-top: 110px;
   background: url("https://dl.dropboxusercontent.com/u/720540/sites/thosegreenmountains/preload.svg") center top no-repeat;
+  background-size: cover;
 }
 
-/* line 125, ../sass/app.scss */
+/* line 126, ../sass/app.scss */
 .overlay__content p:last-of-type {
   margin-bottom: 0;
 }
-/* line 130, ../sass/app.scss */
+/* line 131, ../sass/app.scss */
 .overlay__content ul {
   list-style: none;
   padding: 0;
   margin: 0;
   margin-bottom: 0.84375em;
 }
-/* line 138, ../sass/app.scss */
+/* line 139, ../sass/app.scss */
 .overlay__content li::before {
   content: '- ';
 }
-/* line 141, ../sass/app.scss */
+/* line 142, ../sass/app.scss */
 .overlay__content img {
   display: block;
   margin: 0 auto;

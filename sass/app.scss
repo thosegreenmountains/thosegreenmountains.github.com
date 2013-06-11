@@ -117,6 +117,7 @@ a {
   height: 0;
   padding-top: $preload-image-size + 10px;
   @include background(url($preload-image) center top no-repeat);
+  background-size: cover;
 }
 
 .overlay__content {

@@ -1618,9 +1618,6 @@ window.Zepto = Zepto
 
   function initEnhanced() {
 
-    // @GA
-    _gaq.push(['_trackEvent', 'Layout', 'Enhanced']);
-
     TGM.$html.addClass('is-enhanced');
 
     ////////////////////////////////
@@ -1733,12 +1730,12 @@ window.Zepto = Zepto
       _gaq.push(['_trackEvent', 'Navigation', 'Clicked Profile']);
     });
 
+    // @GA
+    _gaq.push(['_trackEvent', 'Layout', 'Enhanced']);
+
   }
 
   function initSimple() {
-
-    // @GA
-    _gaq.push(['_trackEvent', 'Layout', 'Simple']);
 
     TGM.$html.addClass('is-simple');
 
@@ -1755,6 +1752,9 @@ window.Zepto = Zepto
     }, 1000);
 
     TGM.$html.height( window.innerHeight + 60 );
+
+    // @GA
+    _gaq.push(['_trackEvent', 'Layout', 'Simple']);
 
   }
 
@@ -1837,12 +1837,12 @@ window.Zepto = Zepto
         // nav.
         setSelectorClass( '#details .slide', lastNav );
 
-        // Mark the nav slide as viewed for goal tracking
-        markNavSlideAsViewed(lastNav);
-
-        // @GA
         setTimeout(function() {
+          // Mark the nav slide as viewed for goal tracking
+          markNavSlideAsViewed(lastNav);
+
           var navigationSlideName = getCurrentNavigationSlideName();
+          // @GA
           _gaq.push(['_trackEvent', 'Content', 'Navigation Slide', navigationSlideName]);
         }, 0);
 
@@ -1892,12 +1892,12 @@ window.Zepto = Zepto
         // nav.
         setSelectorClass( '#details .slide', lastNav );
 
-        // Mark the nav slide as viewed for goal tracking
-        markNavSlideAsViewed(lastNav);
-
-        // @GA
         setTimeout(function() {
+          // Mark the nav slide as viewed for goal tracking
+          markNavSlideAsViewed(lastNav);
+
           var navigationSlideName = getCurrentNavigationSlideName();
+          // @GA
           _gaq.push(['_trackEvent', 'Content', 'Navigation Slide', navigationSlideName]);
         }, 0);
 
@@ -2053,30 +2053,33 @@ window.Zepto = Zepto
       // When you press the left arrow key...
       case 37:
         e.preventDefault();
+        navigateLeft();
         // @GA
         _gaq.push(['_trackEvent', 'Navigation', 'Via Keyboard', 'Left']);
-        navigateLeft();
         break;
+      
       // When you press the up arrow key...
       case 38:
         e.preventDefault();
+        navigateUp();
         // @GA
         _gaq.push(['_trackEvent', 'Navigation', 'Via Keyboard', 'Up']);
-        navigateUp();
         break;
+      
       // When you press the right arrow key...
       case 39:
         e.preventDefault();
+        navigateRight();
         // @GA
         _gaq.push(['_trackEvent', 'Navigation', 'Via Keyboard', 'Right']);
-        navigateRight();
         break;
+      
       // When you press the down arrow key...
       case 40:
         e.preventDefault();
+        navigateDown();
         // @GA
         _gaq.push(['_trackEvent', 'Navigation', 'Via Keyboard', 'Down']);
-        navigateDown();
         break;
     }
 
@@ -2084,9 +2087,6 @@ window.Zepto = Zepto
 
   // Handle navigation arrow clicks
   function arrowClicked( e ) {
-
-    // @GA
-    _gaq.push(['_trackEvent', 'Navigation', 'Via Clicking']);
 
     e.preventDefault();
 
@@ -2110,6 +2110,9 @@ window.Zepto = Zepto
         break;
     }
 
+    // @GA
+    _gaq.push(['_trackEvent', 'Navigation', 'Via Clicking']);
+
   }
 
   // Handle window resizing
@@ -2127,9 +2130,6 @@ window.Zepto = Zepto
 
   // Show information panel
   function showInfo( e ) {
-
-    // @GA
-    _gaq.push(['_trackEvent', 'Info', 'Viewed Info']);
 
     // Prevent the default click event
     if (e) {
@@ -2164,13 +2164,13 @@ window.Zepto = Zepto
       visibility: 'visible'
     }, 500, 'ease');
 
+    // @GA
+    _gaq.push(['_trackEvent', 'Info', 'Viewed Info']);
+
   }
 
   // Hide the information panel
   function hideInfo(e) {
-
-    // @GA
-    _gaq.push(['_trackEvent', 'Info', 'Hide Info']);
 
     // Prevent the default click event
     if (e) {
@@ -2193,6 +2193,9 @@ window.Zepto = Zepto
       opacity: 0,
       visibility: 'hidden'
     }, 500, 'ease').find('.js-hide-info').off('click');
+
+    // @GA
+    _gaq.push(['_trackEvent', 'Info', 'Hide Info']);
 
   }
 
