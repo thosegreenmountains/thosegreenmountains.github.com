@@ -2025,29 +2025,34 @@ window.Zepto = Zepto
   // Handle key presses
   function keyPressed( e ) {
 
-    // @GA
-    _gaq.push(['_trackEvent', 'Navigation', 'Via Keyboard']);
-
     switch (e.which) {
 
       // When you press the left arrow key...
       case 37:
         e.preventDefault();
+        // @GA
+        _gaq.push(['_trackEvent', 'Navigation', 'Via Keyboard', 'Left']);
         navigateLeft();
         break;
       // When you press the up arrow key...
       case 38:
         e.preventDefault();
+        // @GA
+        _gaq.push(['_trackEvent', 'Navigation', 'Via Keyboard', 'Up']);
         navigateUp();
         break;
       // When you press the right arrow key...
       case 39:
         e.preventDefault();
+        // @GA
+        _gaq.push(['_trackEvent', 'Navigation', 'Via Keyboard', 'Right']);
         navigateRight();
         break;
       // When you press the down arrow key...
       case 40:
         e.preventDefault();
+        // @GA
+        _gaq.push(['_trackEvent', 'Navigation', 'Via Keyboard', 'Down']);
         navigateDown();
         break;
     }
