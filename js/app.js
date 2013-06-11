@@ -53,9 +53,6 @@
 
   function initEnhanced() {
 
-    // @GA
-    _gaq.push(['_trackEvent', 'Layout', 'Enhanced']);
-
     TGM.$html.addClass('is-enhanced');
 
     ////////////////////////////////
@@ -168,12 +165,12 @@
       _gaq.push(['_trackEvent', 'Navigation', 'Clicked Profile']);
     });
 
+    // @GA
+    _gaq.push(['_trackEvent', 'Layout', 'Enhanced']);
+
   }
 
   function initSimple() {
-
-    // @GA
-    _gaq.push(['_trackEvent', 'Layout', 'Simple']);
 
     TGM.$html.addClass('is-simple');
 
@@ -190,6 +187,9 @@
     }, 1000);
 
     TGM.$html.height( window.innerHeight + 60 );
+
+    // @GA
+    _gaq.push(['_trackEvent', 'Layout', 'Simple']);
 
   }
 
@@ -488,30 +488,33 @@
       // When you press the left arrow key...
       case 37:
         e.preventDefault();
+        navigateLeft();
         // @GA
         _gaq.push(['_trackEvent', 'Navigation', 'Via Keyboard', 'Left']);
-        navigateLeft();
         break;
+      
       // When you press the up arrow key...
       case 38:
         e.preventDefault();
+        navigateUp();
         // @GA
         _gaq.push(['_trackEvent', 'Navigation', 'Via Keyboard', 'Up']);
-        navigateUp();
         break;
+      
       // When you press the right arrow key...
       case 39:
         e.preventDefault();
+        navigateRight();
         // @GA
         _gaq.push(['_trackEvent', 'Navigation', 'Via Keyboard', 'Right']);
-        navigateRight();
         break;
+      
       // When you press the down arrow key...
       case 40:
         e.preventDefault();
+        navigateDown();
         // @GA
         _gaq.push(['_trackEvent', 'Navigation', 'Via Keyboard', 'Down']);
-        navigateDown();
         break;
     }
 
@@ -519,9 +522,6 @@
 
   // Handle navigation arrow clicks
   function arrowClicked( e ) {
-
-    // @GA
-    _gaq.push(['_trackEvent', 'Navigation', 'Via Clicking']);
 
     e.preventDefault();
 
@@ -545,6 +545,9 @@
         break;
     }
 
+    // @GA
+    _gaq.push(['_trackEvent', 'Navigation', 'Via Clicking']);
+
   }
 
   // Handle window resizing
@@ -562,9 +565,6 @@
 
   // Show information panel
   function showInfo( e ) {
-
-    // @GA
-    _gaq.push(['_trackEvent', 'Info', 'Viewed Info']);
 
     // Prevent the default click event
     if (e) {
@@ -599,13 +599,13 @@
       visibility: 'visible'
     }, 500, 'ease');
 
+    // @GA
+    _gaq.push(['_trackEvent', 'Info', 'Viewed Info']);
+
   }
 
   // Hide the information panel
   function hideInfo(e) {
-
-    // @GA
-    _gaq.push(['_trackEvent', 'Info', 'Hide Info']);
 
     // Prevent the default click event
     if (e) {
@@ -628,6 +628,9 @@
       opacity: 0,
       visibility: 'hidden'
     }, 500, 'ease').find('.js-hide-info').off('click');
+
+    // @GA
+    _gaq.push(['_trackEvent', 'Info', 'Hide Info']);
 
   }
 
