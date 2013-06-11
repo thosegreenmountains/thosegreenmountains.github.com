@@ -55,21 +55,6 @@
       box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
     }
   }
-  // Logomark
-
-  body::after {
-    content: '';
-    display: block;
-    margin: 0;
-    position: absolute;
-    top: 0;
-    left: 5%;
-    width: $logo-small-width;
-    height: 140px;
-    opacity: 0;
-    @include replace-text('logo.svg', 0, bottom);
-    @include background-size(cover);
-  }
 
   //////////////////////////////////////
   // CONTAINER
