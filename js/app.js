@@ -73,6 +73,8 @@
     this.$info = $("#info");
     this.$logomark = $("body::after");
     this.maxBodyHeight = parseInt(this.$body.css('max-height'), 10);
+    this.viewedNavCount = 0;
+    this.viewedDetailsCount = 0;
 
     this.$bgs = {
       fore: $('.bg__fore'),
@@ -260,6 +262,7 @@
         if (slideIndex > 0) {
           lastNav = slideIndex - 1;
         }
+
         setProgress( lastNav );
         slideTo( levelIndex, lastNav );
 
@@ -268,6 +271,9 @@
         // to keep the 'present' slide in sync with the
         // nav.
         setSelectorClass( '#details .slide', lastNav );
+
+        // Mark the nav slide as viewed for goal tracking
+        markNavSlideAsViewed(lastNav);
 
         // @GA
         setTimeout(function() {
@@ -321,6 +327,9 @@
         // nav.
         setSelectorClass( '#details .slide', lastNav );
 
+        // Mark the nav slide as viewed for goal tracking
+        markNavSlideAsViewed(lastNav);
+
         // @GA
         setTimeout(function() {
           var navigationSlideName = getCurrentNavigationSlideName();
@@ -344,11 +353,18 @@
       case "header":
         slideTo( 1, lastNav, 1 );
         showProgress( true );
+
+        // Mark the nav slide as viewed for goal tracking
+        markNavSlideAsViewed(lastNav);
+
         break;
 
       case "navigation":
 
         slideTo( levelIndex + 1, slideIndex );
+
+        // Mark the detail slide as viewed for goal tracking
+        markDetailSlideAsViewed(slideIndex);
 
         // @GA
         setTimeout(function() {
@@ -625,6 +641,34 @@
 
   function getCurrentNavigationSlideName() {
     return $("#navigation .present").text().trim();
+  }
+
+  function markNavSlideAsViewed(index) {
+    // Add a data attribute to indicate we've viewed the slide
+    var $slide = $("#navigation li").eq(index);
+    if (!$slide.data('viewed')) {
+      $slide.data('viewed', true);
+      TGM.viewedNavCount++;
+    }
+    if (TGM.viewedNavCount === slideCount) {
+      // @GA
+      _gaq.push(['_trackEvent', 'Goal', 'Viewed All Navigation Slides']);
+      TGM.viewedNavCount = null;
+    }
+  }
+
+  function markDetailSlideAsViewed(index) {
+    // Add a data attribute to indicate we've viewed the slide
+    var $slide = $("#details .slide").eq(index);
+    if (!$slide.data('viewed')) {
+      $slide.data('viewed', true);
+      TGM.viewedDetailsCount++;
+    }
+    if (TGM.viewedDetailsCount === slideCount) {
+      // @GA
+      _gaq.push(['_trackEvent', 'Goal', 'Viewed All Detail Slides']);
+      TGM.viewedDetailsCount = null;
+    } 
   }
 
 })(window.TGM = window.TGM || {}, Zepto);
